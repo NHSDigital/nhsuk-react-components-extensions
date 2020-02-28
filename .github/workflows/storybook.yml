@@ -1,0 +1,23 @@
+name: Build & Deploy Storybook
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          persist-credentials: false
+
+      - name: Yarn Install
+        run: yarn install
+
+      - name: Deploy Storybook
+        run: yarn storybook-to-ghpages --ci
+        env:
+          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}

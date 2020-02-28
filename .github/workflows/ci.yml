@@ -1,0 +1,20 @@
+name: CI Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Yarn Install
+        run: yarn
+      - name: Lint
+        run: yarn lint
+      - name: Jest Tests
+        run: yarn test:ci
+      - name: Typescript build
+        run: yarn build
+      - name: Storybook build
+        run: yarn storybook-to-ghpages --dry-run --ci
