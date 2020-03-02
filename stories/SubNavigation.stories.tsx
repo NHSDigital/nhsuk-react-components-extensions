@@ -6,8 +6,8 @@ const stories = storiesOf('Sub Navigation Panel', module);
 
 stories.add('Standard', () => (
   <SubNavigation>
-    <SubNavigation.Item text="Hello world" target="#" active></SubNavigation.Item>
-    <SubNavigation.Item text="Hello world" target="#"></SubNavigation.Item>
-    <SubNavigation.Item text="Hello world" target="#"></SubNavigation.Item>
+    <SubNavigation.Item href="#" aria-current="page">Hello World</SubNavigation.Item>
+    <SubNavigation.Item href="#">Hello World</SubNavigation.Item>
+    <SubNavigation.Item href="#">Hello World</SubNavigation.Item>
   </SubNavigation>
 ));
