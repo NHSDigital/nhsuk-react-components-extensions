@@ -8212,6 +8212,14 @@ nhsuk-frontend@^3.0.2:
     accessible-autocomplete "^2.0.1"
     sass-mq "^4.0.2"
 
+nhsuk-react-components@^1.0.0-rc.1:
+  version "1.0.0-rc.2"
+  resolved "https://registry.yarnpkg.com/nhsuk-react-components/-/nhsuk-react-components-1.0.0-rc.2.tgz#2a7e58a9d6516466faf47062d46eadce222f103c"
+  integrity sha512-Tc3JWbzMzBXBU9LatihO3Wpd1T8PM0Hy/1MX7Ugso6NkvU8q8wb5qC1wy/fpFMi7L849cgyF/bpFWnHDWri00g==
+  dependencies:
+    "@storybook/storybook-deployer" "^2.8.1"
+    classnames "^2.2.6"
+
 nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
