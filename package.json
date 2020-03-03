@@ -74,7 +74,7 @@
     "build": "yarn build:dist && yarn build:lib && yarn build:styles",
     "build:dist": "rollup -c",
     "build:lib": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline && tsc --emitDeclarationOnly",
-    "build:styles": "node-sass --recursive --output styles src",
+    "build:styles": "node-sass --recursive --output css src",
     "cleanup": "bash scripts/cleanup.sh",
     "lint": "stylelint src/**/*.scss && eslint --fix -c .eslintrc.js --ext .ts --ext .tsx src/*.ts src/components/**/*.ts src/components/**/*.tsx",
     "prebuild": "yarn lint && yarn test --coverage && yarn cleanup",
