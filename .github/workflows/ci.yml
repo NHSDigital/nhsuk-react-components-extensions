@@ -14,7 +14,11 @@ jobs:
         run: yarn lint
       - name: Jest Tests
         run: yarn test:ci
-      - name: Typescript build
-        run: yarn build
+      - name: Dist Build
+        run: yarn build:dist
+      - name: Lib Build
+        run: yarn build:lib
+      - name: Compile Styles
+        run: yarn build:styles
       - name: Storybook build
         run: yarn storybook-to-ghpages --dry-run --ci
