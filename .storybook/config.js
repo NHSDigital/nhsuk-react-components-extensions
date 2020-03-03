@@ -1,5 +1,5 @@
 import { configure, addParameters } from '@storybook/react';
-import '../src/nhsukrc-ext-full.scss';
+import '../src/all.scss';
 import NHSTheme from './theme';
 
 addParameters({
