@@ -85,7 +85,7 @@
   "files": [
     "dist",
     "lib",
-    "styles"
+    "css"
   ],
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
