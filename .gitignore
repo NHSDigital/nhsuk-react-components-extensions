@@ -110,3 +110,4 @@ dist
 lib/
 yarn-error.log
 storybook-static/
+styles/

@@ -10,6 +10,7 @@ export default {
   external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
   plugins: [
     typescript({
+      // eslint-disable-next-line global-require
       typescript: require('typescript'),
       exclude: ['**/*.test.d.ts'],
     }),
