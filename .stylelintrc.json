@@ -1,0 +1,9 @@
+{
+  "plugins": ["stylelint-scss"],
+  "extends": "stylelint-config-sass-guidelines",
+  "rules": {
+    "selector-class-pattern": null,
+    "order/properties-alphabetical-order": null,
+    "max-nesting-depth": null
+  }
+}
