@@ -1,4 +1,4 @@
-@import "src/styles";
+@import '../../styles/variables';
 
 /* ==========================================================================
    #SECONDARY NAV
@@ -16,18 +16,18 @@ $sub-navigation-breakpoint: 40.0625em;
 
   &::before {
     background-color: $color_nhsuk-grey-4;
-    content: "";
+    bottom: -8px;
+    content: '';
     display: block;
     height: 4px;
-    position: absolute;
-    bottom: -8px;
-    width: 100%;
     margin: 4px;
+    position: absolute;
+    width: 100%;
   }
 }
 
 .nhsuk-sub-navigation__item {
-  webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   font-size: 1rem;
@@ -57,8 +57,8 @@ $sub-navigation-breakpoint: 40.0625em;
     position: relative;
 
     &::before {
-      background-color: black;
-      content: "";
+      background-color: #000;
+      content: '';
       display: block;
       height: 100%;
       position: absolute;
@@ -68,14 +68,14 @@ $sub-navigation-breakpoint: 40.0625em;
     }
   }
 
-  &[aria-current="page"] {
+  &[aria-current='page'] {
     color: $tab-link-color;
     position: relative;
     text-decoration: none;
 
     &::before {
       background-color: $color_nhsuk-blue;
-      content: "";
+      content: '';
       display: block;
       height: 100%;
       position: absolute;
@@ -91,7 +91,6 @@ $sub-navigation-breakpoint: 40.0625em;
 }
 
 @media (min-width: $sub-navigation-breakpoint) {
-
   .nhsuk-sub-navigation__list {
     width: 100%;
 
@@ -101,7 +100,7 @@ $sub-navigation-breakpoint: 40.0625em;
   }
 
   .nhsuk-sub-navigation__link {
-    &[aria-current="page"]::before {
+    &[aria-current='page']::before {
       height: 4px;
       width: 100%;
     }

@@ -1,6 +1,5 @@
 import React, { HTMLProps } from 'react';
 import classNames from 'classnames';
-import './SubNavigation.scss';
 
 const SubNavigationItem: React.FC<HTMLProps<HTMLAnchorElement>> = ({
   className,
