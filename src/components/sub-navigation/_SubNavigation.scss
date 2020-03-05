@@ -55,6 +55,7 @@ $sub-navigation-breakpoint: 40.0625em;
   &:hover {
     color: $tab-link-color;
     position: relative;
+    cursor: pointer;
 
     &::before {
       background-color: #000;
