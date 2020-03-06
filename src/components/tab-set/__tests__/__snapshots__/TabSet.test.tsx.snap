@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TabSet matches snapshot 1`] = `
+<div
+  className="nhsuk-tab-set"
+>
+  <Row>
+    <Tab>
+      Overview
+    </Tab>
+    <Tab
+      isActive={true}
+    >
+      Demographics
+    </Tab>
+    <Tab>
+      Clinicals
+    </Tab>
+    <Tab>
+      Documents
+    </Tab>
+  </Row>
+</div>
+`;

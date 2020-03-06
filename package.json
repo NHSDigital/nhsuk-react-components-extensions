@@ -69,6 +69,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "react-flexbox-grid": "^2.1.2",
     "rollup-plugin-typescript2": "^0.26.0"
   },
   "scripts": {
