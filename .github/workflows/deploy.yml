@@ -1,0 +1,30 @@
+name: Build and Publish Package
+
+# on: [push]
+on:
+  push:
+    branches:
+      - feature/add-cd-to-package
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Yarn Install
+        run: yarn
+      #   - name: Lint
+      #     run: yarn lint
+      #   - name: Jest Tests
+      #     run: yarn test:ci
+      #   - name: Dist Build
+      #     run: yarn build:dist
+      #   - name: Lib Build
+      #     run: yarn build:lib
+      #   - name: Compile Styles
+      #     run: yarn build:styles
+      #   - name: Storybook build
+      #     run: yarn storybook-to-ghpages --dry-run --ci
+      - name: Bump Version
+        run: yarn bump
