@@ -106,7 +106,6 @@ const commitNewVersionToGit = async version => {
     console.log('Not committing new version to Git: Not running in Github Actions');
   } else {
     const repo = await Git.Repository.open(path.join(__dirname, '../.git'));
-    const ref = await repo.checkoutBranch('feature/add-cd-to-package');
 
     const index = await repo.refreshIndex();
     await index.addByPath('package.json');
@@ -120,8 +119,8 @@ const commitNewVersionToGit = async version => {
 
     const commit = await repo.createCommit(
       'HEAD',
-      signature,
-      signature,
+      repo.defaultSignature(),
+      repo.defaultSignature(),
       `Bump verson to ${version}`,
       oid,
       [parentCommit],
@@ -131,12 +130,13 @@ const commitNewVersionToGit = async version => {
 
     const remote = await repo.getRemote('origin');
 
-    await remote.push([], {
-      callbacks: {
-        credentials: () => Git.Cred.userpassPlaintextNew(process.env.GH_TOKEN, 'x-oauth-basic'),
-        certificateCheck: () => 0,
-      },
-    });
+    const callbacks = {
+      credentials: () => Git.Cred.userpassPlaintextNew(process.env.GH_TOKEN, 'x-oauth-basic'),
+      certificateCheck: () => 0,
+    };
+
+    await remote.connect(Git.Enums.DIRECTION.PUSH, callbacks);
+    await remote.push(['refs/heads/master:refs/heads/master'], callbacks);
   }
 };
 
