@@ -176,6 +176,7 @@ const main = async () => {
 };
 
 if (require.main === module) {
-  main();
-  process.exit(success ? 0 : 1);
+  main().finally(() => {
+    process.exit(success ? 0 : 1);
+  });
 }
