@@ -4,6 +4,9 @@ const axios = require('axios');
 const fs = require('fs');
 const path = require('path');
 const Git = require('nodegit');
+
+let success = false;
+
 /**
  * Extended Error with different name to differentiate
  * from network errors originating from Axios
@@ -169,11 +172,10 @@ const main = async () => {
     console.log(`Next Package Version: ${nextVersion.version}`);
     await commitNewVersionToGit(nextVersion.version);
   }
+  success = true;
 };
 
 if (require.main === module) {
-  main().catch(err => {
-    console.error('Automated Package Deployment Failed.');
-    throw err;
-  });
+  main();
+  process.exit(success ? 0 : 1);
 }
