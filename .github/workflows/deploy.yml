@@ -28,3 +28,5 @@ jobs:
       #     run: yarn storybook-to-ghpages --dry-run --ci
       - name: Bump Version
         run: yarn bump-version
+        env:
+          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}

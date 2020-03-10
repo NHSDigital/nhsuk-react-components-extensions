@@ -135,9 +135,7 @@ const commitNewVersionToGit = async version => {
       ['refs/heads/feature/add-cd-to-package:refs/heads/feature/add-cd-to-package'],
       {
         callbacks: {
-          credentials() {
-            return Git.Cred.userpassPlaintextNew(process.env.ACCESS_TOKEN, 'x-oauth-basic');
-          },
+          credentials: () => Git.Cred.userpassPlaintextNew(process.env.GH_TOKEN, 'x-oauth-basic'),
           certificateCheck: () => 0,
         },
       },
