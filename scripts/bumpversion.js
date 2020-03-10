@@ -136,9 +136,10 @@ const commitNewVersionToGit = async version => {
     console.log('Pushing to remote...');
     await remote.push(['refs/heads/master:refs/heads/master'], {
       callbacks: {
-        credentials(url, userName) {
-          return Git.Cred.sshKeyFromAgent(userName);
+        credentials() {
+          return Git.Cred.userpassPlaintextNew(process.env.ACCESS_TOKEN, 'x-oauth-basic');
         },
+        certificateCheck: () => 1,
       },
     });
   }
