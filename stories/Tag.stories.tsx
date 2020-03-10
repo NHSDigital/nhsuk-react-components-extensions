@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 
 const stories = storiesOf('Tags', module);
 
-stories.add('Cervical Screening', () => {
+stories.add('Basic', () => {
   return (
     <div className="tag-demo">
       <span className="nhsuk-tag">Standard</span>
