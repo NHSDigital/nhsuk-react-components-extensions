@@ -64,12 +64,6 @@ const getLocalPackageVersion = () => {
   const rawPackage = fs.readFileSync(path.join(__dirname, '../package.json'));
   const package = JSON.parse(rawPackage);
   const [major, minor, patch] = package.version.split('.');
-  console.log({
-    major: Number(major),
-    minor: Number(minor),
-    patch: Number(patch),
-    version: package.version,
-  });
   return {
     major: Number(major),
     minor: Number(minor),
@@ -134,7 +128,7 @@ const commitNewVersionToGit = async version => {
     console.log('New Commit: ', commit.tostrS());
     const remote = await repo.getRemote('origin');
     console.log('Pushing to remote...');
-    await remote.push(['refs/heads/master:refs/heads/master'], {
+    await remote.push([], {
       callbacks: {
         credentials() {
           return Git.Cred.userpassPlaintextNew(process.env.ACCESS_TOKEN, 'x-oauth-basic');
