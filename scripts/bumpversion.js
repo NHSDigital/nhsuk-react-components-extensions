@@ -172,10 +172,8 @@ const main = async () => {
 };
 
 if (require.main === module) {
-  try {
-    main();
-  } catch (err) {
+  main().catch(err => {
     console.error('Automated Package Deployment Failed.');
     throw err;
-  }
+  });
 }
