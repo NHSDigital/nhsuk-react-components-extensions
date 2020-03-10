@@ -176,7 +176,9 @@ const main = async () => {
 };
 
 if (require.main === module) {
-  main().finally(() => {
-    process.exit(success ? 0 : 1);
-  });
+  main()
+    .catch(console.error)
+    .finally(() => {
+      process.exit(success ? 0 : 1);
+    });
 }
