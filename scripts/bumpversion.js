@@ -128,12 +128,14 @@ const commitNewVersionToGit = async version => {
     console.log('New Commit: ', commit.tostrS());
     const remote = await repo.getRemote('origin');
     console.log('Pushing to remote...');
+
+    remote.
     await remote.push([], {
       callbacks: {
         credentials() {
           return Git.Cred.userpassPlaintextNew(process.env.ACCESS_TOKEN, 'x-oauth-basic');
         },
-        certificateCheck: () => 1,
+        certificateCheck: () => true,
       },
     });
   }
