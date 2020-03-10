@@ -129,7 +129,6 @@ const commitNewVersionToGit = async version => {
     const remote = await repo.getRemote('origin');
     console.log('Pushing to remote...');
 
-    remote.
     await remote.push([], {
       callbacks: {
         credentials() {
