@@ -80,10 +80,9 @@
     "build:lib": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline && tsc --emitDeclarationOnly",
     "build:styles": "node-sass --recursive --importer=node_modules/node-sass-tilde-importer --output css src",
     "cleanup": "bash scripts/cleanup.sh",
-    "bump": "node scripts/bumpversion.js",
+    "bump-version": "node scripts/bumpversion.js",
     "lint": "stylelint src/**/*.scss && eslint --fix -c .eslintrc.js --ext .ts --ext .tsx src/*.ts src/components/**/*.ts src/components/**/*.tsx",
     "prebuild": "yarn lint && yarn test --coverage && yarn cleanup",
-    "prepublish": "yarn bump",
     "storybook": "start-storybook",
     "test": "jest",
     "test:ci": "jest --coverage"
