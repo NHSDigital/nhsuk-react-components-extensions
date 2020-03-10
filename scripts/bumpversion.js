@@ -102,46 +102,53 @@ const getNextPatchVersion = async latestVersion => {
 };
 
 const commitNewVersionToGit = async version => {
-  if (process.env.GITHUB_ACTIONS !== 'true') {
-    console.log('Not committing new version to Git: Not running in Github Actions');
-  } else {
-    const repo = await Git.Repository.open(path.join(__dirname, '../.git'));
+  // if (process.env.GITHUB_ACTIONS !== 'true') {
+  // console.log('Not committing new version to Git: Not running in Github Actions');
+  // } else {
+  const repo = await Git.Repository.open(path.join(__dirname, '../.git'));
 
-    const index = await repo.refreshIndex();
-    await index.addByPath('package.json');
+  const index = await repo.refreshIndex();
+  await index.addByPath('package.json');
 
-    const oid = await index.writeTree();
+  const oid = await index.writeTree();
 
-    const head = await Git.Reference.nameToId(repo, 'HEAD');
-    const parentCommit = await repo.getCommit(head);
+  const head = await Git.Reference.nameToId(repo, 'HEAD');
+  const parentCommit = await repo.getCommit(head);
 
-    const signature = Git.Signature.now('Continuous Deployment Action', 'ci-action@github.com');
+  const signature = Git.Signature.now('Continuous Deployment Action', 'ci-action@github.com');
 
-    const commit = await repo.createCommit(
-      'HEAD',
-      signature,
-      signature,
-      `Bump verson to ${version}`,
-      oid,
-      [parentCommit],
-    );
+  const commit = await repo.createCommit(
+    'HEAD',
+    signature,
+    signature,
+    `Bump verson to ${version}`,
+    oid,
+    [parentCommit],
+  );
 
-    console.log('New Commit: ', commit.tostrS());
-    console.log('Pushing to remote...');
+  const remote = await repo.getRemote('origin');
 
-    const remote = await repo.getRemote('origin');
+  const callbacks = {
+    credentials: (_, username) =>
+      Git.Cred.userpassPlaintextNew(process.env.GH_TOKEN, 'x-oauth-basic'),
+    certificateCheck: () => 0,
+  };
 
-    const callbacks = {
-      credentials: () => Git.Cred.userpassPlaintextNew(process.env.GH_TOKEN, 'x-oauth-basic'),
-      certificateCheck: () => 0,
-    };
+  const currentBranch = (await repo.getCurrentBranch()).name();
 
-    const currentBranch = (await repo.getCurrentBranch()).name();
+  const basicBranch = currentBranch.replace('refs/heads/', '');
 
-    await remote.push([`${currentBranch}:${currentBranch}`], {
-      callbacks,
-    });
-  }
+  console.log('Pushing to Remote...');
+
+  await repo.fetchAll({ callbacks });
+  await repo.mergeBranches(basicBranch, `origin/${basicBranch}`);
+
+  await remote.push([`${currentBranch}:${currentBranch}`], {
+    callbacks,
+  });
+
+  console.log('Done!');
+  // }
 };
 
 const bumpPackageJsonVersion = version => {
