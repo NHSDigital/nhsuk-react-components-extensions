@@ -105,8 +105,7 @@ const getNextPatchVersion = async latestVersion => {
 };
 
 const commitNewVersionToGit = async version => {
-  console.log(process.env);
-  if (process.env.GITHUB_ACTIONS !== true) {
+  if (process.env.GITHUB_ACTIONS !== 'true') {
     console.log('Not committing new version to Git: Not running in Github Actions');
   } else {
     const repo = await Git.Repository.open(path.join(__dirname, '../.git'));
