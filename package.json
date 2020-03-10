@@ -6,6 +6,7 @@
     "name": "Thomas Judd-Cooper",
     "url": "https://tomjuddcooper.co.uk"
   },
+  "example": "field",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.7.4",

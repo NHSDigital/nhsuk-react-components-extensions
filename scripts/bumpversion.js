@@ -61,6 +61,12 @@ const getLocalPackageVersion = () => {
   const rawPackage = fs.readFileSync(path.join(__dirname, '../package.json'));
   const package = JSON.parse(rawPackage);
   const [major, minor, patch] = package.version.split('.');
+  console.log({
+    major: Number(major),
+    minor: Number(minor),
+    patch: Number(patch),
+    version: package.version,
+  });
   return {
     major: Number(major),
     minor: Number(minor),
@@ -151,7 +157,7 @@ const main = async () => {
     console.log(
       'No package version changes required: local version (',
       localVersion.version,
-      ' not on npm registry.',
+      ') not on npm registry.',
     );
     console.log(`Next Package Version: ${localVersion.version}`);
   } else {
