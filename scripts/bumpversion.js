@@ -138,7 +138,7 @@ const commitNewVersionToGit = async version => {
           credentials() {
             return Git.Cred.userpassPlaintextNew(process.env.ACCESS_TOKEN, 'x-oauth-basic');
           },
-          certificateCheck: () => true,
+          certificateCheck: () => 0,
         },
       },
     );
