@@ -148,7 +148,11 @@ const main = async () => {
 
   if (latestVersion.version !== localVersion.version) {
     await ensurePackageNotAlreadyPublished(localVersion.version);
-    console.log('No package version changes required: local version not on npm registry.');
+    console.log(
+      'No package version changes required: local version (',
+      localVersion.version,
+      ' not on npm registry.',
+    );
     console.log(`Next Package Version: ${localVersion.version}`);
   } else {
     const nextVersion = await getNextPatchVersion(latestVersion);
