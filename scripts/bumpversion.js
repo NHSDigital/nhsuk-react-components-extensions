@@ -119,12 +119,13 @@ const commitNewVersionToGit = async version => {
 
     const commit = await repo.createCommit(
       'HEAD',
-      repo.defaultSignature(),
-      repo.defaultSignature(),
+      signature,
+      signature,
       `Bump verson to ${version}`,
       oid,
       [parentCommit],
     );
+
     console.log('New Commit: ', commit.tostrS());
     console.log('Pushing to remote...');
 
@@ -135,8 +136,11 @@ const commitNewVersionToGit = async version => {
       certificateCheck: () => 0,
     };
 
-    await remote.connect(Git.Enums.DIRECTION.PUSH, callbacks);
-    await remote.push(['refs/heads/master:refs/heads/master'], callbacks);
+    const currentBranch = (await repo.getCurrentBranch()).name();
+
+    await remote.push([`${currentBranch}:${currentBranch}`], {
+      callbacks,
+    });
   }
 };
 
