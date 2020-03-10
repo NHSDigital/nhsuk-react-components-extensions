@@ -106,6 +106,7 @@ const commitNewVersionToGit = async version => {
     console.log('Not committing new version to Git: Not running in Github Actions');
   } else {
     const repo = await Git.Repository.open(path.join(__dirname, '../.git'));
+    await repo.checkoutBranch('feature/add-cd-to-package');
 
     const index = await repo.refreshIndex();
     await index.addByPath('package.json');
@@ -126,17 +127,21 @@ const commitNewVersionToGit = async version => {
       [parentCommit],
     );
     console.log('New Commit: ', commit.tostrS());
-    const remote = await repo.getRemote('origin');
     console.log('Pushing to remote...');
 
-    await remote.push([], {
-      callbacks: {
-        credentials() {
-          return Git.Cred.userpassPlaintextNew(process.env.ACCESS_TOKEN, 'x-oauth-basic');
+    const remote = await repo.getRemote('origin');
+
+    await remote.push(
+      ['refs/heads/feature/add-cd-to-package:refs/heads/feature/add-cd-to-package'],
+      {
+        callbacks: {
+          credentials() {
+            return Git.Cred.userpassPlaintextNew(process.env.ACCESS_TOKEN, 'x-oauth-basic');
+          },
+          certificateCheck: () => true,
         },
-        certificateCheck: () => true,
       },
-    });
+    );
   }
 };
 
