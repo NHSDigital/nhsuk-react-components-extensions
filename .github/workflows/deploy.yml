@@ -27,4 +27,4 @@ jobs:
       #   - name: Storybook build
       #     run: yarn storybook-to-ghpages --dry-run --ci
       - name: Bump Version
-        run: node scripts/bumpversion.js
+        run: yarn bump-version
