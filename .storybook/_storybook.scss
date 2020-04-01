@@ -2,7 +2,6 @@
   display: block;
   margin: auto;
   background-color: transparent;
-  text-align: center;
 }
 
 .tag-demo {
@@ -24,6 +23,7 @@
 
 .tooltip-demo {
   @extend %demo-centered;
+  text-align: center;
   width: 250px;
   padding-top: 100px;
   padding-bottom: 100px;
