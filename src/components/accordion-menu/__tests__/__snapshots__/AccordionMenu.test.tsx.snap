@@ -28,6 +28,9 @@ exports[`AccordionMenu Section matches snapshot 1`] = `
     >
       TestHeading
     </span>
+    <ToggleIcon
+      open={false}
+    />
   </summary>
 </details>
 `;
