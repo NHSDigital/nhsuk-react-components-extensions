@@ -6,3 +6,16 @@
 
 // Tag Styling
 @import './styles/tag';
+
+// Mobile SCRa Components
+@import './components/accordion-menu/AccordionMenu';
+@import './components/ribbon-link/RibbonLink';
+@import './components/tab-set/TabSet';
+@import './components/tooltip/Tooltip';
+
+// Masked Input Depends on standard Input Styling - Include here and
+// not in the components.scss
+@import '~nhsuk-frontend/packages/components/error-message/error-message';
+@import '~nhsuk-frontend/packages/components/label/label';
+@import '~nhsuk-frontend/packages/components/hint/hint';
+@import '~nhsuk-frontend/packages/components/input/input';
