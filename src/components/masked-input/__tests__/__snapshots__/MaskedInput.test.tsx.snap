@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MaskedInput matches snapshot 1`] = `
+<MaskedInput
+  mask="999 999 9999"
+  type="text"
+>
+  <Label>
+    <BaseLabel>
+      <label
+        className="nhsuk-label"
+      >
+        NHS Number
+      </label>
+    </BaseLabel>
+  </Label>
+  <InputElement
+    className="nhsuk-input"
+    mask="999 999 9999"
+    type="text"
+  >
+    <input
+      className="nhsuk-input"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onPaste={[Function]}
+      type="text"
+    />
+  </InputElement>
+</MaskedInput>
+`;
