@@ -1,0 +1,107 @@
+@import '../../styles/variables';
+
+.nhsuk-accordion-menu {
+  display: block;
+  background-color: $color_nhsuk-white;
+  color: $color_nhsuk-white;
+
+  &__section {
+    border-top: 1px solid $color_nhsuk-white;
+    border-bottom: 1px solid $color_nhsuk-white;
+    background-color: $color_nhsuk-white;
+    padding: 0;
+
+    &:first-of-type + &:not(:focus-visible) {
+      border-top: 2px solid $color_nhsuk-dark-blue;
+    }
+
+    &:last-of-type + &:not(:focus-visible) {
+      border-bottom: 2px solid $color_nhsuk-dark-blue;
+    }
+
+    &-summary {
+      list-style: none !important;
+      background-color: $color_nhsuk-dark-blue;
+      padding-bottom: 3px;
+      outline: none;
+
+      &::-webkit-details-marker {
+        display: none !important;
+        list-style: none !important;
+      }
+
+      &::marker {
+        display: none !important;
+        list-style: none !important;
+      }
+
+      &::before {
+        display: none !important;
+        list-style: none !important;
+      }
+
+      &:active,
+      &:focus {
+        background-color: $nhsuk-focus-color;
+        color: $nhsuk-focus-text-color;
+        border-bottom: 3px solid $color_nhsuk-black;
+        padding-bottom: 0px;
+      }
+
+      &-text {
+        @include nhsuk-responsive-padding(2, 'top');
+        @include nhsuk-responsive-padding(2, 'bottom');
+        @include nhsuk-responsive-padding(4, 'left');
+
+        @include nhsuk-typography-responsive(22);
+
+        display: block;
+        position: relative;
+        cursor: pointer;
+      }
+    }
+
+    .nhsuk-accordion-menu__section-summary-text {
+      background: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__plus' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true'%3E%3Ccircle cx='12' cy='12' r='8' fill='%23ffffff'%3E%3C/circle%3E%3Cpath fill='none' stroke='%23003087' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M12 8v8M8 12h8'%3E%3C/path%3E%3C/svg%3E%0A")
+        right nhsuk-spacing(3) center no-repeat; // sass-lint:disable-line quotes indentation
+    }
+
+    &[open] {
+      .nhsuk-accordion-menu__section-summary-text {
+        background: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__minus' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' aria-hidden='true'%3E%3Ccircle cx='12' cy='12' r='8' fill='%23ffffff'%3E%3C/circle%3E%3Cpath fill='none' stroke='%23003087' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M8 12h8'%3E%3C/path%3E%3C/svg%3E%0A")
+          right nhsuk-spacing(3) center no-repeat; // sass-lint:disable-line quotes indentation
+      }
+    }
+  }
+
+  &__subsection {
+    @include nhsuk-responsive-margin(2, 'top');
+    @include nhsuk-responsive-margin(2, 'bottom');
+    @include nhsuk-responsive-margin(2, 'right');
+    @include nhsuk-responsive-margin(2, 'left');
+
+    @include nhsuk-responsive-padding(3, 'right');
+    @include nhsuk-responsive-padding(3, 'left');
+
+    display: block;
+    cursor: pointer;
+
+    &-link {
+      @include nhsuk-typography-responsive(19);
+      display: block;
+      padding: 3px;
+
+      &:hover {
+        color: $nhsuk-focus-text-color;
+        background-color: $nhsuk-focus-color;
+      }
+
+      &:active {
+        color: $nhsuk-focus-text-color;
+        background-color: $nhsuk-focus-color;
+        padding-bottom: 0px;
+        border-bottom: 3px solid $color_nhsuk-black;
+      }
+    }
+  }
+}
