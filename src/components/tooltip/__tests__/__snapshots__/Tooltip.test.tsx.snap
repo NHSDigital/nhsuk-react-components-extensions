@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip Matches Snapshot 1`] = `
+<Tooltip
+  textProps={Object {}}
+  tooltip="Tooltip!"
+>
+  <div
+    className="nhsuk-tooltip"
+  >
+    Hover Over Me
+    <span
+      className="nhsuk-tooltip__text"
+    >
+      Tooltip!
+    </span>
+  </div>
+</Tooltip>
+`;

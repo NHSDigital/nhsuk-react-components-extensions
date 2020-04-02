@@ -25,7 +25,8 @@
     "@types/node": "^12.12.12",
     "@types/react": "^16.9.3",
     "@types/react-dom": "^16.9.3",
-    "@types/storybook__react": "^4.0.2",
+    "@types/react-input-mask": "^2.0.5",
+    "@types/storybook__react": "^5.2.1",
     "@types/styled-components": "^4.1.19",
     "@typescript-eslint/eslint-plugin": "^2.3.1",
     "@typescript-eslint/parser": "^2.3.1",
@@ -46,6 +47,7 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "jest": "^24.9.0",
     "nhsuk-frontend": "^3.0.2",
+    "nhsuk-react-components": "^1.0.1",
     "node-sass": "^4.12.0",
     "node-sass-tilde-importer": "^1.0.2",
     "prettier": "^1.18.2",
@@ -54,6 +56,7 @@
     "react-dom": "^16.9.3",
     "rollup": "^1.21.4",
     "rollup-plugin-sass": "^1.2.2",
+    "rollup-plugin-typescript2": "^0.26.0",
     "sass-loader": "^8.0.0",
     "stylelint": "^13.2.0",
     "stylelint-config-sass-guidelines": "^7.0.0",
@@ -64,12 +67,13 @@
     "typescript": "^3.6.3"
   },
   "peerDependencies": {
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "nhsuk-react-components": "^1.0.1",
+    "react": "^16.9.3",
+    "react-dom": "^16.9.3"
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "rollup-plugin-typescript2": "^0.26.0"
+    "react-input-mask": "^2.0.4"
   },
   "scripts": {
     "build": "yarn build:dist && yarn build:lib && yarn build:styles",
