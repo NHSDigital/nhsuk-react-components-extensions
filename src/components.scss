@@ -1,5 +1,10 @@
 // SubNavigation Component
 @import './components/sub-navigation/SubNavigation';
 
-// Tag Styling
-@import './styles/tag';
+// Tag Component
+@import './components/tag/Tag';
+
+// Mobile SCRa Components
+@import './components/accordion-menu/AccordionMenu';
+@import './components/tab-set/TabSet';
+@import './components/tooltip/Tooltip';
