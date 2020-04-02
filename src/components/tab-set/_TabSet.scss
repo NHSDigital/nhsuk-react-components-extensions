@@ -1,16 +1,16 @@
 @import '../../styles/variables';
 
 $nhsukext-tab-border-width: 1px !default;
-$nhsukinternal-disabled-text-color: $color_nhsuk-grey-3;
-$nhsukinternal-body-background-color: $color_nhsuk-grey-5;
-$nhsukinternal-content-background-color: $color_nhsuk-white;
+$nhsukext-disabled-text-color: $color_nhsuk-grey-3 !default;
+$nhsukext-body-background-color: $color_nhsuk-grey-5 !default;
+$nhsukext-content-background-color: $color_nhsuk-white !default;
 
 .nhsuk-tab-set {
   display: flex;
   width: 100%;
-  background-color: $color_nhsuk-white;
+  background-color: $nhsukext-content-background-color;
   justify-content: space-between;
-  border: $nhsukext-tab-border-width solid $color_nhsuk-white;
+  border: $nhsukext-tab-border-width solid $nhsukext-content-background-color;
   border-bottom: $nhsukext-tab-border-width solid $nhsuk-border-color;
 
   &__tab {
@@ -19,7 +19,7 @@ $nhsukinternal-content-background-color: $color_nhsuk-white;
     @include nhsuk-responsive-padding(3, 'bottom');
     @include nhsuk-typography-responsive(19);
     background-color: $color_nhsuk-white;
-    border: $nhsukext-tab-border-width solid $color_nhsuk-white;
+    border: $nhsukext-tab-border-width solid $nhsukext-content-background-color;
     text-align: center;
     display: block;
     flex: 1;
@@ -41,7 +41,7 @@ $nhsukinternal-content-background-color: $color_nhsuk-white;
       }
       color: $nhsuk-link-color;
       margin-bottom: -1px;
-      background-color: $color_nhsuk-grey-5;
+      background-color: $nhsukext-body-background-color;
       border: $nhsukext-tab-border-width solid $nhsuk-border-color;
       border-bottom: 0;
     }
@@ -51,13 +51,13 @@ $nhsukinternal-content-background-color: $color_nhsuk-white;
       border-bottom: 0;
       cursor: not-allowed;
       text-decoration: line-through;
-      color: $color_nhsuk-grey-3;
+      color: $nhsukext-disabled-text-color;
 
       &:hover {
         border: $nhsukext-tab-border-width solid $color_nhsuk-white;
         border-bottom: 0;
         text-decoration: line-through;
-        color: $color_nhsuk-grey-3;
+        color: $nhsukext-disabled-text-color;
       }
     }
 
