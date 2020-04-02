@@ -7,6 +7,7 @@ describe('Index', () => {
       'MaskedInput',
       'SubNavigation',
       'TabSet',
+      'Tag',
       'Tooltip',
       'WarningIcon',
     ]);
