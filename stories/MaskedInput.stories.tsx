@@ -10,7 +10,6 @@ stories
     <div className="masked-input-demo">
       <MaskedInput
         name="ni-number"
-        label="National Insurance Number"
         hint="It's on your National Insurance card, benefit letter, payslip or P60. For example, QQ 12 34 56 C"
         width="10"
         mask="AA 99 99 99 A"
@@ -29,7 +28,6 @@ stories
     <div className="masked-input-demo">
       <MaskedInput
         name="ni-number"
-        label="NHS Number"
         hint="Your 10 Digit NHS Number"
         width="10"
         mask="999 999 9999"
@@ -37,7 +35,7 @@ stories
         autoComplete="off"
         alwaysShowMask={false}
       >
-        National Insurance Number
+        NHS Number
       </MaskedInput>
     </div>
   ));
