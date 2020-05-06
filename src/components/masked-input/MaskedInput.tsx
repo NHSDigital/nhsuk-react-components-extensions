@@ -59,6 +59,7 @@ const MaskedInput: React.FC<MaskedInputProps> = ({
           { 'nhsuk-input--error': error },
           className,
         )}
+        id={id}
         aria-describedby={children && id ? `${id}-label` : undefined}
         {...rest}
       />
