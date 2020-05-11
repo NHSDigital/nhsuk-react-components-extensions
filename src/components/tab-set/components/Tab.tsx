@@ -13,6 +13,7 @@ const Tab: React.FC<TabProps> = ({ className, active, disabled, empty, ...rest }
       { 'nhsuk-tab-set__tab--active': active },
       { 'nhsuk-tab-set__tab--disabled': disabled },
       { 'nhsuk-tab-set__tab--empty': empty },
+      className,
     )}
     {...rest}
   />
