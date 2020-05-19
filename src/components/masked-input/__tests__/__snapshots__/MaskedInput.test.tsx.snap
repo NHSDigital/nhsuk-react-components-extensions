@@ -2,32 +2,58 @@
 
 exports[`MaskedInput matches snapshot 1`] = `
 <MaskedInput
+  label="NHS Number"
   mask="999 999 9999"
   type="text"
 >
-  <Label>
-    <BaseLabel>
-      <label
-        className="nhsuk-label"
-      >
-        NHS Number
-      </label>
-    </BaseLabel>
-  </Label>
-  <InputElement
-    className="nhsuk-input"
+  <FormGroup
+    inputType="input"
+    label="NHS Number"
     mask="999 999 9999"
     type="text"
   >
-    <input
-      className="nhsuk-input"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onFocus={[Function]}
-      onMouseDown={[Function]}
-      onPaste={[Function]}
-      type="text"
-    />
-  </InputElement>
+    <div
+      className="nhsuk-form-group"
+    >
+      <Label
+        htmlFor="input_x82ib"
+        id="input_x82ib--label"
+      >
+        <BaseLabel
+          htmlFor="input_x82ib"
+          id="input_x82ib--label"
+        >
+          <label
+            className="nhsuk-label"
+            htmlFor="input_x82ib"
+            id="input_x82ib--label"
+          >
+            NHS Number
+          </label>
+        </BaseLabel>
+      </Label>
+      <InputElement
+        aria-labelledby="input_x82ib--label"
+        className="nhsuk-input"
+        id="input_x82ib"
+        mask="999 999 9999"
+        name="input_x82ib"
+        type="text"
+      >
+        <input
+          aria-labelledby="input_x82ib--label"
+          className="nhsuk-input"
+          id="input_x82ib"
+          name="input_x82ib"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onPaste={[Function]}
+          type="text"
+        />
+      </InputElement>
+    </div>
+  </FormGroup>
 </MaskedInput>
 `;

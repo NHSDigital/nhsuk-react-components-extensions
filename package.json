@@ -47,7 +47,7 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "jest": "^24.9.0",
     "nhsuk-frontend": "^3.0.2",
-    "nhsuk-react-components": "^1.0.1",
+    "nhsuk-react-components": "^1.1.4-test.1",
     "node-sass": "^4.12.0",
     "node-sass-tilde-importer": "^1.0.2",
     "prettier": "^1.18.2",
@@ -67,7 +67,7 @@
     "typescript": "^3.6.3"
   },
   "peerDependencies": {
-    "nhsuk-react-components": "^1.0.1",
+    "nhsuk-react-components": "^1.1.4-test.1",
     "react": "^16.9.3",
     "react-dom": "^16.9.3"
   },
