@@ -11,6 +11,7 @@ stories
       <MaskedInput
         name="ni-number"
         hint="It's on your National Insurance card, benefit letter, payslip or P60. For example, QQ 12 34 56 C"
+        label="National Insurance Number"
         width="10"
         mask="AA 99 99 99 A"
         formatChars={{
@@ -19,9 +20,7 @@ stories
         }}
         maskChar=""
         alwaysShowMask={false}
-      >
-        National Insurance Number
-      </MaskedInput>
+      />
     </div>
   ))
   .add('NHS Number Mask', () => (
@@ -29,13 +28,12 @@ stories
       <MaskedInput
         name="ni-number"
         hint="Your 10 Digit NHS Number"
+        label="NHS Number"
         width="10"
         mask="999 999 9999"
         maskChar=""
         autoComplete="off"
         alwaysShowMask={false}
-      >
-        NHS Number
-      </MaskedInput>
+      />
     </div>
   ));
