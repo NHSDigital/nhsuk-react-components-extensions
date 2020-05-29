@@ -12,15 +12,15 @@ type InputMaskRef =
   | null;
 
 type MaskedInputProps = HTMLProps<HTMLInputElement> &
-  FormElementProps & {
-    width?: InputWidth;
-    mask: string;
-    maskChar?: string;
-    formatChars?: { [character: string]: string };
-    alwaysShowMask?: boolean;
-    inputRef?: (instance: HTMLInputElement | null) => any;
-    ref?: InputMaskRef;
-  };
+FormElementProps & {
+  width?: InputWidth;
+  mask: string;
+  maskChar?: string;
+  formatChars?: { [character: string]: string };
+  alwaysShowMask?: boolean;
+  inputRef?: (instance: HTMLInputElement | null) => any;
+  ref?: InputMaskRef;
+};
 
 const MaskedInput: React.FC<MaskedInputProps> = props => (
   <FormGroup<MaskedInputProps> inputType="input" {...props}>
