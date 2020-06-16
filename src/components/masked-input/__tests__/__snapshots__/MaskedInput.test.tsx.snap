@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MaskedInput matches snapshot 1`] = `
+<MaskedInput
+  id="maskedInput"
+  label="NHS Number"
+  mask="999 999 9999"
+  name="maskedInput"
+  type="text"
+>
+  <FormGroup
+    id="maskedInput"
+    inputType="input"
+    label="NHS Number"
+    mask="999 999 9999"
+    name="maskedInput"
+    type="text"
+  >
+    <div
+      className="nhsuk-form-group"
+    >
+      <Label
+        htmlFor="maskedInput"
+        id="maskedInput--label"
+      >
+        <BaseLabel
+          htmlFor="maskedInput"
+          id="maskedInput--label"
+        >
+          <label
+            className="nhsuk-label"
+            htmlFor="maskedInput"
+            id="maskedInput--label"
+          >
+            NHS Number
+          </label>
+        </BaseLabel>
+      </Label>
+      <InputElement
+        aria-labelledby="maskedInput--label"
+        className="nhsuk-input"
+        id="maskedInput"
+        mask="999 999 9999"
+        name="maskedInput"
+        type="text"
+      >
+        <input
+          aria-labelledby="maskedInput--label"
+          className="nhsuk-input"
+          id="maskedInput"
+          name="maskedInput"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onMouseDown={[Function]}
+          onPaste={[Function]}
+          type="text"
+        />
+      </InputElement>
+    </div>
+  </FormGroup>
+</MaskedInput>
+`;

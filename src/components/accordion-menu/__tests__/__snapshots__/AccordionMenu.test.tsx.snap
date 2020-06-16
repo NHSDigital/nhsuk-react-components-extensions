@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccordionMenu Link matches snapshot 1`] = `
+<div
+  className="nhsuk-accordion-menu__subsection"
+>
+  <a
+    className="nhsuk-accordion-menu__subsection-link"
+  >
+    Test
+  </a>
+</div>
+`;
+
+exports[`AccordionMenu Section matches snapshot 1`] = `
+<details
+  className="nhsuk-accordion-menu__section"
+  open={false}
+>
+  <summary
+    className="nhsuk-accordion-menu__section-summary"
+    onClick={[Function]}
+    role="tab"
+    tabIndex={1}
+  >
+    <span
+      className="nhsuk-accordion-menu__section-summary-text"
+    >
+      TestHeading
+    </span>
+    <ToggleIcon
+      open={false}
+    />
+  </summary>
+</details>
+`;
+
+exports[`AccordionMenu matches snapshot 1`] = `
+<div
+  className="nhsuk-accordion-menu"
+/>
+`;

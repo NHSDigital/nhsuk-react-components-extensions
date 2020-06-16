@@ -1,3 +1,9 @@
+%demo-centered {
+  display: block;
+  margin: auto;
+  background-color: transparent;
+}
+
 .tag-demo {
   display: grid;
   grid-row-gap: 10px;
@@ -6,4 +12,26 @@
   padding-top: 40px;
   padding-bottom: 40px;
   background-color: transparent;
+}
+
+.accordion-demo {
+  @extend %demo-centered;
+  width: 600px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.tooltip-demo {
+  @extend %demo-centered;
+  text-align: center;
+  width: 250px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.masked-input-demo {
+  @extend %demo-centered;
+  width: 500px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
