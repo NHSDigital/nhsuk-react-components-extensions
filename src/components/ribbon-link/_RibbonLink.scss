@@ -30,9 +30,6 @@
 
   &:active {
     text-decoration: none;
-  }
-
-  &:active {
     margin-top: 4px;
     border-bottom: 0px solid;
   }
@@ -42,8 +39,8 @@
   }
 
   &__icon {
-    @include nhsuk-responsive-margin(2, 'right');
     @include nhsuk-responsive-margin(1, 'left');
+    @include nhsuk-responsive-margin(2, 'right');
   }
 
   &--cool {
@@ -164,7 +161,7 @@
     display: flex;
     justify-content: space-between;
 
-    & .nhsuk-ribbon-link {
+    .nhsuk-ribbon-link {
       @include nhsuk-responsive-margin(3, 'right');
 
       &:last-of-type {

@@ -20,10 +20,8 @@ const RibbonLink: RibbonLink = ({ children, flavour, className, ...rest }) => (
     type="button"
     {...rest}
   >
-    <Icons.ArrowRightCircle
-      className={`nhsuk-ribbon-link__icon nhsuk-ribbon-link__icon--${flavour}`}
-    />
-    <span>{children}</span>
+    <Icons.ArrowRightCircle className="nhsuk-ribbon-link__icon" />
+    {children}
   </button>
 );
 
