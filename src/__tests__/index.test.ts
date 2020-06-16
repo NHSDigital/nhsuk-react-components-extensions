@@ -5,6 +5,7 @@ describe('Index', () => {
     expect(Object.keys(index)).toEqual([
       'AccordionMenu',
       'MaskedInput',
+      'RibbonLink',
       'SubNavigation',
       'TabSet',
       'Tag',
