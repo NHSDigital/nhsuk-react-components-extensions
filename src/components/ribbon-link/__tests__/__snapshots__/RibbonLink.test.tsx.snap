@@ -12,11 +12,9 @@ exports[`RibbonLink matches snapshot 1`] = `
   type="button"
 >
   <ArrowRightCircle
-    className="nhsuk-ribbon-link__icon nhsuk-ribbon-link__icon--cool"
+    className="nhsuk-ribbon-link__icon"
   />
-  <span>
-    Cool
-  </span>
+  Cool
 </button>
 `;
 
@@ -26,11 +24,9 @@ exports[`RibbonLink matches snapshot 2`] = `
   type="button"
 >
   <ArrowRightCircle
-    className="nhsuk-ribbon-link__icon nhsuk-ribbon-link__icon--mild"
+    className="nhsuk-ribbon-link__icon"
   />
-  <span>
-    Mild
-  </span>
+  Mild
 </button>
 `;
 
@@ -40,10 +36,8 @@ exports[`RibbonLink matches snapshot 3`] = `
   type="button"
 >
   <ArrowRightCircle
-    className="nhsuk-ribbon-link__icon nhsuk-ribbon-link__icon--hot"
+    className="nhsuk-ribbon-link__icon"
   />
-  <span>
-    Hot
-  </span>
+  Hot
 </button>
 `;
