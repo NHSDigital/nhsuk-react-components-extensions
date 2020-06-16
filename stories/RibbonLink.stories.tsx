@@ -16,7 +16,11 @@ stories
       <RibbonLink flavour="mild">Mild Ribbon</RibbonLink>
     </div>
   ))
-  .add('Hot Ribbon', () => <RibbonLink flavour="hot">Hot Ribbon</RibbonLink>)
+  .add('Hot Ribbon', () => (
+    <div style={{ padding: 20 }}>
+      <RibbonLink flavour="hot">Hot Ribbon</RibbonLink>
+    </div>
+  ))
   .add('RibbonLink Bar', () => (
     <RibbonLink.Bar className="ribbonlink-demo">
       <RibbonLink flavour="cool">Cool Ribbon</RibbonLink>

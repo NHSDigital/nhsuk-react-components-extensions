@@ -11,9 +11,8 @@
   cursor: pointer;
   font-weight: $nhsuk-font-bold;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   border: none;
-  border-left: 1rem solid;
   border-bottom: 4px solid;
   width: 100%;
   border-radius: 4px;
@@ -43,32 +42,37 @@
     border: 0;
   }
 
+  &__icon {
+    @include nhsuk-responsive-margin(2, 'right');
+    @include nhsuk-responsive-margin(1, 'left');
+  }
+
   &--cool {
-    border-left-color: $color_nhsuk-blue;
     border-bottom-color: $color_nhsuk-blue;
     background-color: $color_nhsuk-white;
     color: $color_nhsuk-blue;
+
     & > svg {
       fill: $color_nhsuk-blue;
-      margin-left: none;
     }
+
     &:hover {
       background-color: darken($color_nhsuk-white, 5);
       color: $color_nhsuk-purple;
     }
+
     &:focus {
       background-color: $color_nhsuk-yellow;
       color: $color_nhsuk-black;
       border-bottom-color: $color_nhsuk-black;
-      border-left-color: $color_nhsuk-yellow;
-      border-left: none;
 
       & > svg {
         fill: $color_nhsuk-black;
       }
     }
+
     &:active {
-      border-left: 1rem solid;
+      color: $color_nhsuk-white;
       background-color: darken($color_nhsuk-blue, 10);
       border-left-color: darken($color_nhsuk-blue, 10);
 
@@ -80,146 +84,93 @@
   }
 
   &--mild {
-    border-left-color: $color_nhsuk-black;
-    border-bottom-color: darken($color_nhsuk-warm-yellow, 25);
+    border-bottom-color: darken($color_nhsuk-warm-yellow, 10);
     background-color: $color_nhsuk-warm-yellow;
     color: $color_nhsuk-black;
+
     & > svg {
       fill: $color_nhsuk-black;
     }
+
     &:hover {
-      background-color: darken($color_nhsuk-warm-yellow, 5);
-      color: $color_nhsuk-purple;
+      background-color: $color_nhsuk-blue;
+      color: $color_nhsuk-white;
+      border-bottom-color: $color_shade_nhsuk-blue-20;
+
+      & > svg {
+        fill: $color_nhsuk-white;
+      }
     }
+
+    &:focus {
+      background-color: $color_shade_nhsuk-blue-20;
+      color: $color_nhsuk-white;
+      border-bottom-color: $color_shade_nhsuk-blue-35;
+
+      & > svg {
+        fill: $color_nhsuk-white;
+      }
+    }
+
+    &:active {
+      background-color: $color_shade_nhsuk-blue-20;
+      color: $color_nhsuk-white;
+      border-bottom-color: $color_shade_nhsuk-blue-35;
+
+      & > svg {
+        fill: $color_nhsuk-white;
+      }
+    }
+  }
+
+  &--hot {
+    border-bottom-color: darken($color_nhsuk-red, 10);
+    background-color: $color_nhsuk-red;
+    color: $color_nhsuk-white;
+
+    & > svg {
+      fill: $color_nhsuk-white;
+    }
+
+    &:hover {
+      background-color: darken($color_nhsuk-red, 5);
+
+      & > svg {
+        fill: $color_nhsuk-white;
+      }
+    }
+
     &:focus {
       background-color: $color_nhsuk-yellow;
       color: $color_nhsuk-black;
       border-bottom-color: $color_nhsuk-black;
-      border-left-color: $color_nhsuk-black;
+
       & > svg {
         fill: $color_nhsuk-black;
       }
     }
+
     &:active {
-      background-color: darken($color_nhsuk-warm-yellow, 10);
-      border-left-color: darken($color_nhsuk-warm-yellow, 10);
+      background-color: darken($color_nhsuk-red, 10);
+      color: $color_nhsuk-white;
+      border-bottom-color: $color_shade_nhsuk-blue-35;
 
       & > svg {
-        fill: $color_nhsuk-black;
+        fill: $color_nhsuk-white;
       }
     }
   }
 
-  &__icon {
-    margin: 0px 5px 0px 0px;
+  &__bar {
+    display: flex;
+    justify-content: space-between;
+
+    & .nhsuk-ribbon-link {
+      @include nhsuk-responsive-margin(3, 'right');
+
+      &:last-of-type {
+        @include nhsuk-responsive-margin(0, 'right');
+      }
+    }
   }
 }
-
-//   border-left: 1rem solid;
-//   display: flex;
-//   cursor: pointer;
-//   font-weight: $nhsuk-font-bold;
-//   align-items: center;
-//   text-decoration: none;
-//   max-width: 100%;
-//   margin-top: 15px;
-//   border-radius: 4px;
-//   margin-bottom: 5px;
-
-//   &:active {
-//     margin-top: 20px;
-//     margin-bottom: 0px;
-//     border-bottom: none;
-//     & > span {
-//       line-height: 1;
-//       padding-bottom: none;
-//       padding-top: 3px;
-//     }
-//   }
-
-//   &:active {
-//     background-color: $nhsuk-focus-color;
-//     color: $nhsuk-focus-text-color;
-//     // border-left-color: $nhsuk-focus-color;
-//     & > svg {
-//       fill: $nhsuk-focus-text-color !important;
-//     }
-//   }
-
-//   &--hot {
-//     border-left-color: $color_nhsuk-white;
-//     background-color: $color_nhsuk-red;
-//     border-bottom: 5px solid $color_nhsuk-white;
-//     color: $color_nhsuk-white;
-//     &:hover {
-//       color: $color_nhsuk-white;
-//       background-color: darken($color_nhsuk-red, 10);
-//     }
-//   }
-
-//   &--mild {
-//     border-left-color: $color_nhsuk-black;
-//     background-color: $color_nhsuk-warm-yellow;
-//     border-bottom: 5px solid $color_nhsuk-black;
-//     color: $color_nhsuk-black;
-//     &:hover {
-//       color: $color_nhsuk-black;
-//     }
-//   }
-
-//   &--cool {
-//     border-left-color: $color_nhsuk-blue;
-//     background-color: $color_nhsuk-white;
-//     color: $color_nhsuk-blue;
-//     &:hover {
-//       color: $color_nhsuk-blue;
-//     }
-//     &:active {
-//       background-color: $color_nhsuk-grey-4;
-//     }
-//   }
-
-//   &__icon {
-//     width: 40px;
-//     height: 40px;
-//     margin: 0px 10px 0px 0px;
-
-//     &--hot {
-//       fill: $color_nhsuk-white;
-//     }
-
-//     &--mild {
-//       fill: $color_nhsuk-black;
-//     }
-
-//     &--cool {
-//       fill: $color_nhsuk-blue;
-//     }
-//   }
-
-//   &__bar {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-between;
-//   }
-// }
-
-// .nhsuk-ribbon-link {
-// @include nhsuk-responsive-padding(2, 'top');
-// @include nhsuk-responsive-padding(2, 'right');
-// @include nhsuk-responsive-padding(2, 'bottom');
-// @include nhsuk-responsive-padding(2, 'left');
-// @include nhsuk-typography-responsive(24);
-
-//   // Default to Full Width (No Margin)
-//   flex-basis: 100%;
-
-//   // Two Columns (Slight Margin)
-//   @media only screen and (min-width: 768px) {
-//     flex-basis: 49.5%;
-//   }
-
-//   // Three Columns (Slight Margin)
-//   @media only screen and (min-width: 1280px) {
-//     flex-basis: 33%;
-//   }
