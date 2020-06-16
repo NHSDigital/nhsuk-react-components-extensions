@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RibbonLink RibbonLink.Bar matches snapshot 1`] = `
+<div
+  className="nhsuk-ribbon-link__bar"
+/>
+`;
+
+exports[`RibbonLink matches snapshot 1`] = `
+<button
+  className="nhsuk-ribbon-link nhsuk-ribbon-link--cool"
+  type="button"
+>
+  <ArrowRightCircle
+    className="nhsuk-ribbon-link__icon nhsuk-ribbon-link__icon--cool"
+  />
+  <span>
+    Cool
+  </span>
+</button>
+`;
+
+exports[`RibbonLink matches snapshot 2`] = `
+<button
+  className="nhsuk-ribbon-link nhsuk-ribbon-link--mild"
+  type="button"
+>
+  <ArrowRightCircle
+    className="nhsuk-ribbon-link__icon nhsuk-ribbon-link__icon--mild"
+  />
+  <span>
+    Mild
+  </span>
+</button>
+`;
+
+exports[`RibbonLink matches snapshot 3`] = `
+<button
+  className="nhsuk-ribbon-link nhsuk-ribbon-link--hot"
+  type="button"
+>
+  <ArrowRightCircle
+    className="nhsuk-ribbon-link__icon nhsuk-ribbon-link__icon--hot"
+  />
+  <span>
+    Hot
+  </span>
+</button>
+`;
