@@ -7,17 +7,17 @@ const stories = storiesOf('RibbonLink', module);
 
 stories
   .add('Cool Ribbon', () => (
-    <div style={{ padding: 20 }}>
+    <div className="ribbonlink-demo">
       <RibbonLink flavour="cool">Cool Ribbon</RibbonLink>
     </div>
   ))
   .add('Mild Ribbon', () => (
-    <div style={{ padding: 20 }}>
+    <div className="ribbonlink-demo">
       <RibbonLink flavour="mild">Mild Ribbon</RibbonLink>
     </div>
   ))
   .add('Hot Ribbon', () => (
-    <div style={{ padding: 20 }}>
+    <div className="ribbonlink-demo">
       <RibbonLink flavour="hot">Hot Ribbon</RibbonLink>
     </div>
   ))
