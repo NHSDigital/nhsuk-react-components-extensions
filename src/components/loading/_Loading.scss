@@ -1,0 +1,24 @@
+.nhsuk-loader__container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.nhsuk-loader {
+    pointer-events: none;
+    width: 2.5em;
+    height: 2.5em;
+    border: 0.4em solid transparent;
+    border-color: $color_nhsuk-white;
+    border-top-color: $color_nhsuk-blue;
+    border-radius: 50%;
+    animation: loadingspin 1s linear infinite;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes loadingspin {
+    100% {
+            transform: rotate(360deg)
+    }
+}

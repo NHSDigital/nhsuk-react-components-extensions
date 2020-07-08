@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`loading renders correctly given text 1`] = `
+<div>
+  <div
+    className="nhsuk-loader__container"
+  >
+    <p
+      className="nhsuk-heading-l"
+    >
+      I am testing the loading component
+    </p>
+  </div>
+  <div
+    className="nhsuk-loader__container"
+  >
+    <div
+      className="nhsuk-loader"
+    />
+  </div>
+</div>
+`;
+
+exports[`loading renders with default text if none supplied 1`] = `
+<div>
+  <div
+    className="nhsuk-loader__container"
+  >
+    <p
+      className="nhsuk-heading-l"
+    >
+      Loading...
+    </p>
+  </div>
+  <div
+    className="nhsuk-loader__container"
+  >
+    <div
+      className="nhsuk-loader"
+    />
+  </div>
+</div>
+`;
