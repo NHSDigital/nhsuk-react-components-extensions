@@ -41,3 +41,18 @@ exports[`loading renders with default text if none supplied 1`] = `
   </div>
 </div>
 `;
+
+exports[`loading renders without text if false value supplied 1`] = `
+<div>
+  <div
+    className="nhsuk-loader__container"
+  />
+  <div
+    className="nhsuk-loader__container"
+  >
+    <div
+      className="nhsuk-loader"
+    />
+  </div>
+</div>
+`;
