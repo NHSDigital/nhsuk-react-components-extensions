@@ -10,6 +10,7 @@ describe('Index', () => {
       'TabSet',
       'Tag',
       'Tooltip',
+      'Loading',
       'WarningIcon',
     ]);
   });

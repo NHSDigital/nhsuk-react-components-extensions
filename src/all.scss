@@ -13,9 +13,14 @@
 @import './components/tooltip/Tooltip';
 @import './components/ribbon-link/RibbonLink';
 
+// LoadingSpinner Component
+@import './components/loading-spinner/Loading';
+
 // Masked Input Depends on standard Input Styling - Include here and
 // not in the components.scss
 @import '~nhsuk-frontend/packages/components/error-message/error-message';
 @import '~nhsuk-frontend/packages/components/label/label';
 @import '~nhsuk-frontend/packages/components/hint/hint';
 @import '~nhsuk-frontend/packages/components/input/input';
+
+@import '../node_modules/nhsuk-frontend/packages/components/panel/panel';

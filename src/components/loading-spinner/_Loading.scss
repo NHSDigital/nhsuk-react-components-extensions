@@ -1,0 +1,62 @@
+@keyframes loadingSpin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.nhsuk-loader {
+  border: 5px solid transparent;
+  border-color: $color_nhsuk-grey-3;
+  border-top-color: $color_nhsuk-blue;
+  border-radius: 50%;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  animation: loadingSpin 1s linear infinite;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__text {
+    @include nhsuk-responsive-margin(4, 'top');
+    font-weight: 400;
+    text-align: center;
+  }
+
+  &__backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: none;
+    background-color: rgba($color_nhsuk-black, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    animation: fadeIn 200ms ease-in-out forwards;
+    transition: opacity 200ms ease-in-out;
+
+    &--fade {
+      opacity: 0;
+    }
+  }
+
+  &__panel {
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
