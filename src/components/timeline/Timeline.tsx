@@ -1,14 +1,27 @@
 import React, { HTMLProps } from 'react';
-import classNames from 'classnames';
+import Event, { EventProps } from './components/Event';
 
-interface Timeline extends React.FC<HTMLProps<HTMLDivElement>> {
-  
+export interface TimelineProps extends HTMLProps<HTMLDetailsElement>{
+  events: Array<EventProps>;
 }
 
-const Timeline: Timeline = ({ className, ...rest }) => (
-  <div className={classNames('nhsuk-timeline', className)} {...rest} />
+const Timeline: React.FC<TimelineProps> = ({
+  events,
+}) => (
+  <div className="nhsuk-timeline">
+    {
+      events.map(({ title, instigator, date, description }, index) => (
+          <Event
+            key = {index}
+            title={title}
+            instigator={instigator}
+            date={date}
+            description={description}
+          />
+        ) 
+      )
+    }
+  </div>
 );
-
-
 
 export default Timeline;
