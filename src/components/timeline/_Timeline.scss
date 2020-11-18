@@ -10,7 +10,7 @@
   }
   
   .nhsuk-timeline:before {
-    background-color: #005eb8;
+    background-color: $color_nhsuk-blue;
     content: "";
     height: 100%;
     left: 0;
@@ -34,7 +34,7 @@
   }
   
   .nhsuk-timeline__item:before {
-    background-color: #005eb8;
+    background-color: $color_nhsuk-blue;
     content: "";
     height: 5px;
     left: 0;
