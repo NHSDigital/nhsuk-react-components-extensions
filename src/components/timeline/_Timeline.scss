@@ -46,6 +46,7 @@
 
 .nhsuk-timeline__by {
   @include nhsuk-typography-responsive(19);
+  font-weight: $nhsuk-font-normal;
   color: $color_nhsuk-grey-2;
   display: inline;
   margin: 0;
@@ -61,4 +62,18 @@
 .nhsuk-timeline__description-item {
   @include nhsuk-typography-responsive(16);
   margin-bottom: 0;
+}
+
+.nhsuk-timeline__action {
+  @include nhsuk-responsive-margin(2, 'left');
+  color: $color_nhsuk-grey-2;
+}
+
+.nhsuk-timeline__tag {
+  @include nhsuk-responsive-margin(2, 'left');
+}
+
+.nhsuk-timeline__link {
+  @include nhsuk-responsive-margin(2, 'left');
+  font-weight: $nhsuk-font-normal;
 }

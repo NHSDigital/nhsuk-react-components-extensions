@@ -1,7 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React, { useState } from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Timeline } from '../src';
+import { TagProps } from '../src/components/tag/Tag';
 
 const stories = storiesOf('Timeline', module);
 
@@ -14,6 +15,12 @@ const storybookEvents = [
       'Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised',
       'Test Date: 19-Oct-2020, 9:00:00 am',
     ],
+    action: {
+      status: 'Sent to printer',
+      tagColor: 'yellow' as TagProps['color'],
+      linkText: 'Cancel',
+      actionLink: '/placeholder/',
+    },
   },
   {
     title: 'Patient deferred',
@@ -37,6 +44,17 @@ const storybookEvents = [
     date: new Date('2019-11-19 09:12:42'),
     description: ['Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised'],
   },
+  {
+    title: 'Screening invitation sent',
+    instigator: 'System',
+    date: new Date('2019-11-18 19:49:10'),
+    action: {
+      status: 'Sent to patient',
+      tagColor: 'grey' as TagProps['color'],
+      linkText: 'Resend',
+      actionLink: '/placeholder/',
+    },
+  },
 ];
 
-stories.add('Standard', () => <Timeline events={storybookEvents}></Timeline>);
+stories.add('Standard', () => <Timeline events={storybookEvents} />);
