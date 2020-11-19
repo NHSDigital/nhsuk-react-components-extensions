@@ -8,20 +8,20 @@ exports[`Timeline Event matches snapshot 1`] = `
     className="nhsuk-timeline__title"
   >
     Result sent
+    <span
+      className="nhsuk-timeline__by"
+    >
+       by 
+      System
+    </span>
   </h2>
-  <p
-    className="nhsuk-timeline__by"
-  >
-     by 
-    System
-  </p>
   <p
     className="nhsuk-timeline__date"
   >
     <time
       dateTime="Tue Nov 19 2019 00:00:00 GMT+0000 (Greenwich Mean Time)"
     >
-      Tue Nov 19 2019 00:00:00 GMT+0000 (Greenwich Mean Time)
+      19 Nov 2019, 0:00:00 am
     </time>
   </p>
   <p

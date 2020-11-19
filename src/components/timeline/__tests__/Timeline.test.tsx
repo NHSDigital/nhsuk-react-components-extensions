@@ -74,7 +74,7 @@ describe('Timeline', () => {
     it('should have correct title', () => {
       const event = shallow(<Event {...testEvents[0]} />);
 
-      expect(event.find('.nhsuk-timeline__title').text()).toBe(testEvents[0].title);
+      expect(event.find('.nhsuk-timeline__title').text()).toBe("Result sent by System");
 
       event.unmount();
     });
@@ -90,7 +90,17 @@ describe('Timeline', () => {
     it('should have correct date', () => {
       const event = shallow(<Event {...testEvents[0]} />);
 
-      expect(event.find('.nhsuk-timeline__date time').text()).toBe(testEvents[0].date.toString());
+      const dateOptions = {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: true,
+      };
+
+      expect(event.find('.nhsuk-timeline__date time').text()).toBe(testEvents[0].date.toLocaleString('en-GB', dateOptions));
 
       event.unmount();
     });
