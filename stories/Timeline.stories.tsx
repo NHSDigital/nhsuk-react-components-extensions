@@ -9,7 +9,7 @@ const storybookEvents = [
   {
     title: "Result sent",
     instigator: "System",
-    date: new Date(),
+    date: new Date("2019-11-19"),
     description: [
       "Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised",
       "Test Date: 19-Oct-2020, 9:00:00 am"
@@ -18,7 +18,7 @@ const storybookEvents = [
   {
     title: "Patient deferred",
     instigator: "James Smith",
-    date: new Date(),
+    date: new Date("2019-11-19"),
     description: [
       "Defer Reason: Pregnancy",
       "CRM Case Number: CAS-12345-ABCDE",
@@ -28,7 +28,7 @@ const storybookEvents = [
   {
     title: "Next test due date changed",
     instigator: "System",
-    date: new Date(),
+    date: new Date("2019-11-19"),
     description: [
       "Next test due date changed to 10-Oct-2021"
     ]
@@ -36,7 +36,7 @@ const storybookEvents = [
   {
     title: "Test result added",
     instigator: "System (Edifax)",
-    date: new Date(),
+    date: new Date("2019-11-19"),
     description: [
       "Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised"
     ]

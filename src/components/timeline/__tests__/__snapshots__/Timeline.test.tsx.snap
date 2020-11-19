@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timeline Event matches snapshot 1`] = `
+<div
+  className="nhsuk-timeline__event nhsuk-u-margin-bottom-2"
+>
+  <h2
+    className="nhsuk-timeline__title"
+  >
+    Result sent
+  </h2>
+  <p
+    className="nhsuk-timeline__by"
+  >
+     by 
+    System
+  </p>
+  <p
+    className="nhsuk-timeline__date"
+  >
+    <time
+      dateTime="Tue Nov 19 2019 00:00:00 GMT+0000 (Greenwich Mean Time)"
+    >
+      Tue Nov 19 2019 00:00:00 GMT+0000 (Greenwich Mean Time)
+    </time>
+  </p>
+  <p
+    className="nhsuk-timeline__description-item"
+    key="0"
+  >
+    Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised
+  </p>
+  <p
+    className="nhsuk-timeline__description-item"
+    key="1"
+  >
+    Test Date: 19-Oct-2020, 9:00:00 am
+  </p>
+</div>
+`;
+
+exports[`Timeline matches snapshot 1`] = `
+<div
+  className="nhsuk-timeline"
+>
+  <Event
+    date={2019-11-19T00:00:00.000Z}
+    description={
+      Array [
+        "Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised",
+        "Test Date: 19-Oct-2020, 9:00:00 am",
+      ]
+    }
+    instigator="System"
+    key="0"
+    title="Result sent"
+  />
+  <Event
+    date={2019-11-19T00:00:00.000Z}
+    description={
+      Array [
+        "Defer Reason: Pregnancy",
+        "CRM Case Number: CAS-12345-ABCDE",
+        "Comments: Requested via the GP form",
+      ]
+    }
+    instigator="James Smith"
+    key="1"
+    title="Patient deferred"
+  />
+  <Event
+    date={2019-11-19T00:00:00.000Z}
+    description={
+      Array [
+        "Next test due date changed to 10-Oct-2021",
+      ]
+    }
+    instigator="System"
+    key="2"
+    title="Next test due date changed"
+  />
+  <Event
+    date={2019-11-19T00:00:00.000Z}
+    description={
+      Array [
+        "Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised",
+      ]
+    }
+    instigator="System (Edifax)"
+    key="3"
+    title="Test result added"
+  />
+</div>
+`;
