@@ -23,13 +23,13 @@
   height: calc(100% - 75px);
 }
 
-.nhsuk-timeline__item {
+.nhsuk-timeline__event {
   @include nhsuk-responsive-padding(5, 'bottom');
   @include nhsuk-responsive-padding(4, 'left');
   position: relative;
 }
 
-.nhsuk-timeline__item:before {
+.nhsuk-timeline__event:before {
   background-color: $color_nhsuk-blue;
   content: "";
   height: 5px;
