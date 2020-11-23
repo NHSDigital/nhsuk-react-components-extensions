@@ -7,7 +7,11 @@ exports[`Timeline Event matches snapshot 1`] = `
   <h2
     className="nhsuk-timeline__title"
   >
-    Result sent
+    <span
+      className="nhsuk-timeline__status"
+    >
+      Result sent
+    </span>
     <span
       className="nhsuk-timeline__by"
     >
@@ -83,48 +87,52 @@ exports[`Timeline matches snapshot 1`] = `
     date={2019-11-19T19:49:10.000Z}
     description={
       Array [
-        "Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised",
-        "Test Date: 19-Oct-2020, 9:00:00 am",
+        <React.Fragment>
+          Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised
+        </React.Fragment>,
+        <React.Fragment>
+          Test Date: 19-Oct-2020, 9:00:00 am
+        </React.Fragment>,
       ]
     }
-    instigator="System"
+    instigator={
+      <React.Fragment>
+        System
+      </React.Fragment>
+    }
     key="0"
-    title="Result sent"
+    title={
+      <React.Fragment>
+        Result sent
+      </React.Fragment>
+    }
   />
   <Event
     date={2019-11-19T16:28:57.000Z}
     description={
       Array [
-        "Defer Reason: Pregnancy",
-        "CRM Case Number: CAS-12345-ABCDE",
-        "Comments: Requested via the GP form",
+        <React.Fragment>
+          Defer Reason: Pregnancy
+        </React.Fragment>,
+        <React.Fragment>
+          CRM Case Number: CAS-12345-ABCDE
+        </React.Fragment>,
+        <React.Fragment>
+          Comments: Requested via the GP form
+        </React.Fragment>,
       ]
     }
-    instigator="James Smith"
+    instigator={
+      <React.Fragment>
+        James Smith
+      </React.Fragment>
+    }
     key="1"
-    title="Patient deferred"
-  />
-  <Event
-    date={2019-11-19T11:59:59.000Z}
-    description={
-      Array [
-        "Next test due date changed to 10-Oct-2021",
-      ]
+    title={
+      <React.Fragment>
+        Patient deferred
+      </React.Fragment>
     }
-    instigator="System"
-    key="2"
-    title="Next test due date changed"
-  />
-  <Event
-    date={2019-11-19T09:12:42.000Z}
-    description={
-      Array [
-        "Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised",
-      ]
-    }
-    instigator="System (Edifax)"
-    key="3"
-    title="Test result added"
   />
   <Event
     action={
@@ -140,16 +148,24 @@ exports[`Timeline matches snapshot 1`] = `
         </Tag>
         <a
           className="nhsuk-timeline__link"
-          href="/placeholder/"
+          href="/placeholder2"
         >
           Resend
         </a>
       </span>
     }
     date={2019-11-18T19:49:10.000Z}
-    instigator="System"
-    key="4"
-    title="Screening invitation sent"
+    instigator={
+      <React.Fragment>
+        System
+      </React.Fragment>
+    }
+    key="2"
+    title={
+      <React.Fragment>
+        Screening invitation sent
+      </React.Fragment>
+    }
   />
 </div>
 `;

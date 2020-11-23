@@ -1,10 +1,10 @@
 import React, { ReactNode } from 'react';
 
 export interface EventProps {
-  title: string;
-  instigator: string;
+  title: ReactNode;
+  instigator: ReactNode;
   date: Date;
-  description?: Array<string>;
+  description?: Array<ReactNode>;
   action?: ReactNode;
 }
 
@@ -21,7 +21,7 @@ const dateOptions = {
 const Event: React.FC<EventProps> = ({ title, instigator, date, description = [], action }) => (
   <div className="nhsuk-timeline__event nhsuk-u-margin-bottom-2">
     <h2 className="nhsuk-timeline__title">
-      {title}
+      <span className="nhsuk-timeline__status">{title}</span>
       <span className="nhsuk-timeline__by"> by {instigator}</span>
       {action}
     </h2>

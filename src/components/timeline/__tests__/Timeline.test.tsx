@@ -5,15 +5,16 @@ import Event from '../components/Event';
 import Tag from '../../tag/Tag';
 
 const actionLinkText = 'Cancel';
+const eventInstigator = 'System';
 
 const testEvents = [
   {
-    title: 'Result sent',
-    instigator: 'System',
+    title: <>Result sent</>,
+    instigator: <>{eventInstigator}</>,
     date: new Date('2019-11-19 19:49:10'),
     description: [
-      'Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised',
-      'Test Date: 19-Oct-2020, 9:00:00 am',
+      <>Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised</>,
+      <>Test Date: 19-Oct-2020, 9:00:00 am</>,
     ],
     action: (
       <span className="nhsuk-timeline__action">
@@ -22,36 +23,24 @@ const testEvents = [
           Send to printer
         </Tag>
         <a className="nhsuk-timeline__link" href="/placeholder/">
-          {actionLinkText}
+          Cancel
         </a>
       </span>
     ),
   },
   {
-    title: 'Patient deferred',
-    instigator: 'James Smith',
+    title: <>Patient deferred</>,
+    instigator: <>James Smith</>,
     date: new Date('2019-11-19 16:28:57'),
     description: [
-      'Defer Reason: Pregnancy',
-      'CRM Case Number: CAS-12345-ABCDE',
-      'Comments: Requested via the GP form',
+      <>Defer Reason: Pregnancy</>,
+      <>CRM Case Number: CAS-12345-ABCDE</>,
+      <>Comments: Requested via the GP form</>,
     ],
   },
   {
-    title: 'Next test due date changed',
-    instigator: 'System',
-    date: new Date('2019-11-19 11:59:59'),
-    description: ['Next test due date changed to 10-Oct-2021'],
-  },
-  {
-    title: 'Test result added',
-    instigator: 'System (Edifax)',
-    date: new Date('2019-11-19 09:12:42'),
-    description: ['Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised'],
-  },
-  {
-    title: 'Screening invitation sent',
-    instigator: 'System',
+    title: <>Screening invitation sent</>,
+    instigator: <>System</>,
     date: new Date('2019-11-18 19:49:10'),
     action: (
       <span className="nhsuk-timeline__action">
@@ -59,7 +48,7 @@ const testEvents = [
         <Tag className="nhsuk-timeline__tag" color="grey">
           Sent to patient
         </Tag>
-        <a className="nhsuk-timeline__link" href="/placeholder/">
+        <a className="nhsuk-timeline__link" href="/placeholder2">
           Resend
         </a>
       </span>
@@ -112,7 +101,7 @@ describe('Timeline', () => {
     it('should have correct instigator', () => {
       const event = shallow(<Event {...testEvents[0]} />);
 
-      expect(event.find('.nhsuk-timeline__by').text()).toBe(` by ${testEvents[0].instigator}`);
+      expect(event.find('.nhsuk-timeline__by').text()).toBe(` by ${eventInstigator}`);
 
       event.unmount();
     });
@@ -137,10 +126,34 @@ describe('Timeline', () => {
       event.unmount();
     });
 
+    it('has correct description items if description data is present', () => {
+      const event = shallow(<Event {...testEvents[0]} />);
+
+      expect(event.find('.nhsuk-timeline__description-item').exists()).toBeTruthy();
+    });
+
+    it('has no description items if description data is not present', () => {
+      const event = shallow(<Event {...testEvents[2]} />);
+
+      expect(event.find('.nhsuk-timeline__description-item').exists()).toBeFalsy();
+    });
+
     it('has correct link text if action data is present', () => {
       const event = shallow(<Event {...testEvents[0]} />);
 
       expect(event.find('.nhsuk-timeline__link').text()).toBe(actionLinkText);
+    });
+
+    it('will show action if action data present', () => {
+      const event = shallow(<Event {...testEvents[0]} />);
+
+      expect(event.find('.nhsuk-timeline__action').exists()).toBeTruthy();
+    });
+
+    it('will not show action if no action data present', () => {
+      const event = shallow(<Event {...testEvents[1]} />);
+
+      expect(event.find('.nhsuk-timeline__action').exists()).toBeFalsy();
     });
   });
 });
