@@ -3,10 +3,11 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Timeline } from '../src';
 import Tag from '../src/components/tag/Tag';
+import { EventProps } from '../src/components/timeline/components/Event';
 
 const stories = storiesOf('Timeline', module);
 
-const storybookEvents = [
+const storybookEvents: EventProps[] = [
   {
     title: <>Result sent</>,
     instigator: <>System</>,

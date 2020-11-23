@@ -1,13 +1,13 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Timeline from '../Timeline';
-import Event from '../components/Event';
+import Event, { EventProps } from '../components/Event';
 import Tag from '../../tag/Tag';
 
 const actionLinkText = 'Cancel';
 const eventInstigator = 'System';
 
-const testEvents = [
+const testEvents: EventProps[] = [
   {
     title: <>Result sent</>,
     instigator: <>{eventInstigator}</>,
