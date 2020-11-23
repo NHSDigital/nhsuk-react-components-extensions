@@ -92,7 +92,7 @@ describe('Timeline', () => {
     it('should have correct title', () => {
       const event = shallow(<Event {...testEvents[1]} />);
 
-      expect(event.find('.nhsuk-timeline__title').text()).toBe('Patient deferred by James Smith');
+      expect(event.find('.nhsuk-timeline__title').text()).toBe('Patient deferred');
 
       event.unmount();
     });

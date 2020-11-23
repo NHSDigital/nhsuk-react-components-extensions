@@ -126,11 +126,6 @@ exports[`Timeline matches snapshot 1`] = `
         </React.Fragment>,
       ]
     }
-    instigator={
-      <React.Fragment>
-        James Smith
-      </React.Fragment>
-    }
     key="1"
     title={
       <React.Fragment>
