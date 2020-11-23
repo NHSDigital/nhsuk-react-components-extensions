@@ -63,17 +63,3 @@
   @include nhsuk-typography-responsive(16);
   margin-bottom: 0;
 }
-
-.nhsuk-timeline__action {
-  @include nhsuk-responsive-margin(2, 'left');
-  color: $color_nhsuk-grey-2;
-}
-
-.nhsuk-timeline__tag {
-  @include nhsuk-responsive-margin(2, 'left');
-}
-
-.nhsuk-timeline__link {
-  @include nhsuk-responsive-margin(2, 'left');
-  font-weight: $nhsuk-font-normal;
-}

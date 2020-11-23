@@ -13,7 +13,7 @@ const Event: React.FC<EventProps> = ({ title, instigator, date, description = []
     <h2 className="nhsuk-timeline__title">
       <span className="nhsuk-timeline__status">{title}</span>
       <span className="nhsuk-timeline__by"> by {instigator}</span>
-      {action}
+      {action && <span className="nhsuk-timeline__action">{action}</span>}
     </h2>
     <p className="nhsuk-timeline__date">
       <time dateTime={date}>{date}</time>

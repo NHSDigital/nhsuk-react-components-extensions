@@ -21,19 +21,23 @@ exports[`Timeline Event matches snapshot 1`] = `
     <span
       className="nhsuk-timeline__action"
     >
-      -
-      <Tag
-        className="nhsuk-timeline__tag"
-        color="yellow"
+      <span
+        className="nhsuk-timeline__action"
       >
-        Send to printer
-      </Tag>
-      <a
-        className="nhsuk-timeline__link"
-        href="/placeholder/"
-      >
-        Cancel
-      </a>
+        -
+        <Tag
+          className="nhsuk-timeline__tag"
+          color="yellow"
+        >
+          Send to printer
+        </Tag>
+        <a
+          className="nhsuk-timeline__link"
+          href="/placeholder/"
+        >
+          Cancel
+        </a>
+      </span>
     </span>
   </h2>
   <p

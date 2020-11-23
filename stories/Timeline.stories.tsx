@@ -7,6 +7,18 @@ import { EventProps } from '../src/components/timeline/components/Event';
 
 const stories = storiesOf('Timeline', module);
 
+const actionStyle = {
+  marginLeft: '8px',
+  color: '#768692',
+};
+const tagStyle = {
+  marginLeft: '8px',
+};
+const linkStyle = {
+  marginLeft: '8px',
+  fontWeight: 400,
+};
+
 const storybookEvents: EventProps[] = [
   {
     title: <>Result sent</>,
@@ -17,12 +29,12 @@ const storybookEvents: EventProps[] = [
       <>Test Date: 19-Oct-2020, 9:00:00 am</>,
     ],
     action: (
-      <span className="nhsuk-timeline__action">
+      <span style={actionStyle}>
         -
-        <Tag className="nhsuk-timeline__tag" color="yellow">
+        <Tag style={tagStyle} color="yellow">
           Send to printer
         </Tag>
-        <a className="nhsuk-timeline__link" href="/placeholder/">
+        <a style={linkStyle} href="/placeholder/">
           Cancel
         </a>
       </span>
