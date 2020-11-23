@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Timeline Event matches snapshot 1`] = `
+<div
+  className="nhsuk-timeline__event nhsuk-u-margin-bottom-2"
+>
+  <h2
+    className="nhsuk-timeline__title"
+  >
+    <span
+      className="nhsuk-timeline__status"
+    >
+      Result sent
+    </span>
+    <span
+      className="nhsuk-timeline__by"
+    >
+       by 
+      System
+    </span>
+    <span
+      className="nhsuk-timeline__action"
+    >
+      <span
+        className="nhsuk-timeline__action"
+      >
+        -
+        <Tag
+          className="nhsuk-timeline__tag"
+          color="yellow"
+        >
+          Send to printer
+        </Tag>
+        <a
+          className="nhsuk-timeline__link"
+          href="/placeholder/"
+        >
+          Cancel
+        </a>
+      </span>
+    </span>
+  </h2>
+  <p
+    className="nhsuk-timeline__date"
+  >
+    <time
+      dateTime="19 Nov 2019, 7:49:10 pm"
+    >
+      19 Nov 2019, 7:49:10 pm
+    </time>
+  </p>
+  <p
+    className="nhsuk-timeline__description-item"
+    key="0"
+  >
+    Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised
+  </p>
+  <p
+    className="nhsuk-timeline__description-item"
+    key="1"
+  >
+    Test Date: 19-Oct-2020, 9:00:00 am
+  </p>
+</div>
+`;
+
+exports[`Timeline matches snapshot 1`] = `
+<div
+  className="nhsuk-timeline"
+>
+  <Event
+    action={
+      <span
+        className="nhsuk-timeline__action"
+      >
+        -
+        <Tag
+          className="nhsuk-timeline__tag"
+          color="yellow"
+        >
+          Send to printer
+        </Tag>
+        <a
+          className="nhsuk-timeline__link"
+          href="/placeholder/"
+        >
+          Cancel
+        </a>
+      </span>
+    }
+    date="19 Nov 2019, 7:49:10 pm"
+    description={
+      Array [
+        <React.Fragment>
+          Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised
+        </React.Fragment>,
+        <React.Fragment>
+          Test Date: 19-Oct-2020, 9:00:00 am
+        </React.Fragment>,
+      ]
+    }
+    instigator={
+      <React.Fragment>
+        System
+      </React.Fragment>
+    }
+    key="0"
+    title={
+      <React.Fragment>
+        Result sent
+      </React.Fragment>
+    }
+  />
+  <Event
+    date="19 Nov 2019, 4:28:57 pm"
+    description={
+      Array [
+        <React.Fragment>
+          Defer Reason: Pregnancy
+        </React.Fragment>,
+        <React.Fragment>
+          CRM Case Number: CAS-12345-ABCDE
+        </React.Fragment>,
+        <React.Fragment>
+          Comments: Requested via the GP form
+        </React.Fragment>,
+      ]
+    }
+    instigator={
+      <React.Fragment>
+        James Smith
+      </React.Fragment>
+    }
+    key="1"
+    title={
+      <React.Fragment>
+        Patient deferred
+      </React.Fragment>
+    }
+  />
+  <Event
+    action={
+      <span
+        className="nhsuk-timeline__action"
+      >
+        -
+        <Tag
+          className="nhsuk-timeline__tag"
+          color="grey"
+        >
+          Sent to patient
+        </Tag>
+        <a
+          className="nhsuk-timeline__link"
+          href="/placeholder2"
+        >
+          Resend
+        </a>
+      </span>
+    }
+    date="18 Nov 2019, 7:49:10 pm"
+    instigator={
+      <React.Fragment>
+        System
+      </React.Fragment>
+    }
+    key="2"
+    title={
+      <React.Fragment>
+        Screening invitation sent
+      </React.Fragment>
+    }
+  />
+</div>
+`;

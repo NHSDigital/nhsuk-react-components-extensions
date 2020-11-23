@@ -9,6 +9,7 @@ describe('Index', () => {
       'SubNavigation',
       'TabSet',
       'Tag',
+      'Timeline',
       'Tooltip',
       'WarningIcon',
     ]);

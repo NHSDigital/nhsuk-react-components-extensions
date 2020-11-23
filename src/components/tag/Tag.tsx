@@ -13,7 +13,7 @@ type TagColours =
   | 'orange'
   | 'yellow';
 
-interface TagProps extends HTMLProps<HTMLSpanElement> {
+export interface TagProps extends HTMLProps<HTMLSpanElement> {
   color?: TagColours;
 }
 
