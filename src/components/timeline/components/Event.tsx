@@ -1,17 +1,11 @@
-import React from 'react';
-import Tag, { TagProps } from '../../tag/Tag';
+import React, { ReactNode } from 'react';
 
 export interface EventProps {
   title: string;
   instigator: string;
   date: Date;
   description?: Array<string>;
-  action?: {
-    status: string;
-    tagColor: TagProps['color'];
-    linkText: string;
-    actionLink: string;
-  };
+  action?: ReactNode;
 }
 
 const dateOptions = {
@@ -29,17 +23,7 @@ const Event: React.FC<EventProps> = ({ title, instigator, date, description = []
     <h2 className="nhsuk-timeline__title">
       {title}
       <span className="nhsuk-timeline__by"> by {instigator}</span>
-      {action && (
-        <span className="nhsuk-timeline__action">
-          -
-          <Tag className="nhsuk-timeline__tag" color={action.tagColor}>
-            {action.status}
-          </Tag>
-          <a className="nhsuk-timeline__link" href={action.actionLink}>
-            {action.linkText}
-          </a>
-        </span>
-      )}
+      {action}
     </h2>
     <p className="nhsuk-timeline__date">
       <time dateTime={date.toString()}>{date.toLocaleString('en-GB', dateOptions)}</time>

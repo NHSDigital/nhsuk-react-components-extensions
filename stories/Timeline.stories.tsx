@@ -2,7 +2,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Timeline } from '../src';
-import { TagProps } from '../src/components/tag/Tag';
+import Tag from '../src/components/tag/Tag';
 
 const stories = storiesOf('Timeline', module);
 
@@ -15,12 +15,17 @@ const storybookEvents = [
       'Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised',
       'Test Date: 19-Oct-2020, 9:00:00 am',
     ],
-    action: {
-      status: 'Sent to printer',
-      tagColor: 'yellow' as TagProps['color'],
-      linkText: 'Cancel',
-      actionLink: '/placeholder/',
-    },
+    action: (
+      <span className="nhsuk-timeline__action">
+        -
+        <Tag className="nhsuk-timeline__tag" color="yellow">
+          Send to printer
+        </Tag>
+        <a className="nhsuk-timeline__link" href="/placeholder/">
+          Cancel
+        </a>
+      </span>
+    ),
   },
   {
     title: 'Patient deferred',
@@ -48,12 +53,17 @@ const storybookEvents = [
     title: 'Screening invitation sent',
     instigator: 'System',
     date: new Date('2019-11-18 19:49:10'),
-    action: {
-      status: 'Sent to patient',
-      tagColor: 'grey' as TagProps['color'],
-      linkText: 'Resend',
-      actionLink: '/placeholder/',
-    },
+    action: (
+      <span className="nhsuk-timeline__action">
+        -
+        <Tag className="nhsuk-timeline__tag" color="grey">
+          Sent to patient
+        </Tag>
+        <a className="nhsuk-timeline__link" href="/placeholder2">
+          Resend
+        </a>
+      </span>
+    ),
   },
 ];
 
