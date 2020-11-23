@@ -30,7 +30,6 @@ const testEvents: EventProps[] = [
   },
   {
     title: <>Patient deferred</>,
-    instigator: <>James Smith</>,
     date: '19 Nov 2019, 4:28:57 pm',
     description: [
       <>Defer Reason: Pregnancy</>,
@@ -98,10 +97,19 @@ describe('Timeline', () => {
       event.unmount();
     });
 
-    it('should have correct instigator', () => {
+    it('should have correct instigator if instigator data is present', () => {
       const event = shallow(<Event {...testEvents[0]} />);
 
+      expect(event.find('.nhsuk-timeline__by').exists()).toBeTruthy();
       expect(event.find('.nhsuk-timeline__by').text()).toBe(` by ${eventInstigator}`);
+
+      event.unmount();
+    });
+
+    it('should not have instigator if instigator data is not present', () => {
+      const event = shallow(<Event {...testEvents[1]} />);
+
+      expect(event.find('.nhsuk-timeline__by').exists()).toBeFalsy();
 
       event.unmount();
     });

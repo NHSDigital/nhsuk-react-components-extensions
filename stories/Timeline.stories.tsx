@@ -58,21 +58,19 @@ const storybookEvents: EventProps[] = [
   },
   {
     title: <>Test result added</>,
-    instigator: <>System (Edifax)</>,
     date: '19 Nov 2019, 9:12:42 am',
     description: [<>Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised</>],
   },
   {
     title: <>Screening invitation sent</>,
-    instigator: <>System</>,
     date: '18 Nov 2019, 7:49:10 pm',
     action: (
-      <span className="nhsuk-timeline__action">
+      <span style={actionStyle}>
         -
-        <Tag className="nhsuk-timeline__tag" color="grey">
+        <Tag style={tagStyle} color="grey">
           Sent to patient
         </Tag>
-        <a className="nhsuk-timeline__link" href="/placeholder2">
+        <a style={linkStyle} href="/placeholder2">
           Resend
         </a>
       </span>
