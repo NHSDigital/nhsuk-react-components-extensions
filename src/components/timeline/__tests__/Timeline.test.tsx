@@ -11,7 +11,7 @@ const testEvents = [
   {
     title: <>Result sent</>,
     instigator: <>{eventInstigator}</>,
-    date: new Date('2019-11-19 19:49:10'),
+    date: '19 Nov 2019, 7:49:10 pm',
     description: [
       <>Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised</>,
       <>Test Date: 19-Oct-2020, 9:00:00 am</>,
@@ -31,7 +31,7 @@ const testEvents = [
   {
     title: <>Patient deferred</>,
     instigator: <>James Smith</>,
-    date: new Date('2019-11-19 16:28:57'),
+    date: '19 Nov 2019, 4:28:57 pm',
     description: [
       <>Defer Reason: Pregnancy</>,
       <>CRM Case Number: CAS-12345-ABCDE</>,
@@ -41,7 +41,7 @@ const testEvents = [
   {
     title: <>Screening invitation sent</>,
     instigator: <>System</>,
-    date: new Date('2019-11-18 19:49:10'),
+    date: '18 Nov 2019, 7:49:10 pm',
     action: (
       <span className="nhsuk-timeline__action">
         -
@@ -109,19 +109,7 @@ describe('Timeline', () => {
     it('should have correct date', () => {
       const event = shallow(<Event {...testEvents[0]} />);
 
-      const dateOptions = {
-        day: 'numeric',
-        month: 'short',
-        year: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric',
-        hour12: true,
-      };
-
-      expect(event.find('.nhsuk-timeline__date time').text()).toBe(
-        testEvents[0].date.toLocaleString('en-GB', dateOptions),
-      );
+      expect(event.find('.nhsuk-timeline__date time').text()).toBe(testEvents[0].date);
 
       event.unmount();
     });

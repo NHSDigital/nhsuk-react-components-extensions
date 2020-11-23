@@ -3,20 +3,10 @@ import React, { ReactNode } from 'react';
 export interface EventProps {
   title: ReactNode;
   instigator: ReactNode;
-  date: Date;
+  date: string;
   description?: Array<ReactNode>;
   action?: ReactNode;
 }
-
-const dateOptions = {
-  day: 'numeric',
-  month: 'short',
-  year: 'numeric',
-  hour: 'numeric',
-  minute: 'numeric',
-  second: 'numeric',
-  hour12: true,
-};
 
 const Event: React.FC<EventProps> = ({ title, instigator, date, description = [], action }) => (
   <div className="nhsuk-timeline__event nhsuk-u-margin-bottom-2">
@@ -26,7 +16,7 @@ const Event: React.FC<EventProps> = ({ title, instigator, date, description = []
       {action}
     </h2>
     <p className="nhsuk-timeline__date">
-      <time dateTime={date.toString()}>{date.toLocaleString('en-GB', dateOptions)}</time>
+      <time dateTime={date}>{date}</time>
     </p>
     {description.map((descriptionItem, index) => (
       <p key={index.toString()} className="nhsuk-timeline__description-item">

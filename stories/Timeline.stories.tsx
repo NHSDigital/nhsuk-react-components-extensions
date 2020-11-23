@@ -10,7 +10,7 @@ const storybookEvents = [
   {
     title: <>Result sent</>,
     instigator: <>System</>,
-    date: new Date('2019-11-19 19:49:10'),
+    date: '19 Nov 2019, 7:49:10 pm',
     description: [
       <>Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised</>,
       <>Test Date: 19-Oct-2020, 9:00:00 am</>,
@@ -30,7 +30,7 @@ const storybookEvents = [
   {
     title: <>Patient deferred</>,
     instigator: <>James Smith</>,
-    date: new Date('2019-11-19 16:28:57'),
+    date: '19 Nov 2019, 4:28:57 pm',
     description: [
       <>Defer Reason: Pregnancy</>,
       <>CRM Case Number: CAS-12345-ABCDE</>,
@@ -40,19 +40,19 @@ const storybookEvents = [
   {
     title: <>Next test due date changed</>,
     instigator: <>System</>,
-    date: new Date('2019-11-19 11:59:59'),
+    date: '19 Nov 2019, 11:59:59 am',
     description: [<>Next test due date changed to 10-Oct-2021</>],
   },
   {
     title: <>Test result added</>,
     instigator: <>System (Edifax)</>,
-    date: new Date('2019-11-19 09:12:42'),
+    date: '19 Nov 2019, 9:12:42 am',
     description: [<>Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised</>],
   },
   {
     title: <>Screening invitation sent</>,
     instigator: <>System</>,
-    date: new Date('2019-11-18 19:49:10'),
+    date: '18 Nov 2019, 7:49:10 pm',
     action: (
       <span className="nhsuk-timeline__action">
         -
