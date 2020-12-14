@@ -20,6 +20,9 @@ $nhsukext-content-background-color: $color_nhsuk-white !default;
     @include nhsuk-typography-responsive(19);
     background-color: $color_nhsuk-white;
     border: $nhsukext-tab-border-width solid $nhsukext-content-background-color;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
     text-align: center;
     display: block;
     flex: 1;
@@ -27,18 +30,12 @@ $nhsukext-content-background-color: $color_nhsuk-white !default;
     cursor: pointer;
     text-decoration: none;
 
-    &:hover {
-      border: $nhsukext-tab-border-width solid $nhsuk-border-color;
-      border-bottom: 1px transparent;
-      text-decoration: underline;
-      color: $nhsuk-link-color;
-    }
-
     &--active {
       cursor: auto;
       &:hover {
         text-decoration: none;
       }
+
       color: $nhsuk-link-color;
       margin-bottom: -1px;
       background-color: $nhsukext-body-background-color;
@@ -63,6 +60,18 @@ $nhsukext-content-background-color: $color_nhsuk-white !default;
 
     &--empty {
       display: none;
+    }
+
+    &:hover {
+      border: $nhsukext-tab-border-width solid $nhsuk-border-color;
+      border-bottom: 1px transparent;
+      text-decoration: underline;
+      color: $nhsuk-link-color;
+      outline: none;
+    }
+
+    &:focus {
+      @include nhsuk-focused-button;
     }
   }
 }
