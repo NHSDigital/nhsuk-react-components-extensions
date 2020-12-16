@@ -3,8 +3,7 @@ name: CD Build and Publish
 on:
   push:
     branches:
-      - publish-to-npm
-      # - master
+      - master
 
 jobs:
   build:
@@ -33,7 +32,6 @@ jobs:
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
-          dry-run: true
       - name: Deploy Storybook
         run: yarn storybook-to-ghpages --ci
         env:
