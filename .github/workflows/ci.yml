@@ -22,3 +22,7 @@ jobs:
         run: yarn build:styles
       - name: Storybook build
         run: yarn storybook-to-ghpages --dry-run --ci
+      - name: Publish to npm
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          dry-run: true
