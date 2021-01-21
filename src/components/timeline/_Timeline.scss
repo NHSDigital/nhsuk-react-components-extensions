@@ -47,7 +47,6 @@
 .nhsuk-timeline__by {
   @include nhsuk-typography-responsive(19);
   font-weight: $nhsuk-font-normal;
-  color: $color_nhsuk-grey-2;
   display: inline;
   margin: 0;
 }
@@ -56,7 +55,6 @@
   @include nhsuk-typography-responsive(16);
   @include nhsuk-responsive-margin(1, 'top');
   margin-bottom: 0;
-  color: $color_nhsuk-grey-1;
 }
 
 .nhsuk-timeline__description-item {
