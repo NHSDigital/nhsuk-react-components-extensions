@@ -49,3 +49,27 @@ exports[`FileUpload With Error 1`] = `
   />
 </div>
 `;
+
+exports[`FileUpload With Hint 1`] = `
+<div
+  className="nhsuk-form-group "
+>
+  <label
+    className="nhsuk-label"
+    htmlFor="file-upload-label"
+  >
+    Upload
+  </label>
+  <Hint
+    data-test-id="file-hint"
+  >
+    Format: JPG
+  </Hint>
+  <input
+    aria-describedby="file-upload-label"
+    className="nhsuk-file-upload"
+    id="file-upload"
+    type="file"
+  />
+</div>
+`;

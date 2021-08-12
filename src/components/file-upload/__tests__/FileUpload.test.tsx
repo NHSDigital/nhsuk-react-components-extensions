@@ -13,4 +13,9 @@ describe('FileUpload', () => {
     expect(component).toMatchSnapshot();
     component.unmount();
   });
+  it('With Hint', () => {
+    const component = shallow(<FileUpload hint="Format: JPG">Upload</FileUpload>);
+    expect(component).toMatchSnapshot();
+    component.unmount();
+  });
 });
