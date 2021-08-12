@@ -1,4 +1,5 @@
 export { default as AccordionMenu } from './components/accordion-menu';
+export { default as FileUpload } from './components/file-upload';
 export { default as MaskedInput } from './components/masked-input';
 export { default as RibbonLink } from './components/ribbon-link';
 export { default as SubNavigation } from './components/sub-navigation';
