@@ -4,6 +4,7 @@ describe('Index', () => {
   it('contains all expected elements', () => {
     expect(Object.keys(index)).toEqual([
       'AccordionMenu',
+      'FileUpload',
       'MaskedInput',
       'RibbonLink',
       'SubNavigation',
