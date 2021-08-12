@@ -1,42 +1,42 @@
 import { Hint } from 'nhsuk-react-components';
-import React from 'react';
+import React, { HTMLProps } from 'react';
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactChild;
+interface FileUploadProps extends HTMLProps<HTMLDivElement> {
   error?: string;
   hint?: string;
+  children: React.ReactNode;
 }
 
-function FileUpload({ error, hint, children, ...rest }: Props) {
+const FileUpload: React.FC<FileUploadProps> = ({
+  error,
+  hint,
+  children,
+  ...rest
+}: FileUploadProps) => {
   return (
-    <>
-      <div className={`nhsuk-form-group ${error ? 'nhsuk-form-group--error' : ''}`} {...rest}>
-        <label htmlFor="file-select-input-id" className="nhsuk-label">
-          {children}
-        </label>
-        {error && (
-          <span
-            id="file-select-error-id"
-            data-test-id="file-select-error"
-            className="nhsuk-error-message"
-          >
-            <span className="nhsuk-visually-hidden">Error: </span>
-            {error}
-          </span>
-        )}
-        {hint && <Hint data-test-id="file-hint">{hint}</Hint>}
-        <input
-          aria-describedby="file-select-label"
-          id="file-select-input-id"
-          data-test-id="file-select-input"
-          className="nhsuk-file-upload"
-          name="file-select-input"
-          type="file"
-          title="file select input"
-        />
-      </div>
-    </>
+    <div className={`nhsuk-form-group ${error ? 'nhsuk-form-group--error' : ''}`} {...rest}>
+      <label htmlFor="file-upload-label" className="nhsuk-label">
+        {children}
+      </label>
+      {error && (
+        <span
+          id="file-select-error-id"
+          data-test-id="file-select-error"
+          className="nhsuk-error-message"
+        >
+          <span className="nhsuk-visually-hidden">Error: </span>
+          {error}
+        </span>
+      )}
+      {hint && <Hint data-test-id="file-hint">{hint}</Hint>}
+      <input
+        aria-describedby="file-upload-label"
+        id="file-upload"
+        className="nhsuk-file-upload"
+        type="file"
+      />
+    </div>
   );
-}
+};
 
 export default FileUpload;
