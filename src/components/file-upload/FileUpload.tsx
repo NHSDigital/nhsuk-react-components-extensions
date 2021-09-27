@@ -12,7 +12,7 @@ const FileUpload: React.FC<FileUploadProps> = ({ error, hint, children, id, ...r
     <div className={classNames('nhsuk-form-group', { 'nhsuk-form-group--error': error })} {...rest}>
       <Label htmlFor={id}>{children}</Label>
       {error && <ErrorMessage>{error}</ErrorMessage>}
-      {hint && <Hint data-test-id="file-hint">{hint}</Hint>}
+      {hint && <Hint>{hint}</Hint>}
       <input aria-describedby={id} id="file-upload" className="nhsuk-file-upload" type="file" />
     </div>
   );

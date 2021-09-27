@@ -2,16 +2,12 @@
 
 exports[`FileUpload Matches snapshot 1`] = `
 <div
-  className="nhsuk-form-group "
+  className="nhsuk-form-group"
 >
-  <label
-    className="nhsuk-label"
-    htmlFor="file-upload-label"
-  >
+  <Label>
     Upload
-  </label>
+  </Label>
   <input
-    aria-describedby="file-upload-label"
     className="nhsuk-file-upload"
     id="file-upload"
     type="file"
@@ -20,56 +16,74 @@ exports[`FileUpload Matches snapshot 1`] = `
 `;
 
 exports[`FileUpload With Error 1`] = `
-<div
-  className="nhsuk-form-group nhsuk-form-group--error"
+<FileUpload
+  error="something wrong"
 >
-  <label
-    className="nhsuk-label"
-    htmlFor="file-upload-label"
+  <div
+    className="nhsuk-form-group nhsuk-form-group--error"
   >
-    Upload
-  </label>
-  <span
-    className="nhsuk-error-message"
-    data-test-id="file-select-error"
-    id="file-select-error-id"
-  >
-    <span
-      className="nhsuk-visually-hidden"
+    <Label>
+      <BaseLabel>
+        <label
+          className="nhsuk-label"
+        >
+          Upload
+        </label>
+      </BaseLabel>
+    </Label>
+    <ErrorMessage
+      role="alert"
+      visuallyHiddenText="Error: "
     >
-      Error: 
-    </span>
-    something wrong
-  </span>
-  <input
-    aria-describedby="file-upload-label"
-    className="nhsuk-file-upload"
-    id="file-upload"
-    type="file"
-  />
-</div>
+      <span
+        className="nhsuk-error-message"
+        role="alert"
+      >
+        <span
+          className="nhsuk-u-visually-hidden"
+        >
+          Error: 
+        </span>
+        something wrong
+      </span>
+    </ErrorMessage>
+    <input
+      className="nhsuk-file-upload"
+      id="file-upload"
+      type="file"
+    />
+  </div>
+</FileUpload>
 `;
 
 exports[`FileUpload With Hint 1`] = `
-<div
-  className="nhsuk-form-group "
+<FileUpload
+  hint="Format: JPG"
 >
-  <label
-    className="nhsuk-label"
-    htmlFor="file-upload-label"
+  <div
+    className="nhsuk-form-group"
   >
-    Upload
-  </label>
-  <Hint
-    data-test-id="file-hint"
-  >
-    Format: JPG
-  </Hint>
-  <input
-    aria-describedby="file-upload-label"
-    className="nhsuk-file-upload"
-    id="file-upload"
-    type="file"
-  />
-</div>
+    <Label>
+      <BaseLabel>
+        <label
+          className="nhsuk-label"
+        >
+          Upload
+        </label>
+      </BaseLabel>
+    </Label>
+    <Hint>
+      <span
+        className="nhsuk-hint"
+      >
+        Format: JPG
+      </span>
+    </Hint>
+    <input
+      className="nhsuk-file-upload"
+      id="file-upload"
+      type="file"
+    />
+  </div>
+</FileUpload>
 `;

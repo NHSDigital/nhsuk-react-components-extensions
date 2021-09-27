@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import FileUpload from '../FileUpload';
 
 describe('FileUpload', () => {
@@ -9,13 +9,20 @@ describe('FileUpload', () => {
     component.unmount();
   });
   it('With Error', () => {
-    const component = shallow(<FileUpload error="something wrong">Upload</FileUpload>);
+    const component = mount(<FileUpload error="something wrong">Upload</FileUpload>);
     expect(component).toMatchSnapshot();
+
+    const renderedComponent = component.render();
+    expect(renderedComponent.find('span').prop('class')).toBe('nhsuk-error-message');
+
     component.unmount();
   });
   it('With Hint', () => {
-    const component = shallow(<FileUpload hint="Format: JPG">Upload</FileUpload>);
+    const component = mount(<FileUpload hint="Format: JPG">Upload</FileUpload>);
     expect(component).toMatchSnapshot();
+
+    const renderedComponent = component.render();
+    expect(renderedComponent.find('span').prop('class')).toBe('nhsuk-hint');
     component.unmount();
   });
 });
