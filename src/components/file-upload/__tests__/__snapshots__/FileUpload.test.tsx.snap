@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileUpload Matches snapshot 1`] = `
+<div
+  className="nhsuk-form-group"
+>
+  <Label>
+    Upload
+  </Label>
+  <input
+    className="nhsuk-file-upload"
+    id="file-upload"
+    type="file"
+  />
+</div>
+`;
+
+exports[`FileUpload With Error 1`] = `
+<FileUpload
+  error="something wrong"
+>
+  <div
+    className="nhsuk-form-group nhsuk-form-group--error"
+  >
+    <Label>
+      <BaseLabel>
+        <label
+          className="nhsuk-label"
+        >
+          Upload
+        </label>
+      </BaseLabel>
+    </Label>
+    <ErrorMessage
+      role="alert"
+      visuallyHiddenText="Error: "
+    >
+      <span
+        className="nhsuk-error-message"
+        role="alert"
+      >
+        <span
+          className="nhsuk-u-visually-hidden"
+        >
+          Error: 
+        </span>
+        something wrong
+      </span>
+    </ErrorMessage>
+    <input
+      className="nhsuk-file-upload"
+      id="file-upload"
+      type="file"
+    />
+  </div>
+</FileUpload>
+`;
+
+exports[`FileUpload With Hint 1`] = `
+<FileUpload
+  hint="Format: JPG"
+>
+  <div
+    className="nhsuk-form-group"
+  >
+    <Label>
+      <BaseLabel>
+        <label
+          className="nhsuk-label"
+        >
+          Upload
+        </label>
+      </BaseLabel>
+    </Label>
+    <Hint>
+      <span
+        className="nhsuk-hint"
+      >
+        Format: JPG
+      </span>
+    </Hint>
+    <input
+      className="nhsuk-file-upload"
+      id="file-upload"
+      type="file"
+    />
+  </div>
+</FileUpload>
+`;
