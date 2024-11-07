@@ -25,7 +25,7 @@ Components can either be imported from the global package or from the `/lib` dir
 import { SubNavigation } from 'nhsuk-react-components-extensions';
 
 // From the lib directory
-import SubNavigation from 'nhsuk-react-components/lib/components/sub-navigation';
+// import SubNavigation from 'nhsuk-react-components/lib/components/sub-navigation';
 ```
 
 ### Styles

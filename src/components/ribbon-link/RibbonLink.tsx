@@ -1,6 +1,6 @@
 import React, { HTMLProps } from 'react';
 import classNames from 'classnames';
-import { Icons } from 'nhsuk-react-components';
+import { ArrowRightCircleIcon } from 'nhsuk-react-components';
 import Bar from './components/Bar';
 
 type RibbonFlavours = 'hot' | 'mild' | 'cool';
@@ -20,7 +20,7 @@ const RibbonLink: RibbonLink = ({ children, flavour, className, ...rest }) => (
     type="button"
     {...rest}
   >
-    <Icons.ArrowRightCircle className="nhsuk-ribbon-link__icon" />
+    <ArrowRightCircleIcon className="nhsuk-ribbon-link__icon" />
     {children}
   </button>
 );
