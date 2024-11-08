@@ -48,6 +48,7 @@
         display: none !important;
         list-style: none !important;
       }
+      
       &:hover {
         text-decoration: underline;
       }
@@ -64,6 +65,7 @@
         & > path {
           stroke: $color_nhsuk-white;
         }
+
         & > circle {
           fill: $color_nhsuk-black;
         }
@@ -94,6 +96,7 @@
       display: block;
       border-bottom: 3px solid transparent;
       border-top: 3px solid transparent;
+
       &:hover {
         color: $nhsuk-focus-text-color;
         background-color: $nhsuk-focus-color;
@@ -102,7 +105,7 @@
       &:active {
         color: $nhsuk-focus-text-color;
         background-color: $nhsuk-focus-color;
-        padding-bottom: 0px;
+        padding-bottom: 0;
         border-bottom: 3px solid $color_nhsuk-black;
       }
     }

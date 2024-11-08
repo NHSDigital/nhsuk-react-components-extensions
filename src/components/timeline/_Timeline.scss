@@ -5,7 +5,7 @@
   position: relative;
 }
 
-.nhsuk-timeline:before {
+.nhsuk-timeline::before {
   background-color: $color_nhsuk-blue;
   content: '';
   height: 100%;
@@ -19,7 +19,7 @@
   margin-bottom: 0;
 }
 
-.nhsuk-timeline--full:before {
+.nhsuk-timeline--full::before {
   height: calc(100% - 75px);
 }
 
@@ -29,7 +29,7 @@
   position: relative;
 }
 
-.nhsuk-timeline__event:before {
+.nhsuk-timeline__event::before {
   background-color: $color_nhsuk-blue;
   content: '';
   height: 5px;
