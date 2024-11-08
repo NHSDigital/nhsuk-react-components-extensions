@@ -12735,10 +12735,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nhsuk-frontend@npm:^6.0.0":
-  version: 6.2.0
-  resolution: "nhsuk-frontend@npm:6.2.0"
-  checksum: 10c0/7583f9f8add496ee89fc936b8b06f244deb57d317d674fd987de2ec66ccea874918ffff62b9cad940fa99e9c69fdd1cf4201e038a47d09ad7a0ea03b3a456d35
+"nhsuk-frontend@npm:^7.0.0":
+  version: 7.1.0
+  resolution: "nhsuk-frontend@npm:7.1.0"
+  checksum: 10c0/90cc8bd1de1db24aa12966a50800b683c147812421eef37f986dacfa3992b4e96159b3b01c812a914699539c070b39cc756bd1cf140f4f0f0c6908faef5da391
   languageName: node
   linkType: hard
 
@@ -12780,7 +12780,7 @@ __metadata:
     eslint-plugin-react: "npm:^7.37.2"
     eslint-plugin-react-hooks: "npm:^5.0.0"
     jest: "npm:^29.7.0"
-    nhsuk-frontend: "npm:^6.0.0"
+    nhsuk-frontend: "npm:^7.0.0"
     nhsuk-react-components: "npm:^3.0.0"
     node-sass: "npm:^9.0.0"
     node-sass-tilde-importer: "npm:^1.0.2"
@@ -12792,6 +12792,7 @@ __metadata:
     rollup: "npm:^1.21.4"
     rollup-plugin-sass: "npm:^1.2.2"
     rollup-plugin-typescript2: "npm:^0.26.0"
+    sass: "npm:^1.80.6"
     sass-loader: "npm:^16.0.0"
     stylelint: "npm:^16.10.0"
     stylelint-config-sass-guidelines: "npm:^12.1.0"
@@ -15399,7 +15400,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.7.2":
+"sass@npm:^1.7.2, sass@npm:^1.80.6":
   version: 1.80.6
   resolution: "sass@npm:1.80.6"
   dependencies:

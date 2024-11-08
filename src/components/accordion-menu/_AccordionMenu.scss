@@ -1,3 +1,5 @@
+@import '../../../node_modules/nhsuk-frontend/packages/core/settings/all';
+@import '../../../node_modules/nhsuk-frontend/packages/core/tools/all';
 @import '../../styles/variables';
 
 .nhsuk-accordion-menu {
@@ -20,6 +22,7 @@
     }
 
     &-summary {
+      // 3363 - put these back in, they were giving undefined mixin failures
       @include nhsuk-responsive-padding(2, 'top');
       @include nhsuk-responsive-padding(2, 'bottom');
       @include nhsuk-responsive-padding(4, 'left');

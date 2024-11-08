@@ -1,11 +1,16 @@
 @import '../../styles/variables';
+// 3363 - for some reason, having an @import gives "undefined mixin" error below
+// see comments here https://stackoverflow.com/questions/66365150/when-importing-a-file-with-use-then-error-undefined-mixin
+@import '../../../node_modules/nhsuk-frontend/packages/core/generic/font-face';
+// @import '../../../node_modules/nhsuk-frontend/packages/core/generic/font-face';
 
 /* ==========================================================================
    #TAG
    ========================================================================== */
 
 .nhsuk-tag {
-  @include nhsuk-font($size: 16, $weight: bold, $line-height: 1);
+  // @include _nhsuk-font($size: 16, $weight: bold, $line-height: 1);
+  // @include _nhsuk-font-face-frutiger();
   background-color: shade($color_nhsuk-blue, 10%);
   color: $color_nhsuk-white;
   display: inline-block;
