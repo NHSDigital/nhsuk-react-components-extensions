@@ -12735,10 +12735,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nhsuk-frontend@npm:^7.0.0":
-  version: 7.1.0
-  resolution: "nhsuk-frontend@npm:7.1.0"
-  checksum: 10c0/90cc8bd1de1db24aa12966a50800b683c147812421eef37f986dacfa3992b4e96159b3b01c812a914699539c070b39cc756bd1cf140f4f0f0c6908faef5da391
+"nhsuk-frontend@npm:^9.0.0":
+  version: 9.1.0
+  resolution: "nhsuk-frontend@npm:9.1.0"
+  checksum: 10c0/19629ae1592545c4b316ee86a33947b0f5baeb637988712180538fa90c6299302105d1fb54ee51e8c5ffff62a2423576162907937fe1ab2baad71b2bdc3d861d
   languageName: node
   linkType: hard
 
@@ -12780,7 +12780,7 @@ __metadata:
     eslint-plugin-react: "npm:^7.37.2"
     eslint-plugin-react-hooks: "npm:^5.0.0"
     jest: "npm:^29.7.0"
-    nhsuk-frontend: "npm:^7.0.0"
+    nhsuk-frontend: "npm:^9.0.0"
     nhsuk-react-components: "npm:^3.0.0"
     node-sass: "npm:^9.0.0"
     node-sass-tilde-importer: "npm:^1.0.2"
