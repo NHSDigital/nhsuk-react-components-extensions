@@ -1,8 +1,11 @@
-@import '../../styles/variables';
+@use '../../styles/variables';
 // 3363 - for some reason, having an @import gives "undefined mixin" error below
 // see comments here https://stackoverflow.com/questions/66365150/when-importing-a-file-with-use-then-error-undefined-mixin
-@import '../../../node_modules/nhsuk-frontend/packages/core/generic/font-face';
+@use '../../../node_modules/nhsuk-frontend/packages/core/generic/font-face';
 // @import '../../../node_modules/nhsuk-frontend/packages/core/generic/font-face';
+
+@use '../../../node_modules/nhsuk-frontend/packages/core/settings/colours';
+
 
 /* ==========================================================================
    #TAG
@@ -11,8 +14,8 @@
 .nhsuk-tag {
   // @include _nhsuk-font($size: 16, $weight: bold, $line-height: 1);
   // @include _nhsuk-font-face-frutiger();
-  background-color: shade($color_nhsuk-blue, 10%);
-  color: $color_nhsuk-white;
+  background-color: shade(colours.$color_nhsuk-blue, 10%);
+  color: colours.$color_nhsuk-white;
   display: inline-block;
   letter-spacing: 1px;
   outline: 2px solid transparent;
@@ -23,53 +26,53 @@
   text-transform: uppercase;
 
   &--white {
-    background-color: $color_nhsuk-white;
-    border: 1px solid $color_nhsuk-black;
-    color: $color_nhsuk-black;
+    background-color: colours.$color_nhsuk-white;
+    border: 1px solid colours.$color_nhsuk-black;
+    color: colours.$color_nhsuk-black;
   }
 
   &--grey {
-    background-color: tint($color_nhsuk-grey-1, 80%);
-    color: shade($color_nhsuk-grey-1, 30%);
+    background-color: tint(colours.$color_nhsuk-grey-1, 80%);
+    color: shade(colours.$color_nhsuk-grey-1, 30%);
   }
 
   &--green {
-    background-color: tint($color_nhsuk-green, 80%);
-    color: shade($color_nhsuk-green, 40%);
+    background-color: tint(colours.$color_nhsuk-green, 80%);
+    color: shade(colours.$color_nhsuk-green, 40%);
   }
 
   &--aqua-green {
-    background-color: tint($color_nhsuk-aqua-green, 80%);
-    color: shade($color_nhsuk-aqua-green, 50%);
+    background-color: tint(colours.$color_nhsuk-aqua-green, 80%);
+    color: shade(colours.$color_nhsuk-aqua-green, 50%);
   }
 
   &--blue {
-    background-color: tint($color_nhsuk-blue, 80%);
-    color: shade($color_nhsuk-blue, 30%);
+    background-color: tint(colours.$color_nhsuk-blue, 80%);
+    color: shade(colours.$color_nhsuk-blue, 30%);
   }
 
   &--purple {
-    background-color: tint($color_nhsuk-purple, 80%);
-    color: shade($color_nhsuk-purple, 30%);
+    background-color: tint(colours.$color_nhsuk-purple, 80%);
+    color: shade(colours.$color_nhsuk-purple, 30%);
   }
 
   &--pink {
-    background-color: tint($color_nhsuk-pink, 80%);
-    color: shade($color_nhsuk-pink, 50%);
+    background-color: tint(colours.$color_nhsuk-pink, 80%);
+    color: shade(colours.$color_nhsuk-pink, 50%);
   }
 
   &--red {
-    background-color: tint($color_nhsuk-red, 80%);
-    color: shade($color_nhsuk-red, 50%);
+    background-color: tint(colours.$color_nhsuk-red, 80%);
+    color: shade(colours.$color_nhsuk-red, 50%);
   }
 
   &--orange {
-    background-color: tint($color_nhsuk-warm-yellow, 50%);
-    color: shade($color_nhsuk-warm-yellow, 70%);
+    background-color: tint(colours.$color_nhsuk-warm-yellow, 50%);
+    color: shade(colours.$color_nhsuk-warm-yellow, 70%);
   }
 
   &--yellow {
-    background-color: tint($color_nhsuk-yellow, 50%);
-    color: shade($color_nhsuk-yellow, 70%);
+    background-color: tint(colours.$color_nhsuk-yellow, 50%);
+    color: shade(colours.$color_nhsuk-yellow, 70%);
   }
 }

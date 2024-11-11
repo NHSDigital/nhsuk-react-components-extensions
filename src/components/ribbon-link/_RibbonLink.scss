@@ -1,4 +1,7 @@
-@import '../../styles/variables';
+@use 'sass:color';
+// 3633 - change to @import
+@use '../../styles/variables';
+
 
 .nhsuk-ribbon-link {
   @include nhsuk-responsive-padding(2, 'top');
@@ -12,7 +15,7 @@
   font-weight: $nhsuk-font-bold;
   align-items: center;
   justify-content: flex-start;
-  border: none;
+  border: 0;
   border-bottom: 4px solid;
   width: 100%;
   border-radius: 4px;
@@ -31,7 +34,7 @@
   &:active {
     text-decoration: none;
     margin-top: 4px;
-    border-bottom: 0px solid;
+    border-bottom: 0;
   }
 
   &::-moz-focus-inner {
@@ -48,12 +51,12 @@
     background-color: $color_nhsuk-white;
     color: $color_nhsuk-blue;
 
-    & > svg {
+    > svg {
       fill: $color_nhsuk-blue;
     }
 
     &:hover {
-      background-color: darken($color_nhsuk-white, 5);
+      background-color: color.adjust($color_nhsuk-white, $lightness: -5%);
       color: $color_nhsuk-purple;
     }
 
@@ -62,17 +65,17 @@
       color: $color_nhsuk-black;
       border-bottom-color: $color_nhsuk-black;
 
-      & > svg {
+      > svg {
         fill: $color_nhsuk-black;
       }
     }
 
     &:active {
       color: $color_nhsuk-white;
-      background-color: darken($color_nhsuk-blue, 10);
-      border-left-color: darken($color_nhsuk-blue, 10);
+      border-bottom-color: color.adjust($color_nhsuk-blue, $lightness: -10%);
+      border-left-color: color.adjust($color_nhsuk-blue, $lightness: -10%);
 
-      & > svg {
+      > svg {
         fill: $color_nhsuk-white;
         margin-left: none;
       }
@@ -80,11 +83,11 @@
   }
 
   &--mild {
-    border-bottom-color: darken($color_nhsuk-warm-yellow, 10);
+    border-bottom-color: color.adjust($color_nhsuk-warm-yellow, $lightness: -10%);
     background-color: $color_nhsuk-warm-yellow;
     color: $color_nhsuk-black;
 
-    & > svg {
+    > svg {
       fill: $color_nhsuk-black;
     }
 
@@ -93,7 +96,7 @@
       color: $color_nhsuk-white;
       border-bottom-color: $color_shade_nhsuk-blue-20;
 
-      & > svg {
+      > svg {
         fill: $color_nhsuk-white;
       }
     }
@@ -103,7 +106,7 @@
       color: $color_nhsuk-white;
       border-bottom-color: $color_shade_nhsuk-blue-35;
 
-      & > svg {
+      > svg {
         fill: $color_nhsuk-white;
       }
     }
@@ -113,25 +116,25 @@
       color: $color_nhsuk-white;
       border-bottom-color: $color_shade_nhsuk-blue-35;
 
-      & > svg {
+      > svg {
         fill: $color_nhsuk-white;
       }
     }
   }
 
   &--hot {
-    border-bottom-color: darken($color_nhsuk-red, 10);
+    border-bottom-color: color.adjust($color_nhsuk-red, $lightness: -10%);
     background-color: $color_nhsuk-red;
     color: $color_nhsuk-white;
 
-    & > svg {
+    > svg {
       fill: $color_nhsuk-white;
     }
 
     &:hover {
-      background-color: darken($color_nhsuk-red, 5);
+      background-color: color.adjust($color_nhsuk-red, $lightness: -5%);
 
-      & > svg {
+      > svg {
         fill: $color_nhsuk-white;
       }
     }
@@ -141,17 +144,17 @@
       color: $color_nhsuk-black;
       border-bottom-color: $color_nhsuk-black;
 
-      & > svg {
+      > svg {
         fill: $color_nhsuk-black;
       }
     }
 
     &:active {
-      background-color: darken($color_nhsuk-red, 10);
+      background-color: color.adjust($color_nhsuk-red, $lightness: -10%);
       color: $color_nhsuk-white;
       border-bottom-color: $color_shade_nhsuk-blue-35;
 
-      & > svg {
+      > svg {
         fill: $color_nhsuk-white;
       }
     }

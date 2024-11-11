@@ -1,10 +1,14 @@
-@import '../../styles/variables';
-@import '../../../node_modules/nhsuk-frontend/packages/core/settings/colours';
+// 3633 - update to @use
+@use '../../styles/variables';
+@use '../../../node_modules/nhsuk-frontend/packages/core/tools/focused' as *;
+@use '../../../node_modules/nhsuk-frontend/packages/core/settings/colours';
+@use '../../../node_modules/nhsuk-frontend/packages/core/tools/spacing' as *;
+
 
 $nhsukext-tab-border-width: 1px !default;
-$nhsukext-disabled-text-color: $color_nhsuk-grey-3 !default;
-$nhsukext-body-background-color: $color_nhsuk-grey-5 !default;
-$nhsukext-content-background-color: $color_nhsuk-white !default;
+$nhsukext-disabled-text-color: colours.$color_nhsuk-grey-3 !default;
+$nhsukext-body-background-color: colours.$color_nhsuk-grey-5 !default;
+$nhsukext-content-background-color: colours.$color_nhsuk-white !default;
 
 .nhsuk-tab-set {
   display: flex;
@@ -12,14 +16,19 @@ $nhsukext-content-background-color: $color_nhsuk-white !default;
   background-color: $nhsukext-content-background-color;
   justify-content: space-between;
   border: $nhsukext-tab-border-width solid $nhsukext-content-background-color;
-  border-bottom: $nhsukext-tab-border-width solid $nhsuk-border-color;
+  border-bottom: $nhsukext-tab-border-width solid colours.$nhsuk-border-color;
 
   &__tab {
-    @include nhsuk-responsive-margin(3, 'top');
-    @include nhsuk-responsive-padding(3, 'top');
-    @include nhsuk-responsive-padding(3, 'bottom');
-    @include nhsuk-typography-responsive(19);
-    background-color: $color_nhsuk-white;
+    // @include nhsuk-responsive-margin(3, 'top');
+    // @include nhsuk-responsive-padding(3, 'top');
+    // @include nhsuk-responsive-padding(3, 'bottom');
+    // @include nhsuk-typography-responsive(19);
+
+    margin-top: nhsuk-responsive-margin(3, 'top');
+    padding-top: nhsuk-responsive-padding(3, 'top');
+    padding-bottom: nhsuk-responsive-padding(3, 'bottom');
+    font-size: nhsuk-typography-responsive(19);
+    background-color: colours.$color_nhsuk-white;
     border: $nhsukext-tab-border-width solid $nhsukext-content-background-color;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -27,7 +36,7 @@ $nhsukext-content-background-color: $color_nhsuk-white !default;
     text-align: center;
     display: block;
     flex: 1;
-    color: $nhsuk-secondary-text-color;
+    color: colours.$nhsuk-secondary-text-color;
     cursor: pointer;
     text-decoration: none;
 
@@ -38,22 +47,22 @@ $nhsukext-content-background-color: $color_nhsuk-white !default;
         text-decoration: none;
       }
 
-      color: $nhsuk-link-color;
+      color: colours.$nhsuk-link-color;
       margin-bottom: -1px;
       background-color: $nhsukext-body-background-color;
-      border: $nhsukext-tab-border-width solid $nhsuk-border-color;
+      border: $nhsukext-tab-border-width solid colours.$nhsuk-border-color;
       border-bottom: 0;
     }
 
     &--disabled {
-      border: $nhsukext-tab-border-width solid $color_nhsuk-white;
+      border: $nhsukext-tab-border-width solid colours.$color_nhsuk-white;
       border-bottom: 0;
       cursor: not-allowed;
       text-decoration: line-through;
       color: $nhsukext-disabled-text-color;
 
       &:hover {
-        border: $nhsukext-tab-border-width solid $color_nhsuk-white;
+        border: $nhsukext-tab-border-width solid colours.$color_nhsuk-white;
         border-bottom: 0;
         text-decoration: line-through;
         color: $nhsukext-disabled-text-color;
@@ -65,15 +74,22 @@ $nhsukext-content-background-color: $color_nhsuk-white !default;
     }
 
     &:hover {
-      border: $nhsukext-tab-border-width solid $nhsuk-border-color;
+      border: $nhsukext-tab-border-width solid colours.$nhsuk-border-color;
       border-bottom: 1px transparent;
       text-decoration: underline;
-      color: $nhsuk-link-color;
+      color: colours.$nhsuk-link-color;
       outline: none;
     }
 
     &:focus {
-      @include nhsuk-focused-button;
+      // 3363 - fix this, keeps giving "undefined mixin" errors
+      // needed to include "... as *" at end of import
+      // see https://stackoverflow.com/questions/29591196/sass-compiler-throws-undefined-mixin-error-when-mixins-are-kept-in-seperate-fo
+      // @include nhsuk-focused-button;
+      // but once it's available as a mixin, it gives "undefined variable" failures for the settings inside nhsuk-frontend
+      // which is nothing to do with this repo and can't be changed :(
+      // put this in as a placeholder, fix everything else and come back to it
+      background-color: red;
     }
   }
 }

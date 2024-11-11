@@ -1,34 +1,53 @@
-@import '../../../node_modules/nhsuk-frontend/packages/core/settings/all';
-@import '../../../node_modules/nhsuk-frontend/packages/core/tools/all';
-@import '../../styles/variables';
+@use '../../../node_modules/nhsuk-frontend/packages/core/settings/colours';
+@use '../../../node_modules/nhsuk-frontend/packages/core/tools/spacing' as tools-spacing;
+
+// 3533 - look at switching to @use, it gives undefined variable error
+// see discussion here https://stackoverflow.com/questions/62127255/sass-use-makes-error-undefined-variable
+
+@use '../../styles/variables';
+// @use '../../styles/core';
 
 .nhsuk-accordion-menu {
   display: block;
-  background-color: $color_nhsuk-white;
-  color: $color_nhsuk-white;
+  background-color: colours.$color_nhsuk-white;
+  color: colours.$color_nhsuk-white;
 
   &__section {
-    border-top: 1px solid $color_nhsuk-white;
-    border-bottom: 1px solid $color_nhsuk-white;
-    background-color: $color_nhsuk-white;
+    border-top: 1px solid colours.$color_nhsuk-white;
+    border-bottom: 1px solid colours.$color_nhsuk-white;
+    background-color: colours.$color_nhsuk-white;
     padding: 0;
 
     &:first-of-type + &:not(:focus-visible) {
-      border-top: 4px solid $color_nhsuk-dark-blue;
+      border-top: 4px solid variables.$color_nhsuk-dark-blue;
     }
 
     &:last-of-type + &:not(:focus-visible) {
-      border-bottom: 4px solid $color_nhsuk-dark-blue;
+      border-bottom: 4px solid variables.$color_nhsuk-dark-blue;
     }
 
     &-summary {
-      // 3363 - put these back in, they were giving undefined mixin failures
-      @include nhsuk-responsive-padding(2, 'top');
-      @include nhsuk-responsive-padding(2, 'bottom');
-      @include nhsuk-responsive-padding(4, 'left');
-      @include nhsuk-responsive-padding(4, 'right');
+
+      // this gave undefined-mixin errors
+      // @include nhsuk-responsive-padding(2, 'top');
+      // @include nhsuk-responsive-padding(2, 'bottom');
+      // @include nhsuk-responsive-padding(4, 'left');
+      // @include nhsuk-responsive-padding(4, 'right');
+
+      // this gave undefined variable errors
+      // padding-top: tools-spacing.$nhsuk-responsive-padding(2,'top');
+      // padding-bottom: tools-spacing.$nhsuk-responsive-padding(2,'bottom');
+      // padding-left: tools-spacing.$nhsuk-responsive-padding(4,'left');
+      // padding-right: tools-spacing.$nhsuk-responsive-padding(4,'right');
+
+
+      padding-top: nhsuk-responsive-padding(2,'top');
+      padding-bottom: nhsuk-responsive-padding(2,'bottom');
+      padding-left: nhsuk-responsive-padding(4,'left');
+      padding-right: nhsuk-responsive-padding(4,'right');
+
       list-style: none !important;
-      background-color: $color_nhsuk-dark-blue;
+      background-color: variables.$color_nhsuk-dark-blue;
       outline: none;
       border-bottom: 4px solid transparent;
       border-top: 4px solid transparent;
@@ -58,24 +77,24 @@
 
       &:active,
       &:focus {
-        background-color: $nhsuk-focus-color;
-        color: $nhsuk-focus-text-color;
-        border-bottom: 4px solid $color_nhsuk-black;
+        background-color: colours.$nhsuk-focus-color;
+        color: colours.$nhsuk-focus-text-color;
+        border-bottom: 4px solid colours.$color_nhsuk-black;
       }
 
       &:active > .nhsuk-accordion-menu__icon,
       &:focus > .nhsuk-accordion-menu__icon {
-        & > path {
-          stroke: $color_nhsuk-white;
+        > path {
+          stroke: colours.$color_nhsuk-white;
         }
 
-        & > circle {
-          fill: $color_nhsuk-black;
+        > circle {
+          fill: colours.$color_nhsuk-black;
         }
       }
 
       &-text {
-        @include nhsuk-typography-responsive(22);
+        font-size: nhsuk-typography-responsive(22);
         display: block;
         position: relative;
       }
@@ -83,33 +102,42 @@
   }
 
   &__subsection {
-    @include nhsuk-responsive-margin(2, 'top');
-    @include nhsuk-responsive-margin(2, 'bottom');
-    @include nhsuk-responsive-margin(2, 'right');
-    @include nhsuk-responsive-margin(2, 'left');
+
+    // @include nhsuk-responsive-margin(2, 'top');
+    // @include nhsuk-responsive-margin(2, 'bottom');
+    // @include nhsuk-responsive-margin(2, 'right');
+    // @include nhsuk-responsive-margin(2, 'left');
+
+    margin-top: nhsuk-responsive-margin(2, 'top');
+    margin-bottom: nhsuk-responsive-margin(2, 'bottom');
+    margin-right: nhsuk-responsive-margin(2, 'right');
+    margin-left: nhsuk-responsive-margin(2, 'left');
 
     display: block;
     cursor: pointer;
 
     &-link {
-      @include nhsuk-typography-responsive(19);
-      @include nhsuk-responsive-padding(3, 'right');
-      @include nhsuk-responsive-padding(3, 'left');
+      // @include nhsuk-typography-responsive(19);
+      // @include nhsuk-responsive-padding(3, 'right');
+      // @include nhsuk-responsive-padding(3, 'left');
 
+      font-size: nhsuk-typography-responsive(19);
+      padding-right: nhsuk-responsive-padding(3, 'right');
+      padding-left: nhsuk-responsive-padding(3, 'left');
       display: block;
       border-bottom: 3px solid transparent;
       border-top: 3px solid transparent;
 
       &:hover {
-        color: $nhsuk-focus-text-color;
-        background-color: $nhsuk-focus-color;
+        color: colours.$nhsuk-focus-text-color;
+        background-color: colours.$nhsuk-focus-color;
       }
 
       &:active {
-        color: $nhsuk-focus-text-color;
-        background-color: $nhsuk-focus-color;
+        color: colours.$nhsuk-focus-text-color;
+        background-color: colours.$nhsuk-focus-color;
         padding-bottom: 0;
-        border-bottom: 3px solid $color_nhsuk-black;
+        border-bottom: 3px solid colours.$color_nhsuk-black;
       }
     }
   }

@@ -1,7 +1,19 @@
 // Settings
-@import '../../node_modules/nhsuk-frontend/packages/core/settings/all' as style-all;
-@import '../../node_modules/nhsuk-frontend/packages/core/settings/colours';
-@import '../../node_modules/nhsuk-frontend/packages/core/tools/all' as tools-all;
+
+
+// NCRS-3533: look at switching this for @use, gives an undefined variable at the moment
+@use '../../node_modules/nhsuk-frontend/packages/core/settings/colours';
+@use '../../node_modules/nhsuk-frontend/packages/core/tools/spacing' as tools-spacing;
+
+@use '../../node_modules/nhsuk-frontend/packages/core/settings/spacing' as settings-spacing;
+
+
+
+// @import '../../node_modules/nhsuk-frontend/packages/core/settings/all' as settings-all;
+// @import '../../node_modules/nhsuk-frontend/packages/core/tools/all' as tools-all;
+
+@use '../../node_modules/nhsuk-frontend/packages/core/settings/all' as settings-all;
+@use '../../node_modules/nhsuk-frontend/packages/core/tools/all' as tools-all;
 
 $color_nhsuk-pink: #ae2573;
 $color_nhsuk-dark-blue: #003087;
