@@ -16,8 +16,10 @@
 
 // Masked Input Depends on standard Input Styling - Include here and
 // not in the components.scss
-@use '../node_modules/nhsuk-frontend/packages/components/error-message/error-message';
-@use '../node_modules/nhsuk-frontend/packages/components/label/label';
-@use '../node_modules/nhsuk-frontend/packages/components/hint/hint';
-@use '../node_modules/nhsuk-frontend/packages/components/input/input';
+// 3363 - these were giving undefined mixin failures further up the chain
+// look at and fix
+// @use '../node_modules/nhsuk-frontend/packages/components/error-message/error-message';
+// @use '../node_modules/nhsuk-frontend/packages/components/label/label';
+// @use '../node_modules/nhsuk-frontend/packages/components/hint/hint';
+// @use '../node_modules/nhsuk-frontend/packages/components/input/input';
 

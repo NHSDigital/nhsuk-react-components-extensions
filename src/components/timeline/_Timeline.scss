@@ -1,5 +1,7 @@
 // 3633 - change to @use
 @use '../../styles/variables';
+@use '../../../node_modules/nhsuk-frontend/packages/core/settings/all' as settings;
+
 
 .nhsuk-timeline {
   overflow: hidden;
@@ -7,7 +9,7 @@
 }
 
 .nhsuk-timeline::before {
-  background-color: $color_nhsuk-blue;
+  background-color: settings.$color_nhsuk-blue;
   content: '';
   height: 100%;
   left: 0;
@@ -25,13 +27,15 @@
 }
 
 .nhsuk-timeline__event {
-  @include nhsuk-responsive-padding(5, 'bottom');
-  @include nhsuk-responsive-padding(4, 'left');
+  // @include nhsuk-responsive-padding(5, 'bottom');
+  // @include nhsuk-responsive-padding(4, 'left');
+  padding-bottom: nhsuk-responsive-padding(5, 'bottom');
+  padding-left: nhsuk-responsive-padding(4, 'left');
   position: relative;
 }
 
 .nhsuk-timeline__event::before {
-  background-color: $color_nhsuk-blue;
+  background-color: settings.$color_nhsuk-blue;
   content: '';
   height: 5px;
   left: 0;
@@ -41,24 +45,29 @@
 }
 
 .nhsuk-timeline__title {
-  @include nhsuk-typography-responsive(19);
+  // @include nhsuk-typography-responsive(19);
+  font-size: nhsuk-typography-responsive(19);
   display: inline;
 }
 
 .nhsuk-timeline__by {
-  @include nhsuk-typography-responsive(19);
-  font-weight: $nhsuk-font-normal;
+  // @include nhsuk-typography-responsive(19);
+  font-size: nhsuk-typography-responsive(19);
+  font-weight: settings.$nhsuk-font-normal;
   display: inline;
   margin: 0;
 }
 
 .nhsuk-timeline__date {
-  @include nhsuk-typography-responsive(16);
-  @include nhsuk-responsive-margin(1, 'top');
+  // @include nhsuk-typography-responsive(16);
+  font-size: nhsuk-typography-responsive(16);
+  // @include nhsuk-responsive-margin(1, 'top');
+  margin: nhsuk-responsive-margin(1, 'top');
   margin-bottom: 0;
 }
 
 .nhsuk-timeline__description-item {
-  @include nhsuk-typography-responsive(16);
+  // @include nhsuk-typography-responsive(16);
+  font-size: nhsuk-typography-responsive(16);
   margin-bottom: 0;
 }
