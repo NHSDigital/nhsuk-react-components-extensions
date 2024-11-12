@@ -11,4 +11,5 @@ module.exports = {
   moduleNameMapper: {
     '\\.(css|scss)$': '<rootDir>/src/__mocks__/styleMock.ts',
   },
+  testEnvironment: 'jest-environment-jsdom'
 };
