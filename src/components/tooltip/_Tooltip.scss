@@ -1,5 +1,6 @@
 // 3633 - change to @use
 @use '../../styles/variables';
+@use '../../../node_modules/nhsuk-frontend/packages/core/settings/colours';
 
 .nhsuk-tooltip {
   display: inline-block;
@@ -18,11 +19,11 @@
     z-index: 1000;
     margin-left: -100px;
     border-radius: 4px;
-    background-color: $color_nhsuk-black;
+    background-color: colours.$color_nhsuk-black;
     padding: 5px;
     width: 200px;
     text-align: center;
-    color: $color_nhsuk-white;
+    color: colours.$color_nhsuk-white;
 
     &::after {
       position: absolute;
@@ -31,7 +32,7 @@
       margin-left: -5px;
       border-width: 5px;
       border-style: solid;
-      border-color: $color_nhsuk-black transparent transparent transparent; // sass-lint:disable-line variable-name-format
+      border-color: colours.$color_nhsuk-black transparent transparent transparent; // sass-lint:disable-line variable-name-format
       content: ' ';
     }
   }
