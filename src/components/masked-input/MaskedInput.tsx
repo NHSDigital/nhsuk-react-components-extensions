@@ -1,9 +1,6 @@
 import React, { HTMLProps } from 'react';
 // note to self - removing this and just having 'nhsuk-react-components' leads to error
 // "JSX element type 'FormGroup' does not have any construct or call signatures"
-// import FormGroup from 'nhsuk-react-components/dist/esm/util/FormGroup';
-// import { FormElementProps } from 'nhsuk-react-components/dist/esm/util/types/FormTypes';
-// import { InputWidth } from 'nhsuk-react-components/dist/esm/util/types/NHSUKTypes';
 import FormGroup from 'nhsuk-react-components/dist/lib/util/FormGroup';
 import { FormElementProps } from 'nhsuk-react-components/dist/lib/util/types/FormTypes';
 import { InputWidth } from 'nhsuk-react-components/dist/lib/util/types/NHSUKTypes';
