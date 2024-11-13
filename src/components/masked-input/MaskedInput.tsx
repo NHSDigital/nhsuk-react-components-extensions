@@ -25,29 +25,6 @@ FormElementProps & {
   ref?: InputMaskRef;
 };
 
-// const myFormGroup = ()=>{
-//   return(
-//     <FormGroup/>
-//   )
-// }
-
-// const MaskedInput: React.FC<MaskedInputProps> = (props) => (
-//   <FormGroup<MaskedInputProps> inputType="input" {...props}>
-//     {({ className, width, error, ref, ...rest }:any) => {
-//       return(
-//       <InputMask
-//         className={classNames(
-//           'nhsuk-input',
-//           { [`nhsuk-input--width-${width}`]: width },
-//           { 'nhsuk-input--error': error },
-//           className,
-//         )}
-//         {...rest}
-//       />
-//     )}}
-//   </FormGroup>
-// );
-
 const MaskedInput: React.FC<MaskedInputProps> = props => (
   <FormGroup<MaskedInputProps> inputType="input" {...props}>
     {({ className, width, error, ref, ...rest }) => (

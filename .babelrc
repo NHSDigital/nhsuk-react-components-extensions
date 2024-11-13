@@ -5,5 +5,5 @@
     "@babel/proposal-class-properties",
     "@babel/proposal-object-rest-spread"
   ],
-  "ignore": ["**/__tests__/*", "*/__mocks__/*", "*/setupTests.ts"]
+  "ignore": ["**/__tests__/*", "*/__mocks__/*"]
 }

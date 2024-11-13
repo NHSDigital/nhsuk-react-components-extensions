@@ -1,11 +1,12 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react'
+
 import { WarningIcon } from '..';
 
 describe('WarningIcon', () => {
+  // 3363 - check snapshots
   it('matches snapshot', () => {
-    const component = shallow(<WarningIcon />);
+    const component = render(<WarningIcon />);
     expect(component).toMatchSnapshot();
-    component.unmount();
   });
 });

@@ -89,4 +89,4 @@ describe('AccordionMenu', () => {
       expect(component.container.textContent).toBe('Test');
     });
   });
-});
+// });
