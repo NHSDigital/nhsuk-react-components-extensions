@@ -1,5 +1,4 @@
 import React from 'react';
-// import { shallow, mount } from 'enzyme';
 import {render} from '@testing-library/react'
 import TabSet from '..';
 

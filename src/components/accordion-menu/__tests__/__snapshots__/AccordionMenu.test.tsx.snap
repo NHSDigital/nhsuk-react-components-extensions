@@ -1,42 +1,290 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AccordionMenu Link matches snapshot 1`] = `
-<div
-  className="nhsuk-accordion-menu__subsection"
->
-  <a
-    className="nhsuk-accordion-menu__subsection-link"
-  >
-    Test
-  </a>
-</div>
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="nhsuk-accordion-menu__subsection"
+      >
+        <a
+          class="nhsuk-accordion-menu__subsection-link"
+        >
+          Test
+        </a>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="nhsuk-accordion-menu__subsection"
+    >
+      <a
+        class="nhsuk-accordion-menu__subsection-link"
+      >
+        Test
+      </a>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`AccordionMenu Section matches snapshot 1`] = `
-<details
-  className="nhsuk-accordion-menu__section"
-  open={false}
->
-  <summary
-    className="nhsuk-accordion-menu__section-summary"
-    onClick={[Function]}
-    role="tab"
-    tabIndex={1}
-  >
-    <span
-      className="nhsuk-accordion-menu__section-summary-text"
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <details
+        class="nhsuk-accordion-menu__section"
+      >
+        <summary
+          class="nhsuk-accordion-menu__section-summary"
+          role="tab"
+          tabindex="1"
+        >
+          <span
+            class="nhsuk-accordion-menu__section-summary-text"
+          >
+            TestHeading
+          </span>
+          <svg
+            aria-hidden="true"
+            class="nhsuk-accordion-menu__icon"
+            height="32"
+            viewBox="0 0 32 32"
+            width="32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="16"
+              cy="16"
+              fill="#ffffff"
+              r="16"
+            />
+            <path
+              d="M16 8v16M8 16h16"
+              fill="none"
+              stroke="#003087"
+              stroke-linecap="round"
+              stroke-miterlimit="10"
+              stroke-width="4"
+            />
+          </svg>
+        </summary>
+      </details>
+    </div>
+  </body>,
+  "container": <div>
+    <details
+      class="nhsuk-accordion-menu__section"
     >
-      TestHeading
-    </span>
-    <ToggleIcon
-      open={false}
-    />
-  </summary>
-</details>
+      <summary
+        class="nhsuk-accordion-menu__section-summary"
+        role="tab"
+        tabindex="1"
+      >
+        <span
+          class="nhsuk-accordion-menu__section-summary-text"
+        >
+          TestHeading
+        </span>
+        <svg
+          aria-hidden="true"
+          class="nhsuk-accordion-menu__icon"
+          height="32"
+          viewBox="0 0 32 32"
+          width="32"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="16"
+            cy="16"
+            fill="#ffffff"
+            r="16"
+          />
+          <path
+            d="M16 8v16M8 16h16"
+            fill="none"
+            stroke="#003087"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="4"
+          />
+        </svg>
+      </summary>
+    </details>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`AccordionMenu matches snapshot 1`] = `
-<div
-  className="nhsuk-accordion-menu"
-/>
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="nhsuk-accordion-menu"
+      />
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="nhsuk-accordion-menu"
+    />
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
