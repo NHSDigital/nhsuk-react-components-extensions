@@ -1,6 +1,6 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import Timeline from '../Timeline';
+import {render} from '@testing-library/react'
 import Event, { EventProps } from '../components/Event';
 import Tag from '../../tag/Tag';
 
@@ -57,99 +57,90 @@ const testEvents: EventProps[] = [
 
 describe('Timeline', () => {
   it('matches snapshot', () => {
-    const timeline = shallow(<Timeline events={testEvents} />);
+    // 3363 - check snapshots
+    const timeline = render(<Timeline events={testEvents} />);
 
     expect(timeline).toMatchSnapshot();
 
-    timeline.unmount();
   });
 
   it('should have correct classes applied', () => {
-    const timeline = shallow(<Timeline events={testEvents} />);
+    const timeline = render(<Timeline events={testEvents} />);
 
-    expect(timeline.hasClass('nhsuk-timeline')).toBeTruthy();
-
-    timeline.unmount();
+    expect(timeline.container.querySelector('.nhsuk-timeline')).toBeTruthy();
   });
 
   describe('Event', () => {
     it('matches snapshot', () => {
-      const event = shallow(<Event {...testEvents[0]} />);
+      const event = render(<Event {...testEvents[0]} />);
 
       expect(event).toMatchSnapshot();
 
-      event.unmount();
     });
 
     it('should have correct classes applied', () => {
-      const event = shallow(<Event {...testEvents[0]} />);
+      const event = render(<Event {...testEvents[0]} />);
 
-      expect(event.hasClass('nhsuk-timeline__event')).toBeTruthy();
+      expect(event.container.querySelector('.nhsuk-timeline__event')).toBeTruthy();
 
-      event.unmount();
     });
 
     it('should have correct title', () => {
-      const event = shallow(<Event {...testEvents[1]} />);
+      const event = render(<Event {...testEvents[1]} />);
 
-      expect(event.find('.nhsuk-timeline__title').text()).toBe('Patient deferred');
+      expect(event.container.querySelector('.nhsuk-timeline__title')?.textContent).toBe('Patient deferred');
 
-      event.unmount();
     });
 
     it('should have correct instigator if instigator data is present', () => {
-      const event = shallow(<Event {...testEvents[0]} />);
+      const event = render(<Event {...testEvents[0]} />);
 
-      expect(event.find('.nhsuk-timeline__by').exists()).toBeTruthy();
-      expect(event.find('.nhsuk-timeline__by').text()).toBe(` by ${eventInstigator}`);
+     expect(event.container.querySelector('.nhsuk-timeline__by')).toBeTruthy();
+      expect(event.container.querySelector('.nhsuk-timeline__by')?.textContent).toBe(` by ${eventInstigator}`);
 
-      event.unmount();
     });
 
     it('should not have instigator if instigator data is not present', () => {
-      const event = shallow(<Event {...testEvents[1]} />);
+      const event = render(<Event {...testEvents[1]} />);
 
-      expect(event.find('.nhsuk-timeline__by').exists()).toBeFalsy();
+      expect(event.container.querySelector('.nhsuk-timeline__by')).toBeFalsy();
 
-      event.unmount();
     });
 
     it('should have correct date', () => {
-      const event = shallow(<Event {...testEvents[0]} />);
+      const event = render(<Event {...testEvents[0]} />);
 
-      expect(event.find('.nhsuk-timeline__date time').text()).toBe(testEvents[0].date);
-
-      event.unmount();
+      expect(event.container.querySelector('.nhsuk-timeline__date time')?.textContent).toBe(testEvents[0].date);
     });
 
     it('has correct description items if description data is present', () => {
-      const event = shallow(<Event {...testEvents[0]} />);
+      const event = render(<Event {...testEvents[0]} />);
 
-      expect(event.find('.nhsuk-timeline__description-item').exists()).toBeTruthy();
+      expect(event.container.querySelector('.nhsuk-timeline__description-item')).toBeTruthy();
     });
 
     it('has no description items if description data is not present', () => {
-      const event = shallow(<Event {...testEvents[2]} />);
+      const event = render(<Event {...testEvents[2]} />);
 
-      expect(event.find('.nhsuk-timeline__description-item').exists()).toBeFalsy();
+      expect(event.container.querySelector('.nhsuk-timeline__description-item')).toBeFalsy();
     });
 
     it('has correct link text if action data is present', () => {
-      const event = shallow(<Event {...testEvents[0]} />);
+      const event = render(<Event {...testEvents[0]} />);
 
-      expect(event.find('.nhsuk-timeline__link').text()).toBe(actionLinkText);
+      expect(event.container.querySelector('.nhsuk-timeline__link')?.textContent).toBe(actionLinkText);
     });
 
     it('will show action if action data present', () => {
-      const event = shallow(<Event {...testEvents[0]} />);
+      const event = render(<Event {...testEvents[0]} />);
 
-      expect(event.find('.nhsuk-timeline__action').exists()).toBeTruthy();
+      expect(event.container.querySelector('.nhsuk-timeline__action')).toBeTruthy();
     });
 
     it('will not show action if no action data present', () => {
-      const event = shallow(<Event {...testEvents[1]} />);
+      const event = render(<Event {...testEvents[1]} />);
 
-      expect(event.find('.nhsuk-timeline__action').exists()).toBeFalsy();
+      expect(event.container.querySelector('.nhsuk-timeline__action')).toBeFalsy();
     });
   });
 });

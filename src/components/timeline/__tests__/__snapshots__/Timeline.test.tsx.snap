@@ -1,170 +1,537 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Timeline Event matches snapshot 1`] = `
-<div
-  className="nhsuk-timeline__event nhsuk-u-margin-bottom-2"
->
-  <h2
-    className="nhsuk-timeline__title"
-  >
-    <span
-      className="nhsuk-timeline__status"
-    >
-      Result sent
-    </span>
-    <span
-      className="nhsuk-timeline__by"
-    >
-       by 
-      System
-    </span>
-    <span
-      className="nhsuk-timeline__action"
-    >
-      <span
-        className="nhsuk-timeline__action"
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="nhsuk-timeline__event nhsuk-u-margin-bottom-2"
       >
-        -
-        <Tag
-          className="nhsuk-timeline__tag"
-          color="yellow"
+        <h2
+          class="nhsuk-timeline__title"
         >
-          Send to printer
-        </Tag>
-        <a
-          className="nhsuk-timeline__link"
-          href="/placeholder/"
+          <span
+            class="nhsuk-timeline__status"
+          >
+            Result sent
+          </span>
+          <span
+            class="nhsuk-timeline__by"
+          >
+             by 
+            System
+          </span>
+          <span
+            class="nhsuk-timeline__action"
+          >
+            <span
+              class="nhsuk-timeline__action"
+            >
+              -
+              <span
+                class="nhsuk-tag nhsuk-tag--yellow nhsuk-timeline__tag"
+              >
+                Send to printer
+              </span>
+              <a
+                class="nhsuk-timeline__link"
+                href="/placeholder/"
+              >
+                Cancel
+              </a>
+            </span>
+          </span>
+        </h2>
+        <p
+          class="nhsuk-timeline__date"
         >
-          Cancel
-        </a>
-      </span>
-    </span>
-  </h2>
-  <p
-    className="nhsuk-timeline__date"
-  >
-    <time
-      dateTime="19 Nov 2019, 7:49:10 pm"
+          <time
+            datetime="19 Nov 2019, 7:49:10 pm"
+          >
+            19 Nov 2019, 7:49:10 pm
+          </time>
+        </p>
+        <p
+          class="nhsuk-timeline__description-item"
+        >
+          Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised
+        </p>
+        <p
+          class="nhsuk-timeline__description-item"
+        >
+          Test Date: 19-Oct-2020, 9:00:00 am
+        </p>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="nhsuk-timeline__event nhsuk-u-margin-bottom-2"
     >
-      19 Nov 2019, 7:49:10 pm
-    </time>
-  </p>
-  <p
-    className="nhsuk-timeline__description-item"
-    key="0"
-  >
-    Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised
-  </p>
-  <p
-    className="nhsuk-timeline__description-item"
-    key="1"
-  >
-    Test Date: 19-Oct-2020, 9:00:00 am
-  </p>
-</div>
+      <h2
+        class="nhsuk-timeline__title"
+      >
+        <span
+          class="nhsuk-timeline__status"
+        >
+          Result sent
+        </span>
+        <span
+          class="nhsuk-timeline__by"
+        >
+           by 
+          System
+        </span>
+        <span
+          class="nhsuk-timeline__action"
+        >
+          <span
+            class="nhsuk-timeline__action"
+          >
+            -
+            <span
+              class="nhsuk-tag nhsuk-tag--yellow nhsuk-timeline__tag"
+            >
+              Send to printer
+            </span>
+            <a
+              class="nhsuk-timeline__link"
+              href="/placeholder/"
+            >
+              Cancel
+            </a>
+          </span>
+        </span>
+      </h2>
+      <p
+        class="nhsuk-timeline__date"
+      >
+        <time
+          datetime="19 Nov 2019, 7:49:10 pm"
+        >
+          19 Nov 2019, 7:49:10 pm
+        </time>
+      </p>
+      <p
+        class="nhsuk-timeline__description-item"
+      >
+        Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised
+      </p>
+      <p
+        class="nhsuk-timeline__description-item"
+      >
+        Test Date: 19-Oct-2020, 9:00:00 am
+      </p>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
 
 exports[`Timeline matches snapshot 1`] = `
-<div
-  className="nhsuk-timeline"
->
-  <Event
-    action={
-      <span
-        className="nhsuk-timeline__action"
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="nhsuk-timeline"
       >
-        -
-        <Tag
-          className="nhsuk-timeline__tag"
-          color="yellow"
+        <div
+          class="nhsuk-timeline__event nhsuk-u-margin-bottom-2"
         >
-          Send to printer
-        </Tag>
-        <a
-          className="nhsuk-timeline__link"
-          href="/placeholder/"
+          <h2
+            class="nhsuk-timeline__title"
+          >
+            <span
+              class="nhsuk-timeline__status"
+            >
+              Result sent
+            </span>
+            <span
+              class="nhsuk-timeline__by"
+            >
+               by 
+              System
+            </span>
+            <span
+              class="nhsuk-timeline__action"
+            >
+              <span
+                class="nhsuk-timeline__action"
+              >
+                -
+                <span
+                  class="nhsuk-tag nhsuk-tag--yellow nhsuk-timeline__tag"
+                >
+                  Send to printer
+                </span>
+                <a
+                  class="nhsuk-timeline__link"
+                  href="/placeholder/"
+                >
+                  Cancel
+                </a>
+              </span>
+            </span>
+          </h2>
+          <p
+            class="nhsuk-timeline__date"
+          >
+            <time
+              datetime="19 Nov 2019, 7:49:10 pm"
+            >
+              19 Nov 2019, 7:49:10 pm
+            </time>
+          </p>
+          <p
+            class="nhsuk-timeline__description-item"
+          >
+            Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised
+          </p>
+          <p
+            class="nhsuk-timeline__description-item"
+          >
+            Test Date: 19-Oct-2020, 9:00:00 am
+          </p>
+        </div>
+        <div
+          class="nhsuk-timeline__event nhsuk-u-margin-bottom-2"
         >
-          Cancel
-        </a>
-      </span>
-    }
-    date="19 Nov 2019, 7:49:10 pm"
-    description={
-      Array [
-        <React.Fragment>
+          <h2
+            class="nhsuk-timeline__title"
+          >
+            <span
+              class="nhsuk-timeline__status"
+            >
+              Patient deferred
+            </span>
+          </h2>
+          <p
+            class="nhsuk-timeline__date"
+          >
+            <time
+              datetime="19 Nov 2019, 4:28:57 pm"
+            >
+              19 Nov 2019, 4:28:57 pm
+            </time>
+          </p>
+          <p
+            class="nhsuk-timeline__description-item"
+          >
+            Defer Reason: Pregnancy
+          </p>
+          <p
+            class="nhsuk-timeline__description-item"
+          >
+            CRM Case Number: CAS-12345-ABCDE
+          </p>
+          <p
+            class="nhsuk-timeline__description-item"
+          >
+            Comments: Requested via the GP form
+          </p>
+        </div>
+        <div
+          class="nhsuk-timeline__event nhsuk-u-margin-bottom-2"
+        >
+          <h2
+            class="nhsuk-timeline__title"
+          >
+            <span
+              class="nhsuk-timeline__status"
+            >
+              Screening invitation sent
+            </span>
+            <span
+              class="nhsuk-timeline__by"
+            >
+               by 
+              System
+            </span>
+            <span
+              class="nhsuk-timeline__action"
+            >
+              <span
+                class="nhsuk-timeline__action"
+              >
+                -
+                <span
+                  class="nhsuk-tag nhsuk-tag--grey nhsuk-timeline__tag"
+                >
+                  Sent to patient
+                </span>
+                <a
+                  class="nhsuk-timeline__link"
+                  href="/placeholder2"
+                >
+                  Resend
+                </a>
+              </span>
+            </span>
+          </h2>
+          <p
+            class="nhsuk-timeline__date"
+          >
+            <time
+              datetime="18 Nov 2019, 7:49:10 pm"
+            >
+              18 Nov 2019, 7:49:10 pm
+            </time>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="nhsuk-timeline"
+    >
+      <div
+        class="nhsuk-timeline__event nhsuk-u-margin-bottom-2"
+      >
+        <h2
+          class="nhsuk-timeline__title"
+        >
+          <span
+            class="nhsuk-timeline__status"
+          >
+            Result sent
+          </span>
+          <span
+            class="nhsuk-timeline__by"
+          >
+             by 
+            System
+          </span>
+          <span
+            class="nhsuk-timeline__action"
+          >
+            <span
+              class="nhsuk-timeline__action"
+            >
+              -
+              <span
+                class="nhsuk-tag nhsuk-tag--yellow nhsuk-timeline__tag"
+              >
+                Send to printer
+              </span>
+              <a
+                class="nhsuk-timeline__link"
+                href="/placeholder/"
+              >
+                Cancel
+              </a>
+            </span>
+          </span>
+        </h2>
+        <p
+          class="nhsuk-timeline__date"
+        >
+          <time
+            datetime="19 Nov 2019, 7:49:10 pm"
+          >
+            19 Nov 2019, 7:49:10 pm
+          </time>
+        </p>
+        <p
+          class="nhsuk-timeline__description-item"
+        >
           Test Result: (39S) Low-grade dyskaryosis, HPV positive, Repeat Advised
-        </React.Fragment>,
-        <React.Fragment>
+        </p>
+        <p
+          class="nhsuk-timeline__description-item"
+        >
           Test Date: 19-Oct-2020, 9:00:00 am
-        </React.Fragment>,
-      ]
-    }
-    instigator={
-      <React.Fragment>
-        System
-      </React.Fragment>
-    }
-    key="0"
-    title={
-      <React.Fragment>
-        Result sent
-      </React.Fragment>
-    }
-  />
-  <Event
-    date="19 Nov 2019, 4:28:57 pm"
-    description={
-      Array [
-        <React.Fragment>
-          Defer Reason: Pregnancy
-        </React.Fragment>,
-        <React.Fragment>
-          CRM Case Number: CAS-12345-ABCDE
-        </React.Fragment>,
-        <React.Fragment>
-          Comments: Requested via the GP form
-        </React.Fragment>,
-      ]
-    }
-    key="1"
-    title={
-      <React.Fragment>
-        Patient deferred
-      </React.Fragment>
-    }
-  />
-  <Event
-    action={
-      <span
-        className="nhsuk-timeline__action"
+        </p>
+      </div>
+      <div
+        class="nhsuk-timeline__event nhsuk-u-margin-bottom-2"
       >
-        -
-        <Tag
-          className="nhsuk-timeline__tag"
-          color="grey"
+        <h2
+          class="nhsuk-timeline__title"
         >
-          Sent to patient
-        </Tag>
-        <a
-          className="nhsuk-timeline__link"
-          href="/placeholder2"
+          <span
+            class="nhsuk-timeline__status"
+          >
+            Patient deferred
+          </span>
+        </h2>
+        <p
+          class="nhsuk-timeline__date"
         >
-          Resend
-        </a>
-      </span>
-    }
-    date="18 Nov 2019, 7:49:10 pm"
-    instigator={
-      <React.Fragment>
-        System
-      </React.Fragment>
-    }
-    key="2"
-    title={
-      <React.Fragment>
-        Screening invitation sent
-      </React.Fragment>
-    }
-  />
-</div>
+          <time
+            datetime="19 Nov 2019, 4:28:57 pm"
+          >
+            19 Nov 2019, 4:28:57 pm
+          </time>
+        </p>
+        <p
+          class="nhsuk-timeline__description-item"
+        >
+          Defer Reason: Pregnancy
+        </p>
+        <p
+          class="nhsuk-timeline__description-item"
+        >
+          CRM Case Number: CAS-12345-ABCDE
+        </p>
+        <p
+          class="nhsuk-timeline__description-item"
+        >
+          Comments: Requested via the GP form
+        </p>
+      </div>
+      <div
+        class="nhsuk-timeline__event nhsuk-u-margin-bottom-2"
+      >
+        <h2
+          class="nhsuk-timeline__title"
+        >
+          <span
+            class="nhsuk-timeline__status"
+          >
+            Screening invitation sent
+          </span>
+          <span
+            class="nhsuk-timeline__by"
+          >
+             by 
+            System
+          </span>
+          <span
+            class="nhsuk-timeline__action"
+          >
+            <span
+              class="nhsuk-timeline__action"
+            >
+              -
+              <span
+                class="nhsuk-tag nhsuk-tag--grey nhsuk-timeline__tag"
+              >
+                Sent to patient
+              </span>
+              <a
+                class="nhsuk-timeline__link"
+                href="/placeholder2"
+              >
+                Resend
+              </a>
+            </span>
+          </span>
+        </h2>
+        <p
+          class="nhsuk-timeline__date"
+        >
+          <time
+            datetime="18 Nov 2019, 7:49:10 pm"
+          >
+            18 Nov 2019, 7:49:10 pm
+          </time>
+        </p>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
 `;
