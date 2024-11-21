@@ -11,17 +11,15 @@ export default {
   //   { file: pkg.main, format: 'cjs' },
   //   { file: pkg.module, format: 'es' },
   // ],
-  output: {
-    // 3363 - NOTE - look at this, is it the correct outdir?
-    // makes the tests pass though
-    // should it be lib or dist?  Lib matches current Typescript compiler option for outDir
-    dir: "./lib",
-    // dir
-    format: 'cjs'
-  },
+  output: [
+    { file: pkg.main, format: 'cjs' },
+    { file: pkg.module, format: 'es' }
+  ],
   external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
   plugins: [
-    typescript(),
+    typescript({
+      declarationDir: './dist'
+    }),
     nodeResolve(),
     commonjs(),
   ],
