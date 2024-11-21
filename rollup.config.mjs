@@ -1,7 +1,7 @@
 // import typescriptPlugin from 'rollup-plugin-typescript2';
 import typescript from '@rollup/plugin-typescript';
 // import typescript from 'typescript';
-import pkg from './package.json';
+import pkg from './package.json' assert { type: 'json' };
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 
@@ -21,6 +21,6 @@ export default {
       declarationDir: './dist'
     }),
     nodeResolve(),
-    commonjs(),
+    commonjs()
   ],
 };
