@@ -16,7 +16,6 @@ exports[`MaskedInput matches snapshot 1`] = `
           NHS Number
         </label>
         <input
-          aria-labelledby="maskedInput--label"
           class="nhsuk-input"
           id="maskedInput"
           name="maskedInput"
@@ -37,7 +36,6 @@ exports[`MaskedInput matches snapshot 1`] = `
         NHS Number
       </label>
       <input
-        aria-labelledby="maskedInput--label"
         class="nhsuk-input"
         id="maskedInput"
         name="maskedInput"

@@ -6,7 +6,8 @@ import { FormElementProps } from 'nhsuk-react-components/dist/esm/util/types/For
 
 import { InputWidth } from 'nhsuk-react-components/dist/esm/util/types/NHSUKTypes';
 
-import FormGroup from "nhsuk-react-components/dist/esm/util/FormGroup"
+// import FormGroup from "nhsuk-react-components/dist/esm/util/FormGroup"
+import FormGroup from './LocalFormGroup';
 
 import InputMask, { ReactInputMask } from 'react-input-mask';
 
