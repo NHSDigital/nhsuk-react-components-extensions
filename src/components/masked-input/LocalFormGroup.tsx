@@ -7,9 +7,11 @@ import { ErrorMessage } from 'nhsuk-react-components';
 // clearly isn't being compiled correctly either
 // import { generateRandomID } from 'nhsuk-react-components/dist/esm/util/RandomID'
 import { generateRandomID } from './LocalRandomID';
-import { Label } from 'nhsuk-react-components';
+import Label from './LocalLabel';
 // import { FormElementProps } from '../types/FormTypes/FormTypes';
-import { FormElementProps } from 'nhsuk-react-components/dist/esm/util/types/FormTypes';
+// this gives 3 errors like Cannot find module '@components/form-elements/error-message/ErrorMessage' or its corresponding type declarations on yarn build
+// import { FormElementProps } from 'nhsuk-react-components/dist/esm/util/types/FormTypes';
+import { FormElementProps } from './LocalFormTypes';
 // this gives SyntaxError: Cannot use import statement outside a module on yarn test// import FieldsetContext from 'nhsuk-react-components/dist/esm/components/form-elements/fieldset/FieldsetContext'
 import FieldsetContext, {IFieldsetContext} from './LocalFieldsetContext';
 // import { IFieldsetContext } from 'nhsuk-react-components/dist/esm/components/form-elements/fieldset/FieldsetContext';

@@ -1,8 +1,8 @@
 import React, { HTMLProps } from 'react';
-// note to self - removing this and just having 'nhsuk-react-components' leads to error
-// "JSX element type 'FormGroup' does not have any construct or call signatures"
 
-import { FormElementProps } from 'nhsuk-react-components/dist/esm/util/types/FormTypes';
+// this gives errors like Cannot find module '@components/form-elements/label/Label' or its corresponding type declarations. on yarm build
+// import { FormElementProps } from 'nhsuk-react-components/dist/esm/util/types/FormTypes';
+import { FormElementProps } from './LocalFormTypes';
 
 import { InputWidth } from 'nhsuk-react-components/dist/esm/util/types/NHSUKTypes';
 
