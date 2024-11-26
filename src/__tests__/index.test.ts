@@ -5,6 +5,12 @@ describe('Index', () => {
     expect(Object.keys(index)).toEqual([
       'AccordionMenu',
       'MaskedInput',
+      'FormGroup',
+      'Label',
+      'getRandomString',
+      'generateRandomID',
+      'generateRandomName',
+      'FieldsetContext',
       'RibbonLink',
       'SubNavigation',
       'TabSet',

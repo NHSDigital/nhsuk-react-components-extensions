@@ -1,5 +1,5 @@
 export { default as AccordionMenu } from './components/accordion-menu';
-export { default as MaskedInput } from './components/masked-input';
+export { MaskedInput, FormGroup, FormElementProps, Label, getRandomString, generateRandomID, generateRandomName, FieldsetContext} from './components/masked-input';
 export { default as RibbonLink } from './components/ribbon-link';
 export { default as SubNavigation } from './components/sub-navigation';
 export { default as TabSet } from './components/tab-set';
