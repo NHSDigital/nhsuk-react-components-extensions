@@ -4556,22 +4556,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@webpack-contrib/schema-utils@npm:^1.0.0-beta.0":
-  version: 1.0.0-beta.0
-  resolution: "@webpack-contrib/schema-utils@npm:1.0.0-beta.0"
-  dependencies:
-    ajv: "npm:^6.1.0"
-    ajv-keywords: "npm:^3.1.0"
-    chalk: "npm:^2.3.2"
-    strip-ansi: "npm:^4.0.0"
-    text-table: "npm:^0.2.0"
-    webpack-log: "npm:^1.1.2"
-  peerDependencies:
-    webpack: ^3.0.0 || ^4.0.0
-  checksum: 10c0/ee22c94bf93e3fca2b06575e33d2326d9d079d4704493fcc5a00fc9b8004ebf51b6230f509026ec4eaa80e506f3fe54b24b87c7f61487189ed979b2b0e1ea88e
-  languageName: node
-  linkType: hard
-
 "@xtuc/ieee754@npm:^1.2.0":
   version: 1.2.0
   resolution: "@xtuc/ieee754@npm:1.2.0"
@@ -6375,7 +6359,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:2.4.2, chalk@npm:^2.0.1, chalk@npm:^2.1.0, chalk@npm:^2.3.2, chalk@npm:^2.4.1, chalk@npm:^2.4.2":
+"chalk@npm:2.4.2, chalk@npm:^2.0.1, chalk@npm:^2.1.0, chalk@npm:^2.4.1, chalk@npm:^2.4.2":
   version: 2.4.2
   resolution: "chalk@npm:2.4.2"
   dependencies:
@@ -13463,7 +13447,6 @@ __metadata:
     nhsuk-react-components: "npm:^4.0.0"
     prettier: "npm:^3.3.3"
     react: "npm:^16.9.3"
-    react-docgen-typescript-loader: "npm:^3.7.2"
     react-dom: "npm:^16.9.3"
     react-input-mask: "npm:^2.0.4"
     rollup: "npm:^4.0.0"
@@ -15168,28 +15151,6 @@ __metadata:
     strip-ansi: "npm:5.2.0"
     text-table: "npm:0.2.0"
   checksum: 10c0/4738ebab343b25efd71fd0162b4c7fb9a04e84d898e7ec7b61ef39722caef8c0cf1b30b88c983a7f7f35e39008a47c5c07c0698716f4e45bcd374d14c82b5d63
-  languageName: node
-  linkType: hard
-
-"react-docgen-typescript-loader@npm:^3.7.2":
-  version: 3.7.2
-  resolution: "react-docgen-typescript-loader@npm:3.7.2"
-  dependencies:
-    "@webpack-contrib/schema-utils": "npm:^1.0.0-beta.0"
-    loader-utils: "npm:^1.2.3"
-    react-docgen-typescript: "npm:^1.15.0"
-  peerDependencies:
-    typescript: "*"
-  checksum: 10c0/7f67e1a5b277826dcd6d9169a056dfe6063d8c3ba6c09dae35bb4926a9ed80471b04185726d1d5ef6b19a1d44ccbbf1722a052c9ec3887f0623ad127ee9eb978
-  languageName: node
-  linkType: hard
-
-"react-docgen-typescript@npm:^1.15.0":
-  version: 1.22.0
-  resolution: "react-docgen-typescript@npm:1.22.0"
-  peerDependencies:
-    typescript: ">= 3.x"
-  checksum: 10c0/6d13f70a796087d63a556a5850abdb1e48774d932658fb625b04d84fcf4acc0b3f1278100dfb49ac08b96bcdcc6c188016d77372f1720296383a2c48e1e9852b
   languageName: node
   linkType: hard
 
@@ -18449,7 +18410,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack-log@npm:^1.1.2, webpack-log@npm:^1.2.0":
+"webpack-log@npm:^1.2.0":
   version: 1.2.0
   resolution: "webpack-log@npm:1.2.0"
   dependencies:
