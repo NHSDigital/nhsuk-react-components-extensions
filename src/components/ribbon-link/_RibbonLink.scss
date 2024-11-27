@@ -3,11 +3,6 @@
 @use '../../../node_modules/nhsuk-frontend/packages/core/settings/all' as settings;
 
 .nhsuk-ribbon-link {
-  // @include nhsuk-responsive-padding(2, 'top');
-  // @include nhsuk-responsive-padding(2, 'right');
-  // @include nhsuk-responsive-padding(2, 'bottom');
-  // @include nhsuk-responsive-padding(2, 'left');
-  // @include nhsuk-typography-responsive(24);
 
   padding-top: nhsuk-responsive-padding(2,'top');
   padding-bottom: nhsuk-responsive-padding(2,'bottom');
@@ -47,8 +42,6 @@
   }
 
   &__icon {
-    // @include nhsuk-responsive-margin(1, 'left');
-    // @include nhsuk-responsive-margin(2, 'right');
     margin-left: nhsuk-responsive-margin(1, 'left');
     margin-right: nhsuk-responsive-margin(2, 'right');
   }

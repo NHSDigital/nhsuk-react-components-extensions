@@ -21,22 +21,30 @@ describe('AccordionMenu', () => {
       );
     });
 
+    it('handles defaultOpen', () => {
+        const component = render(
+          <AccordionMenu.Section id="accordion" heading="Heading" defaultOpen />,
+        );
+        // const event = {
+        //   preventDefault: jest.fn(),
+        // };
+  
+        expect(component.container.querySelector('#accordion')).toBe(4)
+      });
+  
+
     // 3363 - fix this one!
     // it('handles defaultOpen', () => {
     //   const component = render(
     //     <AccordionMenu.Section id="accordion" heading="Heading" defaultOpen />,
     //   );
-    //   // const event = {
-    //   //   preventDefault: jest.fn(),
-    //   // };
-
-    //   console.log(`I am component: ${component.container.querySelector('#accordion')?.textContent}`)
-    //   console.log(`I am component 2: ${component.getByText('Heading')}`)
-    //   console.log(`I am component 2: ${component.container.querySelector('.nhsuk-accordion-menu__section')?.textContent}`)
+    //   const event = {
+    //     preventDefault: jest.fn(),
+    //   };
 
     //   expect(component.container.querySelector('#accordion')).toBe(4)
 
-      // component.getByText('Heading').click();
+    //   // component.getByText('Heading').click();
       // component.container.querySelector('.nhsuk-accordion-menu__icon')?.click()
       // expect(event.preventDefault).toHaveBeenCalledTimes(1);
 

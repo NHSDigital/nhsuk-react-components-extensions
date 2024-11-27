@@ -1,23 +1,17 @@
-// 3363 - for some reason, having an @use gives "undefined mixin" error below
-// see comments here https://stackoverflow.com/questions/66365150/when-importing-a-file-with-use-then-error-undefined-mixin
-@use '../../../node_modules/nhsuk-frontend/packages/core/generic/font-face';
 @use '../../../node_modules/nhsuk-frontend/packages/core/settings/all' as settings;
-// @use '../../../node_modules/nhsuk-frontend/packages/core/generic/font-face' as *;
-
-// https://stackoverflow.com/questions/66365150/when-importing-a-file-with-use-then-error-undefined-mixin
-
-
-
-
+// this needs to use an @import and @mixin, because the font mixin is a private module
+@import '../../../node_modules/nhsuk-frontend/packages/core/generic/font-face';
 
 /* ==========================================================================
    #TAG
    ========================================================================== */;
 
 .nhsuk-tag {
-  // 3363 - look at this next
-  // @include _nhsuk-font($size: 16, $weight: bold, $line-height: 1);
-  // @include _nhsuk-font-face-frutiger();
+  @mixin _nhsuk-font-face-frutiger{
+    font-size: 16;
+    font-weight: bold;
+    line-height: 1;
+  };
   background-color: shade(settings.$color_nhsuk-blue, 10%);
   color: settings.$color_nhsuk-white;
   display: inline-block;

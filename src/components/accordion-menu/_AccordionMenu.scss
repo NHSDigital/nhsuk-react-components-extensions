@@ -1,11 +1,7 @@
 @use '../../../node_modules/nhsuk-frontend/packages/core/settings/colours';
 @use '../../../node_modules/nhsuk-frontend/packages/core/tools/spacing' as tools-spacing;
 
-// 3533 - look at switching to @use, it gives undefined variable error
-// see discussion here https://stackoverflow.com/questions/62127255/sass-use-makes-error-undefined-variable
-
 @use '../../styles/variables';
-// @use '../../styles/core';
 
 .nhsuk-accordion-menu {
   display: block;
@@ -27,20 +23,6 @@
     }
 
     &-summary {
-
-      // this gave undefined-mixin errors
-      // @include nhsuk-responsive-padding(2, 'top');
-      // @include nhsuk-responsive-padding(2, 'bottom');
-      // @include nhsuk-responsive-padding(4, 'left');
-      // @include nhsuk-responsive-padding(4, 'right');
-
-      // this gave undefined variable errors
-      // padding-top: tools-spacing.$nhsuk-responsive-padding(2,'top');
-      // padding-bottom: tools-spacing.$nhsuk-responsive-padding(2,'bottom');
-      // padding-left: tools-spacing.$nhsuk-responsive-padding(4,'left');
-      // padding-right: tools-spacing.$nhsuk-responsive-padding(4,'right');
-
-
       padding-top: nhsuk-responsive-padding(2,'top');
       padding-bottom: nhsuk-responsive-padding(2,'bottom');
       padding-left: nhsuk-responsive-padding(4,'left');
@@ -103,11 +85,6 @@
 
   &__subsection {
 
-    // @include nhsuk-responsive-margin(2, 'top');
-    // @include nhsuk-responsive-margin(2, 'bottom');
-    // @include nhsuk-responsive-margin(2, 'right');
-    // @include nhsuk-responsive-margin(2, 'left');
-
     margin-top: nhsuk-responsive-margin(2, 'top');
     margin-bottom: nhsuk-responsive-margin(2, 'bottom');
     margin-right: nhsuk-responsive-margin(2, 'right');
@@ -117,9 +94,6 @@
     cursor: pointer;
 
     &-link {
-      // @include nhsuk-typography-responsive(19);
-      // @include nhsuk-responsive-padding(3, 'right');
-      // @include nhsuk-responsive-padding(3, 'left');
 
       font-size: nhsuk-typography-responsive(19);
       padding-right: nhsuk-responsive-padding(3, 'right');

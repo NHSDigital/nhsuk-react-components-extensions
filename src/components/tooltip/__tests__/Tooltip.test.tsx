@@ -16,7 +16,6 @@ describe('Tooltip', () => {
       </Tooltip>,
     );
 
-    // 3363 - note - do these need to be more complex???
     expect(componentWithoutId.container.querySelector('#test-id')).toBeNull();
     expect(componentWithoutId.container).toMatchSnapshot();
 
@@ -24,14 +23,4 @@ describe('Tooltip', () => {
     expect(componentWithId.container).toMatchSnapshot();
 
   })
-
-  //   expect(componentWithoutId.find('div').prop('aria-labelledby')).toBe(undefined);
-  //   expect(componentWithId.find('div').prop('aria-labelledby')).toBe('test-id-tooltip-text');
-
-  //   expect(componentWithId.find('span').prop('id')).toBe('test-id-tooltip-text');
-  //   expect(componentWithoutId.find('span').prop('id')).toBe(undefined);
-
-  //   componentWithId.unmount();
-  //   componentWithoutId.unmount();
-  // });
 });
