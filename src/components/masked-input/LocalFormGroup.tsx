@@ -1,20 +1,11 @@
-'use client';
 import React, { ReactNode, useState, useEffect, HTMLProps, useContext } from 'react';
 import classNames from 'classnames';
 import { HintText } from 'nhsuk-react-components';
 import { ErrorMessage } from 'nhsuk-react-components';
-// note - this gives SyntaxError: Unexpected token 'export' on yarn build
-// clearly isn't being compiled correctly either
-// import { generateRandomID } from 'nhsuk-react-components/dist/esm/util/RandomID'
 import { generateRandomID } from './LocalRandomID';
 import Label from './LocalLabel';
-// import { FormElementProps } from '../types/FormTypes/FormTypes';
-// this gives 3 errors like Cannot find module '@components/form-elements/error-message/ErrorMessage' or its corresponding type declarations on yarn build
-// import { FormElementProps } from 'nhsuk-react-components/dist/esm/util/types/FormTypes';
 import { FormElementProps } from './LocalFormTypes';
-// this gives SyntaxError: Cannot use import statement outside a module on yarn test// import FieldsetContext from 'nhsuk-react-components/dist/esm/components/form-elements/fieldset/FieldsetContext'
 import FieldsetContext, {IFieldsetContext} from './LocalFieldsetContext';
-// import { IFieldsetContext } from 'nhsuk-react-components/dist/esm/components/form-elements/fieldset/FieldsetContext';
 import { useFormContext } from 'nhsuk-react-components';
 
 type ExcludedProps =

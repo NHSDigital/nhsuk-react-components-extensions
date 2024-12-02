@@ -26,7 +26,6 @@ stories
       </AccordionMenu.Section>
     </AccordionMenu>
   ))
-  // 3363 - this was preventing the storybook from building.  WHY???  need to fix
   .add('With defaultOpen', () => (
     <AccordionMenu className="accordion-demo">
       <AccordionMenu.Section heading="Greetings!" defaultOpen>

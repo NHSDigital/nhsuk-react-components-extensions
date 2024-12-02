@@ -3,7 +3,6 @@ import { render } from '@testing-library/react'
 import MaskedInput from '../MaskedInput';
 
 describe('MaskedInput', () => {
-  // 3363 - check snapshot
   it('matches snapshot', () => {
     const component = render(
       <MaskedInput mask="999 999 9999" name="maskedInput" id="maskedInput" label="NHS Number" />,

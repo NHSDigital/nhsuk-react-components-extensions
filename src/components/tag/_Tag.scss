@@ -1,5 +1,4 @@
 @use '../../../node_modules/nhsuk-frontend/packages/core/settings/all' as settings;
-// this needs to use an @import and @mixin, because the font mixin is a private module
 @import '../../../node_modules/nhsuk-frontend/packages/core/generic/font-face';
 
 /* ==========================================================================

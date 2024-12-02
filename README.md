@@ -20,8 +20,11 @@ npm i --save nhsuk-react-components-extensions
 
 Components can either be imported from the global package or from the `/lib` directory. The package is tree-shakeable, so you should not see a sizeable difference between the import sizes using either method.
 
+
+
 ```jsx
 // From the global package
+// 3363 - update README!!!!
 import { SubNavigation } from 'nhsuk-react-components-extensions';
 
 // From the lib directory

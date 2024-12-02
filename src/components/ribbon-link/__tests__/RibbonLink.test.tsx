@@ -12,7 +12,6 @@ describe('RibbonLink', () => {
     expect(mildRibbon.container.querySelector('button')?.className).toBe('nhsuk-ribbon-link nhsuk-ribbon-link--mild');
     expect(hotRibbon.container.querySelector('button')?.className).toBe('nhsuk-ribbon-link nhsuk-ribbon-link--hot');
 
-    // 3363 - check snapshots
     expect(coolRibbon).toMatchSnapshot();
     expect(mildRibbon).toMatchSnapshot();
     expect(hotRibbon).toMatchSnapshot();
@@ -20,7 +19,6 @@ describe('RibbonLink', () => {
 
   describe('RibbonLink.Bar', () => {
     it('matches snapshot', () => {
-      // 3363 - check snapshot
       const bar = render(<RibbonLink.Bar />);
       expect(bar).toMatchSnapshot();
     });

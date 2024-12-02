@@ -4,7 +4,6 @@ import SubNavigation from '../SubNavigation';
 
 describe('SubNavigation', () => {
   it('matches snapshot', () => {
-    // 3363 - check snapshot
     const component = render(<SubNavigation />);
     expect(component).toMatchSnapshot();
   });
@@ -20,7 +19,6 @@ describe('SubNavigation', () => {
 
   describe('SubNavigationItem', () => {
     it('matches snapshot', () => {
-      // 3363 - check snapshot
       const component = render(<SubNavigation.Item href="#">Hello world</SubNavigation.Item>);
       expect(component).toMatchSnapshot();
     });

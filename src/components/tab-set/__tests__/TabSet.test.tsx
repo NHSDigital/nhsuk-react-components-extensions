@@ -3,13 +3,11 @@ import {render} from '@testing-library/react'
 import TabSet from '..';
 
 describe('TabSet', () => {
-  // 3363 - check snapshot
   it('matches snapshot', () => {
     const component = render(<TabSet />)
     expect(component).toMatchSnapshot();
   });
 
-  // 3363 - check snapshot
   describe('Tab', () => {
     it('matches snapshot', () => {
       const component = render(<TabSet.Tab />);

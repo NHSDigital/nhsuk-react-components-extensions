@@ -1,12 +1,9 @@
 import React, { HTMLProps } from 'react';
 
-// this gives errors like Cannot find module '@components/form-elements/label/Label' or its corresponding type declarations. on yarm build
-// import { FormElementProps } from 'nhsuk-react-components/dist/esm/util/types/FormTypes';
 import { FormElementProps } from './LocalFormTypes';
 
 import { InputWidth } from 'nhsuk-react-components/dist/esm/util/types/NHSUKTypes';
 
-// import FormGroup from "nhsuk-react-components/dist/esm/util/FormGroup"
 import FormGroup from './LocalFormGroup';
 
 import InputMask, { ReactInputMask } from 'react-input-mask';

@@ -23,17 +23,17 @@ stories
       />
     </div>
   ))
-  // .add('NHS Number Mask', () => (
-  //   <div className="masked-input-demo">
-  //     <MaskedInput
-  //       name="ni-number"
-  //       hint="Your 10 Digit NHS Number"
-  //       label="NHS Number"
-  //       width="10"
-  //       mask="999 999 9999"
-  //       maskChar=""
-  //       autoComplete="off"
-  //       alwaysShowMask={false}
-  //     />
-  //   </div>
-  // ));
+  .add('NHS Number Mask', () => (
+    <div className="masked-input-demo">
+      <MaskedInput
+        name="ni-number"
+        hint="Your 10 Digit NHS Number"
+        label="NHS Number"
+        width="10"
+        mask="999 999 9999"
+        maskChar=""
+        autoComplete="off"
+        alwaysShowMask={false}
+      />
+    </div>
+  ));

@@ -165,11 +165,9 @@
     justify-content: space-between;
 
     .nhsuk-ribbon-link {
-      // @include nhsuk-responsive-margin(3, 'right');
       margin-right: nhsuk-responsive-margin(3, 'right');
 
       &:last-of-type {
-        // @include nhsuk-responsive-margin(0, 'right');
         margin-right: nhsuk-responsive-margin(0, 'right');
       }
     }

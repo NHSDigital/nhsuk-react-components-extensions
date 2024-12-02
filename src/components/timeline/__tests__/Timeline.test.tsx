@@ -57,7 +57,6 @@ const testEvents: EventProps[] = [
 
 describe('Timeline', () => {
   it('matches snapshot', () => {
-    // 3363 - check snapshots
     const timeline = render(<Timeline events={testEvents} />);
 
     expect(timeline).toMatchSnapshot();
