@@ -3976,6 +3976,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/regenerator-runtime@npm:^0":
+  version: 0.13.8
+  resolution: "@types/regenerator-runtime@npm:0.13.8"
+  checksum: 10c0/10c094584c097aec51a29f598425306febab764f054db14d5dd892961bf97c96272d620af5bd6e4c5f7d20c4e5b9ce98b6069b0f009cfc57f54614b33760b86e
+  languageName: node
+  linkType: hard
+
 "@types/resolve@npm:1.20.2":
   version: 1.20.2
   resolution: "@types/resolve@npm:1.20.2"
@@ -13410,6 +13417,7 @@ __metadata:
     "@types/react": "npm:^18.2.60"
     "@types/react-dom": "npm:^18.2.19"
     "@types/react-input-mask": "npm:^3.0.5"
+    "@types/regenerator-runtime": "npm:^0"
     "@types/storybook__react": "npm:^5.2.1"
     "@types/styled-components": "npm:^4.1.19"
     "@typescript-eslint/eslint-plugin": "npm:^8.13.0"
@@ -13433,10 +13441,12 @@ __metadata:
     jest-environment-jsdom: "npm:^29.7.0"
     nhsuk-frontend: "npm:8.1.0"
     nhsuk-react-components: "npm:^5.0.0"
+    postcss: "npm:^8.4.49"
     prettier: "npm:^3.3.3"
     react: "npm:^16.9.3"
     react-dom: "npm:^16.9.3"
     react-input-mask: "npm:^2.0.4"
+    regenerator-runtime: "npm:^0.14.1"
     rollup: "npm:^4.0.0"
     rollup-plugin-sass: "npm:^1.2.2"
     sass: "npm:~1.70.0"
@@ -14633,7 +14643,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.2.15":
+"postcss@npm:^8.2.15, postcss@npm:^8.4.49":
   version: 8.4.49
   resolution: "postcss@npm:8.4.49"
   dependencies:
@@ -15531,7 +15541,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:^0.14.0":
+"regenerator-runtime@npm:^0.14.0, regenerator-runtime@npm:^0.14.1":
   version: 0.14.1
   resolution: "regenerator-runtime@npm:0.14.1"
   checksum: 10c0/1b16eb2c4bceb1665c89de70dcb64126a22bc8eb958feef3cd68fe11ac6d2a4899b5cd1b80b0774c7c03591dc57d16631a7f69d2daa2ec98100e2f29f7ec4cc4
