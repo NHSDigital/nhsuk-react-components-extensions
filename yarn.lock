@@ -13377,10 +13377,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nhsuk-frontend@npm:^9.0.0":
-  version: 9.1.0
-  resolution: "nhsuk-frontend@npm:9.1.0"
-  checksum: 10c0/19629ae1592545c4b316ee86a33947b0f5baeb637988712180538fa90c6299302105d1fb54ee51e8c5ffff62a2423576162907937fe1ab2baad71b2bdc3d861d
+"nhsuk-frontend@npm:9.0.0":
+  version: 9.0.0
+  resolution: "nhsuk-frontend@npm:9.0.0"
+  checksum: 10c0/ebb2341f67503592207c051a380acb7f147689c116c2e247bfa1b66a8753540b5660a9db88e1d6dae6a29f677299e43b921612edd6d67d911a7b70da4858360f
   languageName: node
   linkType: hard
 
@@ -13431,7 +13431,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^5.0.0"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
-    nhsuk-frontend: "npm:^9.0.0"
+    nhsuk-frontend: "npm:9.0.0"
     nhsuk-react-components: "npm:^5.0.0"
     prettier: "npm:^3.3.3"
     react: "npm:^16.9.3"
