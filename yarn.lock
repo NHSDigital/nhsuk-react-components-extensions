@@ -2853,7 +2853,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-centered@npm:^5.3.9":
+"@storybook/addon-centered@npm:^5.3.21":
   version: 5.3.21
   resolution: "@storybook/addon-centered@npm:5.3.21"
   dependencies:
@@ -2868,7 +2868,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-info@npm:^5.2.1":
+"@storybook/addon-info@npm:^5.3.21":
   version: 5.3.21
   resolution: "@storybook/addon-info@npm:5.3.21"
   dependencies:
@@ -3154,9 +3154,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/core@npm:8.4.3":
-  version: 8.4.3
-  resolution: "@storybook/core@npm:8.4.3"
+"@storybook/core@npm:8.4.6":
+  version: 8.4.6
+  resolution: "@storybook/core@npm:8.4.6"
   dependencies:
     "@storybook/csf": "npm:^0.1.11"
     better-opn: "npm:^3.0.2"
@@ -3174,7 +3174,7 @@ __metadata:
   peerDependenciesMeta:
     prettier:
       optional: true
-  checksum: 10c0/72ec88a220d943bc17a2dec704a89583ece433b4a6fa0fae56e0cb75751919c2433199c22b9c77cdba6756f8fca468eeb560df718befdf6b190467cc432b7d02
+  checksum: 10c0/1e30268eec18458dd78ed4b97fb12ac47b2c3cb41ffcbe9e9f5934b3f0c83b0bfcb0c0d508926344779383cc5260f992dcd534ffffab3f05425c7cee8c90687c
   languageName: node
   linkType: hard
 
@@ -13377,10 +13377,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nhsuk-frontend@npm:9.0.0":
-  version: 9.0.0
-  resolution: "nhsuk-frontend@npm:9.0.0"
-  checksum: 10c0/ebb2341f67503592207c051a380acb7f147689c116c2e247bfa1b66a8753540b5660a9db88e1d6dae6a29f677299e43b921612edd6d67d911a7b70da4858360f
+"nhsuk-frontend@npm:8.1.0":
+  version: 8.1.0
+  resolution: "nhsuk-frontend@npm:8.1.0"
+  checksum: 10c0/28892f263f88b3d0a4c8bc537ef9594d091edd202c0b164f2215d2f5df339fdc9eda18c1fec086366e17ef921d70866df3dbb2f3c44b2e60b9126f8e0d72c6a9
   languageName: node
   linkType: hard
 
@@ -13396,8 +13396,8 @@ __metadata:
     "@rollup/plugin-commonjs": "npm:^28.0.1"
     "@rollup/plugin-node-resolve": "npm:^15.3.0"
     "@rollup/plugin-typescript": "npm:^12.1.1"
-    "@storybook/addon-centered": "npm:^5.3.9"
-    "@storybook/addon-info": "npm:^5.2.1"
+    "@storybook/addon-centered": "npm:^5.3.21"
+    "@storybook/addon-info": "npm:^5.3.21"
     "@storybook/addon-storysource": "npm:^5.3.3"
     "@storybook/react": "npm:^5.2.1"
     "@storybook/storybook-deployer": "npm:^2.8.1"
@@ -13431,7 +13431,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^5.0.0"
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
-    nhsuk-frontend: "npm:9.0.0"
+    nhsuk-frontend: "npm:8.1.0"
     nhsuk-react-components: "npm:^5.0.0"
     prettier: "npm:^3.3.3"
     react: "npm:^16.9.3"
@@ -13441,7 +13441,7 @@ __metadata:
     rollup-plugin-sass: "npm:^1.2.2"
     sass: "npm:~1.70.0"
     sass-loader: "npm:^8.0.0"
-    storybook: "npm:^8.4.3"
+    storybook: "npm:^8.4.6"
     style-loader: "npm:^2.0.0"
     stylelint: "npm:^16.10.0"
     stylelint-config-sass-guidelines: "npm:^12.1.0"
@@ -16761,11 +16761,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"storybook@npm:^8.4.3":
-  version: 8.4.3
-  resolution: "storybook@npm:8.4.3"
+"storybook@npm:^8.4.6":
+  version: 8.4.6
+  resolution: "storybook@npm:8.4.6"
   dependencies:
-    "@storybook/core": "npm:8.4.3"
+    "@storybook/core": "npm:8.4.6"
   peerDependencies:
     prettier: ^2 || ^3
   peerDependenciesMeta:
@@ -16775,7 +16775,7 @@ __metadata:
     getstorybook: ./bin/index.cjs
     sb: ./bin/index.cjs
     storybook: ./bin/index.cjs
-  checksum: 10c0/0fc9488792a721cc9d994970e8d2ef294f46273e510fabb580c89dc1929316904ae634b4d76689ff6948ab30b74e7fb97b41ca6e91853b55c33f2920b931df39
+  checksum: 10c0/e15249718c1efab3d3d05f3152df28fc8f7e2e988bf7414cd4abf2adfb5d6c3b802f05dad5be0521c30d0ba43e55abf516e6f874b0671e0d1e84a7096cb47d3d
   languageName: node
   linkType: hard
 
