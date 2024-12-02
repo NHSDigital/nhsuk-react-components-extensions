@@ -13444,7 +13444,7 @@ __metadata:
     jest: "npm:^29.7.0"
     jest-environment-jsdom: "npm:^29.7.0"
     nhsuk-frontend: "npm:^9.0.0"
-    nhsuk-react-components: "npm:^4.0.0"
+    nhsuk-react-components: "npm:^5.0.0"
     prettier: "npm:^3.3.3"
     react: "npm:^16.9.3"
     react-dom: "npm:^16.9.3"
@@ -13464,22 +13464,22 @@ __metadata:
     typescript: "npm:^5.6.3"
     webpack: "npm:^5.0.0"
   peerDependencies:
-    nhsuk-react-components: ^4.0.0
+    nhsuk-react-components: ^5.0.0
     react: ^16.9.3
     react-dom: ^16.9.3
   languageName: unknown
   linkType: soft
 
-"nhsuk-react-components@npm:^4.0.0":
-  version: 4.1.3
-  resolution: "nhsuk-react-components@npm:4.1.3"
+"nhsuk-react-components@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "nhsuk-react-components@npm:5.0.0"
   dependencies:
     classnames: "npm:^2.2.6"
   peerDependencies:
-    nhsuk-frontend: ">=8.0.0 <9.0.0"
+    nhsuk-frontend: ">=9.0.0 <10.0.0"
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: 10c0/f142a4d7a8e07485f07635ef8b268d91336a600cbf6f0d6796dbcd2bcba802818bd0959fc2cb6db275cf06e82ebcb5d48289bc3feb2ecaea2e7847d8321c9f5a
+  checksum: 10c0/54212ca80732cf299c036e8dc45f3be88e6ee6783b13dce99f441886bd2fca20e06cd8f01aa5dddba255927e013ca4c5ce181f0b3b89dd22ec45a0ca0b104512
   languageName: node
   linkType: hard
 

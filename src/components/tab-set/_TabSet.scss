@@ -76,7 +76,9 @@ $nhsukext-content-background-color: colours.$color_nhsuk-white !default;
     }
 
     &:focus {
-       @mixin nhsuk-focused-button{};
+      @mixin nhsuk-focused-button {
+        background-color: $nhsuk-focus-color;
+      };
     }
   }
 }
