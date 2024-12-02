@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-redeclare */
 import React, { HTMLProps } from 'react';
 import classNames from 'classnames';
 import Section, { SectionProps } from './components/Section';

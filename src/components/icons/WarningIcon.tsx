@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { HTMLProps } from 'react';
 
 interface WarningIconProps extends HTMLProps<SVGSVGElement> {

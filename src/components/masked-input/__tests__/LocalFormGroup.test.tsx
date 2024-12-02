@@ -198,7 +198,7 @@ describe('FormGroup', () => {
       const { container } = renderFormGroupComponent({
         inputType: 'input',
         error: "Oh no there's an error!",
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+         
         children: ({ error, ...rest }) => <input {...rest} />,
       });
 
@@ -215,7 +215,7 @@ describe('FormGroup', () => {
       const { container } = renderFormGroupComponent({
         inputType: 'input',
         error: true,
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+         
         children: ({ error, ...rest }) => <input {...rest} />,
       });
 
@@ -246,7 +246,7 @@ describe('FormGroup', () => {
       id: 'error-and-hint',
       error: 'This is an error',
       hint: 'This is a hint',
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+       
       children: ({ error, ...rest }) => <input {...rest} />,
     });
 
@@ -258,7 +258,7 @@ describe('FormGroup', () => {
   it('should have no aria-describedby when there is no hint or label', () => {
     const { container } = renderFormGroupComponent({
       inputType: 'input',
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+       
       children: ({ error, ...rest }) => <input {...rest} />,
     });
 

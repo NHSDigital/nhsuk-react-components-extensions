@@ -29,6 +29,8 @@
   "awesomeTypescriptLoaderOptions": {
     "ignoreDiagnostics": [7005]
   },
-  "include": ["src/**/*"],
+  // needed to add "tests" to "included" to get rid of errors like:
+  // Parsing error: /home/spineii-user/.repos/nhsuk-react-components-extensions/src/components/sub-navigation/__tests__/SubNavigation.test.tsx was not found by the project service. Consider either including it in the tsconfig.json or including it in allowDefaultProject
+  "include": ["src/**/*" ],
   "exclude": ["node_modules", "**/__tests__", "**/__mocks__"]
 }
