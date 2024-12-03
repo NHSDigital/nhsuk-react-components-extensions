@@ -1,9 +1,6 @@
 import React, { HTMLProps } from 'react';
 import { render } from '@testing-library/react';
-// import { axe, toHaveNoViolations } from 'jest-axe';
 import FormGroup, { FormGroupProps } from '../LocalFormGroup';
-
-// expect.extend(toHaveNoViolations);
 
 type InputProps = HTMLProps<HTMLInputElement> & { error?: boolean };
 type Optional<T, K extends keyof T> = Pick<Partial<T>, K> & Omit<T, K>;
@@ -225,20 +222,6 @@ describe('FormGroup', () => {
       expect(container.querySelector('.nhsuk-error-message')).toBeFalsy();
     });
   });
-
-//   it('should produce an accessible component', async () => {
-//     const { container } = render(
-//       <main>
-//         <FormGroup<InputProps> inputType="input" error label="Form Label">
-//           {/* eslint-disable-next-line @typescript-eslint/no-unused-vars */}
-//           {({ error, ...rest }) => <input {...rest} />}
-//         </FormGroup>
-//       </main>,
-//     );
-//     const html = container.innerHTML;
-
-//     expect(await axe(html)).toHaveNoViolations();
-//   });
 
   it('should add hint ID and error ID to the aria-describedby of the input', () => {
     const { container } = renderFormGroupComponent({

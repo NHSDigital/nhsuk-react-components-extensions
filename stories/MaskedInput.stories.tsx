@@ -1,7 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { storiesOf } from '@storybook/react';
-import { MaskedInput } from '../src/components/masked-input';
+import { MaskedInput } from '../src';
 
 const stories = storiesOf('MaskedInput', module);
 

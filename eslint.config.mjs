@@ -1,5 +1,3 @@
-// this was auto-generated using @eslint/migrate-config
-// see discussion here: https://eslint.org/docs/latest/use/configure/migration-guide
 import react from "eslint-plugin-react";
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import jest from "eslint-plugin-jest";
@@ -24,8 +22,7 @@ export default [...compat.extends("airbnb-typescript"), {
         react,
         "@typescript-eslint": typescriptEslint,
         jest,
-        // rules
-        'import': importPlugin
+        "import": importPlugin
     },
 
     languageOptions: {
@@ -55,7 +52,6 @@ export default [...compat.extends("airbnb-typescript"), {
 
     rules: {
         // override deprecated rules
-        // see discussion at https://github.com/iamturns/eslint-config-airbnb-typescript/issues/354
         "@typescript-eslint/brace-style": 0,
         "@typescript-eslint/comma-dangle": 0,
         "@typescript-eslint/comma-spacing": 0,
