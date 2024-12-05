@@ -12,7 +12,7 @@
     font-weight: bold;
     line-height: 1;
   };
-  background-color: mix(black,settings.$color_nhsuk-blue, 10%);
+  background-color: color.mix(settings.$color_nhsuk-black, settings.$color_nhsuk-blue, 10%);
   color: settings.$color_nhsuk-white;
   display: inline-block;
   letter-spacing: 1px;
@@ -30,47 +30,47 @@
   }
 
   &--grey {
-    background-color: mix(white,settings.$color_nhsuk-grey-1, 80%);
-    color: mix(black,settings.$color_nhsuk-grey-1, 30%);
+    background-color: color.mix(settings.$color_nhsuk-white, settings.$color_nhsuk-grey-1, 80%);
+    color: color.mix(settings.$color_nhsuk-black, settings.$color_nhsuk-grey-1, 30%);
   }
 
   &--green {
-    background-color: mix(white,settings.$color_nhsuk-green,80%);
-    color: mix(black,settings.$color_nhsuk-green, 40%);
+    background-color: color.mix(settings.$color_nhsuk-white, settings.$color_nhsuk-green, 80%);
+    color: color.mix(settings.$color_nhsuk-black, settings.$color_nhsuk-green, 40%);
   }
 
   &--aqua-green {
-    background-color: mix(white,settings.$color_nhsuk-aqua-green, 80%);
-    color: mix(black,settings.$color_nhsuk-aqua-green, 50%);
+    background-color: color.mix(settings.$color_nhsuk-white, settings.$color_nhsuk-aqua-green, 80%);
+    color: color.mix(settings.$color_nhsuk-black, settings.$color_nhsuk-aqua-green, 50%);
   }
 
   &--blue {
-    background-color: mix(white,settings.$color_nhsuk-blue, 80%);
-    color: mix(black,settings.$color_nhsuk-blue, 30%);
+    background-color: color.mix(settings.$color_nhsuk-white, settings.$color_nhsuk-blue, 80%);
+    color: color.mix(settings.$color_nhsuk-black, settings.$color_nhsuk-blue, 30%);
   }
 
   &--purple {
-    background-color: mix(white,settings.$color_nhsuk-purple, 80%);
-    color: mix(black,settings.$color_nhsuk-purple, 30%);
+    background-color: color.mix(settings.$color_nhsuk-white, settings.$color_nhsuk-purple, 80%);
+    color: color.mix(settings.$color_nhsuk-black, settings.$color_nhsuk-purple, 30%);
   }
 
   &--pink {
-    background-color: mix(white,settings.$color_nhsuk-pink, 80%);
-    color: mix(black,settings.$color_nhsuk-pink, 50%);
+    background-color: color.mix(settings.$color_nhsuk-white, settings.$color_nhsuk-pink, 80%);
+    color: color.mix(settings.$color_nhsuk-black, settings.$color_nhsuk-pink, 50%);
   }
 
   &--red {
-    background-color: mix(white,settings.$color_nhsuk-red, 80%);
-    color: mix(black,settings.$color_nhsuk-red, 50%);
+    background-color: color.mix(settings.$color_nhsuk-white, settings.$color_nhsuk-red, 80%);
+    color: color.mix(settings.$color_nhsuk-black, settings.$color_nhsuk-red, 50%);
   }
 
   &--orange {
-    background-color: mix(white,settings.$color_nhsuk-warm-yellow, 50%);
-    color: mix(black,settings.$color_nhsuk-warm-yellow, 70%);
+    background-color: color.mix(settings.$color_nhsuk-white, settings.$color_nhsuk-warm-yellow, 50%);
+    color: color.mix(settings.$color_nhsuk-black, settings.$color_nhsuk-warm-yellow, 70%);
   }
 
   &--yellow {
-    background-color: mix(white,settings.$color_nhsuk-yellow, 50%);
-    color: mix(black,settings.$color_nhsuk-yellow, 70%);
+    background-color: color.mix(settings.$color_nhsuk-white, settings.$color_nhsuk-yellow, 50%);
+    color: color.mix(settings.$color_nhsuk-black, settings.$color_nhsuk-yellow, 70%);
   }
 }

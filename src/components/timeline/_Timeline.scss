@@ -26,7 +26,7 @@
 }
 
 .nhsuk-timeline__event {
-  @include nhsuk-responsive-padding(5, "bottom");
+  @include nhsuk-responsive-padding(5, 'bottom');
   @include nhsuk-responsive-padding(4, 'left');
   position: relative;
 }
