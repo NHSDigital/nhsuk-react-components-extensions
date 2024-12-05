@@ -1,14 +1,14 @@
 @use 'sass:color';
-@use '../../../node_modules/nhsuk-frontend/packages/core/tools/spacing';
 @use '../../../node_modules/nhsuk-frontend/packages/core/settings/all' as settings;
+@import '../../../node_modules/nhsuk-frontend/packages/core/all';
 
 .nhsuk-ribbon-link {
 
-  padding-top: nhsuk-responsive-padding(2, 'top');
-  padding-bottom: nhsuk-responsive-padding(2, 'bottom');
-  padding-left: nhsuk-responsive-padding(2, 'left');
-  padding-right: nhsuk-responsive-padding(2, 'right');
-  font-size: nhsuk-typography-responsive(24);
+  @include nhsuk-responsive-padding(2, 'top');
+  @include nhsuk-responsive-padding(2, 'bottom');
+  @include nhsuk-responsive-padding(2, 'left');
+  @include nhsuk-responsive-padding(2, 'right');
+  @include nhsuk-typography-responsive(24);
 
   display: flex;
   cursor: pointer;
@@ -42,8 +42,8 @@
   }
 
   &__icon {
-    margin-left: nhsuk-responsive-margin(1, 'left');
-    margin-right: nhsuk-responsive-margin(2, 'right');
+    @include nhsuk-responsive-margin(1, 'left');
+    @include nhsuk-responsive-margin(2, 'right');
   }
 
   &--cool {
@@ -165,10 +165,10 @@
     justify-content: space-between;
 
     .nhsuk-ribbon-link {
-      margin-right: nhsuk-responsive-margin(3, 'right');
+      @include nhsuk-responsive-margin(3, 'right');
 
       &:last-of-type {
-        margin-right: nhsuk-responsive-margin(0, 'right');
+        @include nhsuk-responsive-margin(0, 'right');
       }
     }
   }
