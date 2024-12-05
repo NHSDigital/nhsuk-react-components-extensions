@@ -42,24 +42,24 @@
 }
 
 .nhsuk-timeline__title {
-  font-size: nhsuk-typography-responsive(19);
+  @include nhsuk-typography-responsive(19);
   display: inline;
 }
 
 .nhsuk-timeline__by {
-  font-size: nhsuk-typography-responsive(19);
+  @include nhsuk-typography-responsive(19);
   font-weight: settings.$nhsuk-font-normal;
   display: inline;
-  margin: 0;
+  @include nhsuk-responsive-margin(0);
 }
 
 .nhsuk-timeline__date {
-  font-size: nhsuk-typography-responsive(16);
-  margin: nhsuk-responsive-margin(1, 'top');
-  margin-bottom: 0;
+  @include nhsuk-typography-responsive(16);
+  @include nhsuk-responsive-margin(1, 'top');
+  @include nhsuk-responsive-margin(0, 'bottom');
 }
 
 .nhsuk-timeline__description-item {
-  font-size: nhsuk-typography-responsive(16);
-  margin-bottom: 0;
+  @include nhsuk-typography-responsive(16);
+  @include nhsuk-responsive-margin(0, 'bottom');
 }
