@@ -1,4 +1,5 @@
 @use '../../../node_modules/nhsuk-frontend/packages/core/settings/all' as settings;
+@import '../../../node_modules/nhsuk-frontend/packages/core/all';
 
 
 .nhsuk-timeline {
@@ -25,8 +26,8 @@
 }
 
 .nhsuk-timeline__event {
-  padding-bottom: 32px;
-  padding-left: 24px;
+  @include nhsuk-responsive-padding(5, "bottom");
+  @include nhsuk-responsive-padding(4, 'left');
   position: relative;
 }
 
