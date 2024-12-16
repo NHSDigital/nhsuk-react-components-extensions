@@ -1,4 +1,4 @@
-import React, { HTMLProps } from 'react';
+import React, { HTMLProps, ReactInstance } from 'react';
 
 import { FormElementProps } from './LocalFormTypes';
 
@@ -25,6 +25,7 @@ FormElementProps & {
   alwaysShowMask?: boolean;
   inputRef?: (instance: HTMLInputElement | null) => any;
   ref?: InputMaskRef;
+  refs?: ReactInstance;
 };
 
 const MaskedInput: React.FC<MaskedInputProps> = props => (
