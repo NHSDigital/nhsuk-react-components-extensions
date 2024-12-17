@@ -3624,12 +3624,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-input-mask@npm:^3.0.6":
-  version: 3.0.6
-  resolution: "@types/react-input-mask@npm:3.0.6"
+"@types/react-input-mask@npm:2.0.4":
+  version: 2.0.4
+  resolution: "@types/react-input-mask@npm:2.0.4"
   dependencies:
     "@types/react": "npm:*"
-  checksum: 10c0/af7a8b938a6d89416630ab27d0d2b6b962acf9ac1de567c745b5041f5cfa07e42715f525a84a5b3cf51fca4b8b8e20cc32e16b80b7c04411c2ebb81aaf462b1f
+  checksum: 10c0/95d25bea36c5ca7dc2d0d1933dc9ec384e2e2e7bde50311a951e2abe28d236c6f957cd722c2674fafe2a7923d156324f93b59bb88fa74ca89d217f70636aec7b
   languageName: node
   linkType: hard
 
@@ -12661,7 +12661,7 @@ __metadata:
     "@types/node": "npm:^22.9.0"
     "@types/react": "npm:^18.2.60"
     "@types/react-dom": "npm:^18.2.19"
-    "@types/react-input-mask": "npm:^3.0.6"
+    "@types/react-input-mask": "npm:2.0.4"
     "@typescript-eslint/eslint-plugin": "npm:^8.13.0"
     "@typescript-eslint/parser": "npm:^8.13.0"
     babel-loader: "npm:^8.0.0"
