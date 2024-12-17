@@ -25,7 +25,9 @@ FormElementProps & {
   alwaysShowMask?: boolean;
   inputRef?: (instance: HTMLInputElement | null) => any;
   ref?: InputMaskRef;
-  refs?: ReactInstance;
+  refs?: {
+    [key: string]: ReactInstance;
+};
 };
 
 const MaskedInput: React.FC<MaskedInputProps> = props => (
