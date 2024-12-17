@@ -6,15 +6,16 @@ import { InputWidth } from 'nhsuk-react-components/dist/esm/util/types/NHSUKType
 
 import FormGroup from './LocalFormGroup';
 
-import InputMask, { ReactInputMask } from 'react-input-mask';
+// import InputMask, { ReactInputMask } from 'react-input-mask';
+import InputMask from 'react-input-mask';
 
 import classNames from 'classnames';
 
-type InputMaskRef =
-  | string
-  | ((instance: ReactInputMask | null) => void)
-  | React.RefObject<ReactInputMask>
-  | null;
+// type InputMaskRef =
+//   | string
+//   | ((instance: ReactInputMask | null) => void)
+//   | React.RefObject<ReactInputMask>
+//   | null;
 
 type MaskedInputProps = HTMLProps<HTMLInputElement> &
 FormElementProps & {
@@ -24,15 +25,13 @@ FormElementProps & {
   formatChars?: { [character: string]: string };
   alwaysShowMask?: boolean;
   inputRef?: (instance: HTMLInputElement | null) => any;
-  ref?: InputMaskRef;
-  refs?: {
-    [key: string]: ReactInstance;
-};
+  // ref?: InputMaskRef;
 };
 
 const MaskedInput: React.FC<MaskedInputProps> = props => (
   <FormGroup<MaskedInputProps> inputType="input" {...props}>
-    {({ className, width, error, ref, refs, ...rest }:any) => (
+    {/* {({ className, width, error, ref, ...rest }:any) => ( */}
+    {({ className, width, error, ...rest }:any) => (
       <InputMask
         className={classNames(
           'nhsuk-input',
