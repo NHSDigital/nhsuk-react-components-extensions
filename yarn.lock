@@ -3624,15 +3624,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-input-mask@npm:^3.0.5":
-  version: 3.0.5
-  resolution: "@types/react-input-mask@npm:3.0.5"
-  dependencies:
-    "@types/react": "npm:*"
-  checksum: 10c0/6672093897ae7e3e58b28ff6111f501a7648154a325aea4315efa35a0d9fcbeb60bf9d12786efa75cf80529230f40741b040829782d17cb58f0cea956288be73
-  languageName: node
-  linkType: hard
-
 "@types/react-syntax-highlighter@npm:11.0.4":
   version: 11.0.4
   resolution: "@types/react-syntax-highlighter@npm:11.0.4"
@@ -12661,7 +12652,6 @@ __metadata:
     "@types/node": "npm:^22.9.0"
     "@types/react": "npm:^18.2.60"
     "@types/react-dom": "npm:^18.2.19"
-    "@types/react-input-mask": "npm:^3.0.5"
     "@typescript-eslint/eslint-plugin": "npm:^8.13.0"
     "@typescript-eslint/parser": "npm:^8.13.0"
     babel-loader: "npm:^8.0.0"
