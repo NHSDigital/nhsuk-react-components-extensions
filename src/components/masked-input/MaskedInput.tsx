@@ -1,4 +1,5 @@
-import React, { HTMLProps, ReactInstance } from 'react';
+// import React, { HTMLProps, ReactInstance } from 'react';
+import React, { HTMLProps } from 'react';
 
 import { FormElementProps } from './LocalFormTypes';
 
