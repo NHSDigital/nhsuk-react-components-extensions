@@ -8,6 +8,8 @@ import FormGroup from './LocalFormGroup';
 
 import InputMask, { ReactInputMask } from 'react-input-mask';
 
+// const ReactInputMask = require('react-input-mask')
+
 import classNames from 'classnames';
 
 type InputMaskRef =

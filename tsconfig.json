@@ -19,7 +19,7 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "types": ["react", "jest"],
+    "types": ["react", "jest", "node"],
     "declaration": true,
     "declarationDir": "./lib",
     "strict": true,
@@ -31,7 +31,4 @@
   },
   "include": ["src/**/*" ],
   "exclude": ["node_modules", "**/__tests__", "**/__mocks__"],
-  "paths": {
-      "react": ["../node_modules/@types/react-input-mask"]
-  }
 }
