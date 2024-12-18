@@ -28,7 +28,7 @@
     "@types/node": "^22.9.0",
     "@types/react": "^18.2.60",
     "@types/react-dom": "^18.2.19",
-    "@types/react-input-mask": "2.0.4",
+    "@types/react-input-mask": "^3.0.4",
     "@typescript-eslint/eslint-plugin": "^8.13.0",
     "@typescript-eslint/parser": "^8.13.0",
     "babel-loader": "^8.0.0",
@@ -74,7 +74,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "react-input-mask": "^2.0.4"
+    "react-input-mask": "^3.0.0-alpha.2"
   },
   "scripts": {
     "build": "yarn build:dist && yarn build:lib && yarn build:sass",

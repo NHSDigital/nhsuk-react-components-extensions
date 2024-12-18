@@ -3624,12 +3624,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-input-mask@npm:2.0.4":
-  version: 2.0.4
-  resolution: "@types/react-input-mask@npm:2.0.4"
+"@types/react-input-mask@npm:^3.0.4":
+  version: 3.0.6
+  resolution: "@types/react-input-mask@npm:3.0.6"
   dependencies:
     "@types/react": "npm:*"
-  checksum: 10c0/95d25bea36c5ca7dc2d0d1933dc9ec384e2e2e7bde50311a951e2abe28d236c6f957cd722c2674fafe2a7923d156324f93b59bb88fa74ca89d217f70636aec7b
+  checksum: 10c0/af7a8b938a6d89416630ab27d0d2b6b962acf9ac1de567c745b5041f5cfa07e42715f525a84a5b3cf51fca4b8b8e20cc32e16b80b7c04411c2ebb81aaf462b1f
   languageName: node
   linkType: hard
 
@@ -12661,7 +12661,7 @@ __metadata:
     "@types/node": "npm:^22.9.0"
     "@types/react": "npm:^18.2.60"
     "@types/react-dom": "npm:^18.2.19"
-    "@types/react-input-mask": "npm:2.0.4"
+    "@types/react-input-mask": "npm:^3.0.4"
     "@typescript-eslint/eslint-plugin": "npm:^8.13.0"
     "@typescript-eslint/parser": "npm:^8.13.0"
     babel-loader: "npm:^8.0.0"
@@ -12687,7 +12687,7 @@ __metadata:
     prettier: "npm:^3.3.3"
     react: "npm:^16.9.3"
     react-dom: "npm:^16.9.3"
-    react-input-mask: "npm:^2.0.4"
+    react-input-mask: "npm:^3.0.0-alpha.2"
     rollup: "npm:^4.0.0"
     sass: "npm:~1.70.0"
     sass-loader: "npm:^10.0.0"
@@ -14395,16 +14395,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-input-mask@npm:^2.0.4":
-  version: 2.0.4
-  resolution: "react-input-mask@npm:2.0.4"
+"react-input-mask@npm:^3.0.0-alpha.2":
+  version: 3.0.0-alpha.2
+  resolution: "react-input-mask@npm:3.0.0-alpha.2"
   dependencies:
     invariant: "npm:^2.2.4"
-    warning: "npm:^4.0.2"
+    prop-types: "npm:^15.7.2"
+    warning: "npm:^4.0.3"
   peerDependencies:
-    react: ">=0.14.0"
-    react-dom: ">=0.14.0"
-  checksum: 10c0/89fc110a99e79ee3fa3f63696d5d46ab8889c653b33c0e50c6b24d70b715e1c8d475b8637ceb9e0f4fcacec5e39f653156faef4f5f06972886c4b1e643f66a82
+    react: ">=16.8"
+    react-dom: ">=16.8"
+  checksum: 10c0/13588bf7e67a67303744c0e06041d755b22ed386a236673dba137fe8cb1ad53f5b892f73de2de5b85c0a7ea5f6cfa32d55c0c6037d13296697dc0e57a59158f6
   languageName: node
   linkType: hard
 
