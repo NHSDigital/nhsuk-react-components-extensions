@@ -31,13 +31,8 @@ FormElementProps & {
 
 const MaskedInput: React.FC<MaskedInputProps> = props => (
   <FormGroup<MaskedInputProps> inputType="input" {...props}>
-<<<<<<< Updated upstream
-    {({ className, width, error, ref, ...rest }:any) => (
-      <ReactInputMask
-=======
     {({ className, width, error, ref, ...rest }) => (
       <InputMask
->>>>>>> Stashed changes
         className={classNames(
           'nhsuk-input',
           { [`nhsuk-input--width-${width}`]: width },
