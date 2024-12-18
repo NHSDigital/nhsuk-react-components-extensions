@@ -32,7 +32,7 @@ FormElementProps & {
 const MaskedInput: React.FC<MaskedInputProps> = props => (
   <FormGroup<MaskedInputProps> inputType="input" {...props}>
     {({ className, width, error, ref, ...rest }) => (
-      <InputMask
+      <ReactInputMask
         className={classNames(
           'nhsuk-input',
           { [`nhsuk-input--width-${width}`]: width },
