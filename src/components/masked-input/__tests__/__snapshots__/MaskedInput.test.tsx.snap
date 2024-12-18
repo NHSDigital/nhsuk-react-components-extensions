@@ -20,6 +20,7 @@ exports[`MaskedInput matches snapshot 1`] = `
           id="maskedInput"
           name="maskedInput"
           type="text"
+          value=""
         />
       </div>
     </div>
@@ -40,6 +41,7 @@ exports[`MaskedInput matches snapshot 1`] = `
         id="maskedInput"
         name="maskedInput"
         type="text"
+        value=""
       />
     </div>
   </div>,
