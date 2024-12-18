@@ -6,7 +6,9 @@ import { InputWidth } from 'nhsuk-react-components/dist/esm/util/types/NHSUKType
 
 import FormGroup from './LocalFormGroup';
 
-import InputMask, { ReactInputMask } from 'react-input-mask';
+// import InputMask, { ReactInputMask } from 'react-input-mask';
+import ReactInputMask from 'react-input-mask';
+// import * as
 
 import classNames from 'classnames';
 
@@ -30,7 +32,7 @@ FormElementProps & {
 const MaskedInput: React.FC<MaskedInputProps> = props => (
   <FormGroup<MaskedInputProps> inputType="input" {...props}>
     {({ className, width, error, ref, ...rest }:any) => (
-      <InputMask
+      <ReactInputMask
         className={classNames(
           'nhsuk-input',
           { [`nhsuk-input--width-${width}`]: width },
