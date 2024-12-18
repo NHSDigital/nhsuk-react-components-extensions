@@ -19,7 +19,7 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "types": ["react", "jest"],
+    "types": ["react", "jest", "node"],
     "declaration": true,
     "declarationDir": "./lib",
     "strict": true,
