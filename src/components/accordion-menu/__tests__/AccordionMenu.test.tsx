@@ -5,13 +5,13 @@ import AccordionMenu from '..';
 describe('AccordionMenu', () => {
   it('matches snapshot', () => {
     const component = render(<AccordionMenu />);
-    expect(component).toMatchSnapshot();
+    expect(component.container).toMatchSnapshot();
   });
 
   describe('Section', () => {
     it('matches snapshot', () => {
       const component = render(<AccordionMenu.Section heading="TestHeading" />);
-      expect(component).toMatchSnapshot();
+      expect(component.container).toMatchSnapshot();
     });
 
     it('passes through text', () => {
@@ -64,7 +64,7 @@ describe('AccordionMenu', () => {
   describe('Link', () => {
     it('matches snapshot', () => {
       const component = render(<AccordionMenu.Link>Test</AccordionMenu.Link>);
-      expect(component).toMatchSnapshot();
+      expect(component.container).toMatchSnapshot();
       expect(component.container.textContent).toBe('Test');
     });
   });

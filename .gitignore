@@ -112,3 +112,4 @@ yarn-error.log
 storybook-static/
 css/
 .idea/
+.yarn/install-state.gz

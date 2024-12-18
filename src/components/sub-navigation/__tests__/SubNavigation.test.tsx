@@ -5,7 +5,7 @@ import SubNavigation from '../SubNavigation';
 describe('SubNavigation', () => {
   it('matches snapshot', () => {
     const component = render(<SubNavigation />);
-    expect(component).toMatchSnapshot();
+    expect(component.container).toMatchSnapshot();
   });
 
   it('should have correct classes applied', () => {
@@ -20,7 +20,7 @@ describe('SubNavigation', () => {
   describe('SubNavigationItem', () => {
     it('matches snapshot', () => {
       const component = render(<SubNavigation.Item href="#">Hello world</SubNavigation.Item>);
-      expect(component).toMatchSnapshot();
+      expect(component.container).toMatchSnapshot();
     });
 
     it('should have the correct classes applied', () => {

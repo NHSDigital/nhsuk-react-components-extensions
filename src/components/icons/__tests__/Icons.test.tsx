@@ -6,6 +6,6 @@ import { WarningIcon } from '..';
 describe('WarningIcon', () => {
   it('matches snapshot', () => {
     const component = render(<WarningIcon />);
-    expect(component).toMatchSnapshot();
+    expect(component.container).toMatchSnapshot();
   });
 });

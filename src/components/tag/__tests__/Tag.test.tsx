@@ -5,7 +5,7 @@ import Tag from '..';
 describe('Tag', () => {
   it('matches snapshot', () => {
     const component = render(<Tag>Tag</Tag>);
-    expect(component).toMatchSnapshot();
+    expect(component.container).toMatchSnapshot();
     expect(component.container.textContent).toBe('Tag');
   });
 

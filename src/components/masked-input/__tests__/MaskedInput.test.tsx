@@ -7,7 +7,7 @@ describe('MaskedInput', () => {
     const component = render(
       <MaskedInput mask="999 999 9999" name="maskedInput" id="maskedInput" label="NHS Number" />,
     );
-    expect(component).toMatchSnapshot();
+    expect(component.container).toMatchSnapshot();
     expect(component.container.textContent).toBe('NHS Number');
   });
 });

@@ -5,13 +5,13 @@ import TabSet from '..';
 describe('TabSet', () => {
   it('matches snapshot', () => {
     const component = render(<TabSet />)
-    expect(component).toMatchSnapshot();
+    expect(component.container).toMatchSnapshot();
   });
 
   describe('Tab', () => {
     it('matches snapshot', () => {
       const component = render(<TabSet.Tab />);
-      expect(component).toMatchSnapshot();
+      expect(component.container).toMatchSnapshot();
     });
 
     it('applies correct classes', () => {

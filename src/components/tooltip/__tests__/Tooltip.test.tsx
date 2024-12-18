@@ -5,7 +5,7 @@ import Tooltip from '..';
 describe('Tooltip', () => {
   it('Matches Snapshot', () => {
     const component = render(<Tooltip tooltip="Tooltip!">Hover Over Me</Tooltip>);
-    expect(component).toMatchSnapshot();
+    expect(component.container).toMatchSnapshot();
   });
 
   it('Passes through IDs', () => {

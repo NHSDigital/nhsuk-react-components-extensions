@@ -1,8 +1,16 @@
 import MaskedInput from './MaskedInput';
 import FormGroup from './LocalFormGroup';
-import { FormElementProps } from './LocalFormTypes';
-import Label from './LocalLabel';
+import type { FormElementProps } from './LocalFormTypes';
+import { Label } from 'nhsuk-react-components';
 import { getRandomString, generateRandomID, generateRandomName } from './LocalRandomID';
 import FieldsetContext from './LocalFieldsetContext';
 
-export { MaskedInput, FormGroup, FormElementProps, Label, getRandomString, generateRandomID, generateRandomName, FieldsetContext}
+export default { MaskedInput}
+export { 
+    FormGroup, 
+    FormElementProps, 
+    Label, 
+    getRandomString, 
+    generateRandomID, 
+    generateRandomName, 
+    FieldsetContext }
