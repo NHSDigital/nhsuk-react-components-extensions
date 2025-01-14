@@ -1,14 +1,21 @@
 import React, { HTMLProps } from 'react';
-import FormGroup from 'nhsuk-react-components/lib/util/FormGroup';
-import { FormElementProps } from 'nhsuk-react-components/lib/util/types/FormTypes';
-import { InputWidth } from 'nhsuk-react-components/lib/util/types/NHSUKTypes';
-import InputMask, { ReactInputMask } from 'react-input-mask';
+
+import { FormElementProps } from './LocalFormTypes';
+
+import { InputWidth } from 'nhsuk-react-components/dist/esm/util/types/NHSUKTypes';
+
+import FormGroup from './LocalFormGroup';
+
+// this needs to use "require" or the tests will fail in the pipeline
+// TODO - switch react-input-mask for a package that's updated regularly
+const ReactInputMask = require('react-input-mask')
+
 import classNames from 'classnames';
 
 type InputMaskRef =
   | string
-  | ((instance: ReactInputMask | null) => void)
-  | React.RefObject<ReactInputMask>
+  | ((instance: typeof ReactInputMask | null) => void)
+  | React.RefObject<typeof ReactInputMask>
   | null;
 
 type MaskedInputProps = HTMLProps<HTMLInputElement> &
@@ -25,7 +32,7 @@ FormElementProps & {
 const MaskedInput: React.FC<MaskedInputProps> = props => (
   <FormGroup<MaskedInputProps> inputType="input" {...props}>
     {({ className, width, error, ref, ...rest }) => (
-      <InputMask
+      <ReactInputMask
         className={classNames(
           'nhsuk-input',
           { [`nhsuk-input--width-${width}`]: width },

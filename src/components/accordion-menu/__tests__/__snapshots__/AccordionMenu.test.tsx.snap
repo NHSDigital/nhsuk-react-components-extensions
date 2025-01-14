@@ -1,42 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AccordionMenu Link matches snapshot 1`] = `
-<div
-  className="nhsuk-accordion-menu__subsection"
->
-  <a
-    className="nhsuk-accordion-menu__subsection-link"
+<div>
+  <div
+    class="nhsuk-accordion-menu__subsection"
   >
-    Test
-  </a>
+    <a
+      class="nhsuk-accordion-menu__subsection-link"
+    >
+      Test
+    </a>
+  </div>
 </div>
 `;
 
 exports[`AccordionMenu Section matches snapshot 1`] = `
-<details
-  className="nhsuk-accordion-menu__section"
-  open={false}
->
-  <summary
-    className="nhsuk-accordion-menu__section-summary"
-    onClick={[Function]}
-    role="tab"
-    tabIndex={1}
+<div>
+  <details
+    class="nhsuk-accordion-menu__section"
   >
-    <span
-      className="nhsuk-accordion-menu__section-summary-text"
+    <summary
+      class="nhsuk-accordion-menu__section-summary"
+      role="tab"
+      tabindex="1"
     >
-      TestHeading
-    </span>
-    <ToggleIcon
-      open={false}
-    />
-  </summary>
-</details>
+      <span
+        class="nhsuk-accordion-menu__section-summary-text"
+      >
+        TestHeading
+      </span>
+      <svg
+        aria-hidden="true"
+        class="nhsuk-accordion-menu__icon"
+        height="32"
+        viewBox="0 0 32 32"
+        width="32"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle
+          cx="16"
+          cy="16"
+          fill="#ffffff"
+          r="16"
+        />
+        <path
+          d="M16 8v16M8 16h16"
+          fill="none"
+          stroke="#003087"
+          stroke-linecap="round"
+          stroke-miterlimit="10"
+          stroke-width="4"
+        />
+      </svg>
+    </summary>
+  </details>
+</div>
 `;
 
 exports[`AccordionMenu matches snapshot 1`] = `
-<div
-  className="nhsuk-accordion-menu"
-/>
+<div>
+  <div
+    class="nhsuk-accordion-menu"
+  />
+</div>
 `;

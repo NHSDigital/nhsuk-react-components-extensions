@@ -57,7 +57,6 @@ const Section: React.FC<SectionProps> = ({
       open={isOpen}
       {...rest}
     >
-      {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
       <summary
         className="nhsuk-accordion-menu__section-summary"
         role="tab"

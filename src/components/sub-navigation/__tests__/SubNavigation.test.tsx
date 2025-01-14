@@ -1,45 +1,40 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import {render} from '@testing-library/react';
 import SubNavigation from '../SubNavigation';
 
 describe('SubNavigation', () => {
   it('matches snapshot', () => {
-    const component = shallow(<SubNavigation />);
-    expect(component).toMatchSnapshot();
-    component.unmount();
+    const component = render(<SubNavigation />);
+    expect(component.container).toMatchSnapshot();
   });
 
   it('should have correct classes applied', () => {
-    const component = shallow(<SubNavigation />);
-    const unorderedList = component.find('.nhsuk-sub-navigation__list');
+    const component = render(<SubNavigation />);
+    const unorderedList = component.container.querySelector('.nhsuk-sub-navigation__list');
 
-    expect(component.hasClass('nhsuk-sub-navigation')).toBeTruthy();
-    expect(unorderedList.exists()).toBeTruthy();
+    expect(component.container.querySelector('.nhsuk-sub-navigation')).toBeTruthy();
+    expect(unorderedList).toBeTruthy();
 
-    component.unmount();
   });
 
   describe('SubNavigationItem', () => {
     it('matches snapshot', () => {
-      const component = shallow(<SubNavigation.Item href="#">Hello world</SubNavigation.Item>);
-      expect(component).toMatchSnapshot();
-      component.unmount();
+      const component = render(<SubNavigation.Item href="#">Hello world</SubNavigation.Item>);
+      expect(component.container).toMatchSnapshot();
     });
 
     it('should have the correct classes applied', () => {
-      const component = shallow(<SubNavigation.Item href="#">Hello world</SubNavigation.Item>);
+      const component = render(<SubNavigation.Item href="#">Hello world</SubNavigation.Item>);
 
-      expect(component.hasClass('nhsuk-sub-navigation__item')).toBeTruthy();
+      expect(component.container.querySelector('.nhsuk-sub-navigation__item')).toBeTruthy();
 
-      component.unmount();
     });
 
     it('passes inner text correctly', () => {
-      const component = shallow(
+      const component = render(
         <SubNavigation.Item href="https://nhs.uk">Hello world</SubNavigation.Item>,
       );
-      expect(component.text()).toBe('Hello world');
-      component.unmount();
+      expect(component.container.textContent).toBe('Hello world');
     });
   });
 });

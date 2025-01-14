@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./lib",
+    "outDir": "./dist",
     "module": "es6",
     "target": "es5",
     "lib": ["es5", "es6", "es7", "es2017", "esnext", "dom"],
@@ -15,12 +15,11 @@
     "noImplicitThis": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "types": ["react", "jest"],
+    "types": ["react", "jest", "node"],
     "declaration": true,
     "declarationDir": "./lib",
     "strict": true,
@@ -30,6 +29,6 @@
   "awesomeTypescriptLoaderOptions": {
     "ignoreDiagnostics": [7005]
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/__tests__", "setupTests*", "**/__mocks__"]
+  "include": ["src/**/*" ],
+  "exclude": ["node_modules", "**/__tests__", "**/__mocks__"]
 }

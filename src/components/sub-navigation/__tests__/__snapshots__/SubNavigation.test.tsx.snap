@@ -1,24 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SubNavigation SubNavigationItem matches snapshot 1`] = `
-<li
-  className="nhsuk-sub-navigation__item"
->
-  <a
-    className="nhsuk-sub-navigation__link"
-    href="#"
+<div>
+  <li
+    class="nhsuk-sub-navigation__item"
   >
-    Hello world
-  </a>
-</li>
+    <a
+      class="nhsuk-sub-navigation__link"
+      href="#"
+    >
+      Hello world
+    </a>
+  </li>
+</div>
 `;
 
 exports[`SubNavigation matches snapshot 1`] = `
-<nav
-  className="nhsuk-sub-navigation"
->
-  <ul
-    className="nhsuk-sub-navigation__list"
-  />
-</nav>
+<div>
+  <nav
+    class="nhsuk-sub-navigation"
+  >
+    <ul
+      class="nhsuk-sub-navigation__list"
+    />
+  </nav>
+</div>
 `;

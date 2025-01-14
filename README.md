@@ -18,14 +18,16 @@ npm i --save nhsuk-react-components-extensions
 
 ### Importing Components
 
-Components can either be imported from the global package or from the `/lib` directory. The package is tree-shakeable, so you should not see a sizeable difference between the import sizes using either method.
+Components can either be imported from the global package or from the `/dist` directory. The package is tree-shakeable, so you should not see a sizeable difference between the import sizes using either method.
+
+
 
 ```jsx
 // From the global package
 import { SubNavigation } from 'nhsuk-react-components-extensions';
 
-// From the lib directory
-import SubNavigation from 'nhsuk-react-components/lib/components/sub-navigation';
+// From the dist directory
+import SubNavigation from 'nhsuk-react-components/dist/src/components/sub-navigation';
 ```
 
 ### Styles

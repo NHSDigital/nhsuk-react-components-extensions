@@ -1,4 +1,4 @@
-@import '../../styles/variables';
+@use '../../../node_modules/nhsuk-frontend/packages/core/settings/colours';
 
 /* ==========================================================================
    #SECONDARY NAV
@@ -15,7 +15,7 @@ $sub-navigation-breakpoint: 40.0625em;
   position: relative;
 
   &::before {
-    background-color: $color_nhsuk-grey-4;
+    background-color: colours.$color_nhsuk-grey-4;
     bottom: -8px;
     content: '';
     display: block;
@@ -75,7 +75,7 @@ $sub-navigation-breakpoint: 40.0625em;
     text-decoration: none;
 
     &::before {
-      background-color: $color_nhsuk-blue;
+      background-color: colours.$color_nhsuk-blue;
       content: '';
       display: block;
       height: 100%;

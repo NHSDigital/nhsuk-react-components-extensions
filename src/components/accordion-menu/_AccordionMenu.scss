@@ -1,31 +1,34 @@
-@import '../../styles/variables';
+@use '../../styles/variables';
+@use '../../../node_modules/nhsuk-frontend/packages/core/settings/all' as settings;
+@import '../../../node_modules/nhsuk-frontend/packages/core/all';
 
 .nhsuk-accordion-menu {
   display: block;
-  background-color: $color_nhsuk-white;
-  color: $color_nhsuk-white;
+  background-color: settings.$color_nhsuk-white;
+  color: settings.$color_nhsuk-white;
 
   &__section {
-    border-top: 1px solid $color_nhsuk-white;
-    border-bottom: 1px solid $color_nhsuk-white;
-    background-color: $color_nhsuk-white;
+    border-top: 1px solid settings.$color_nhsuk-white;
+    border-bottom: 1px solid settings.$color_nhsuk-white;
+    background-color: settings.$color_nhsuk-white;
     padding: 0;
 
     &:first-of-type + &:not(:focus-visible) {
-      border-top: 4px solid $color_nhsuk-dark-blue;
+      border-top: 4px solid variables.$color_nhsuk-dark-blue;
     }
 
     &:last-of-type + &:not(:focus-visible) {
-      border-bottom: 4px solid $color_nhsuk-dark-blue;
+      border-bottom: 4px solid variables.$color_nhsuk-dark-blue;
     }
 
     &-summary {
       @include nhsuk-responsive-padding(2, 'top');
       @include nhsuk-responsive-padding(2, 'bottom');
       @include nhsuk-responsive-padding(4, 'left');
-      @include nhsuk-responsive-padding(4, 'right');
+      @include nhsuk-responsive-padding(4, 'right'); 
+
       list-style: none !important;
-      background-color: $color_nhsuk-dark-blue;
+      background-color: variables.$color_nhsuk-dark-blue;
       outline: none;
       border-bottom: 4px solid transparent;
       border-top: 4px solid transparent;
@@ -48,24 +51,26 @@
         display: none !important;
         list-style: none !important;
       }
+      
       &:hover {
         text-decoration: underline;
       }
 
       &:active,
       &:focus {
-        background-color: $nhsuk-focus-color;
-        color: $nhsuk-focus-text-color;
-        border-bottom: 4px solid $color_nhsuk-black;
+        background-color: settings.$nhsuk-focus-color;
+        color: settings.$nhsuk-focus-text-color;
+        border-bottom: 4px solid settings.$color_nhsuk-black;
       }
 
       &:active > .nhsuk-accordion-menu__icon,
       &:focus > .nhsuk-accordion-menu__icon {
-        & > path {
-          stroke: $color_nhsuk-white;
+        > path {
+          stroke: settings.$color_nhsuk-white;
         }
-        & > circle {
-          fill: $color_nhsuk-black;
+
+        > circle {
+          fill: settings.$color_nhsuk-black;
         }
       }
 
@@ -78,6 +83,7 @@
   }
 
   &__subsection {
+
     @include nhsuk-responsive-margin(2, 'top');
     @include nhsuk-responsive-margin(2, 'bottom');
     @include nhsuk-responsive-margin(2, 'right');
@@ -87,23 +93,25 @@
     cursor: pointer;
 
     &-link {
-      @include nhsuk-typography-responsive(19);
+
       @include nhsuk-responsive-padding(3, 'right');
       @include nhsuk-responsive-padding(3, 'left');
 
+      @include nhsuk-typography-responsive(19);
       display: block;
       border-bottom: 3px solid transparent;
       border-top: 3px solid transparent;
+
       &:hover {
-        color: $nhsuk-focus-text-color;
-        background-color: $nhsuk-focus-color;
+        color: settings.$nhsuk-focus-text-color;
+        background-color: settings.$nhsuk-focus-color;
       }
 
       &:active {
-        color: $nhsuk-focus-text-color;
-        background-color: $nhsuk-focus-color;
-        padding-bottom: 0px;
-        border-bottom: 3px solid $color_nhsuk-black;
+        color: settings.$nhsuk-focus-text-color;
+        background-color: settings.$nhsuk-focus-color;
+        padding-bottom: 0;
+        border-bottom: 3px solid settings.$color_nhsuk-black;
       }
     }
   }

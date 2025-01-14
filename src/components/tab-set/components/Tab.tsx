@@ -1,6 +1,4 @@
-/* eslint-disable react/button-has-type */
-/** This is disabled as the rule requires the type to be a static string, which we don't
- * do in a component library. We let the end-user choose the button type they want. */
+ 
 import React, { HTMLProps } from 'react';
 import classNames from 'classnames';
 
