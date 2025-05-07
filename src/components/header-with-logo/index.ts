@@ -1,3 +1,3 @@
-import { HeaderWithLogo } from "./HeaderWithLogo";
+import HeaderWithLogo from './HeaderWithLogo';
 
-export default HeaderWithLogo
+export default HeaderWithLogo;

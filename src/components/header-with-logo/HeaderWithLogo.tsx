@@ -1,19 +1,16 @@
-// this was copied and edited from nhsuk-react-components
-// the original did not work 
-
 'use client';
 import React, { FC, HTMLProps, useContext, useState, useEffect, useMemo } from 'react';
 import classNames from 'classnames';
-import NHSLogo, {NHSLogoNavProps}from './LocalNHSLogo';
-import OrganisationalLogo, { OrganisationalLogoProps }  from './LocalOrganisationalLogo'; 
-import HeaderContext, { IHeaderContext } from './LocalHeaderContext'
-import Search from 'nhsuk-react-components';
-import Nav from 'nhsuk-react-components';
-import NavItem from 'nhsuk-react-components';
-import NavDropdownMenu from 'nhsuk-react-components';
+import NHSLogo, { NHSLogoNavProps } from './components/LocalNHSLogo';
+import OrganisationalLogo, { OrganisationalLogoProps } from './components/LocalOrganisationalLogo';
+import HeaderContext, { IHeaderContext } from './HeaderContext';
+import Search from './components/LocalSearch';
+import Nav from './components/LocalNav';
+import NavItem from './components/LocalNavItem';
+import NavDropdownMenu from './components/LocalNavDropdownMenu';
 import { Container } from 'nhsuk-react-components';
-import Content from 'nhsuk-react-components';
-import TransactionalServiceName from 'nhsuk-react-components';
+import Content from './components/LocalContent';
+import TransactionalServiceName from './components/LocalTransactionalServiceName';
 import HeaderJs from './header';
 
 const BaseHeaderLogo: FC<OrganisationalLogoProps & NHSLogoNavProps> = (props) => {
@@ -24,7 +21,7 @@ const BaseHeaderLogo: FC<OrganisationalLogoProps & NHSLogoNavProps> = (props) =>
   return <NHSLogo {...props} />;
 };
 
-export const HeaderContainer: FC<HTMLProps<HTMLDivElement>> = ({ className, ...rest }) => (
+const HeaderContainer: FC<HTMLProps<HTMLDivElement>> = ({ className, ...rest }) => (
   <Container className={classNames('nhsuk-header__container', className)} {...rest} />
 );
 
@@ -37,7 +34,7 @@ interface HeaderProps extends HTMLProps<HTMLDivElement> {
   white?: boolean;
 }
 
-export const HeaderWithLogo = ({
+const HeaderWithLogo = ({
   className,
   children,
   transactional,
@@ -53,8 +50,6 @@ export const HeaderWithLogo = ({
   const [hasSearch, setHasSearch] = useState(false);
   const [hasServiceName, setHasServiceName] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  console.log(`I am coming from nhusk-react-components-extensions`)
 
   useEffect(() => {
     HeaderJs();

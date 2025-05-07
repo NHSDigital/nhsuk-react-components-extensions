@@ -1,8 +1,8 @@
 'use client';
 import React, { FC, useContext, SVGProps } from 'react';
 import classNames from 'classnames';
-import HeaderContext, { IHeaderContext } from './LocalHeaderContext';
-import { AsElementLink } from '../../../node_modules/nhsuk-react-components/dist/esm/util/types/LinkTypes';
+import HeaderContext, { IHeaderContext } from '../HeaderContext';
+import { AsElementLink } from '../../../../node_modules/nhsuk-react-components/dist/esm/util/types/LinkTypes';
 
 interface SVGImageWithSrc extends SVGProps<SVGImageElement> {
   src: string;

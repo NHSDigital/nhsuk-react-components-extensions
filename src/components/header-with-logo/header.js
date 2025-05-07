@@ -32,6 +32,7 @@ class Header {
       this.doOnOrientationChange();
   
       this.handleResize = this.debounce(() => {
+        console.log(`I am calling handleResize`)
         this.calculateBreakpoints();
         this.updateNavigation();
       });
