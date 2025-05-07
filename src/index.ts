@@ -1,4 +1,5 @@
 export { default as AccordionMenu } from './components/accordion-menu';
+export { default as HeaderWithLogo} from './components/header-with-logo'
 export { default as MaskedInput, 
         FormGroup,
         Label,
