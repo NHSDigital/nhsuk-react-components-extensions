@@ -12673,6 +12673,7 @@ __metadata:
     "@types/react-input-mask": "npm:^3.0.5"
     "@typescript-eslint/eslint-plugin": "npm:^8.13.0"
     "@typescript-eslint/parser": "npm:^8.13.0"
+    babel-jest: "npm:^29.7.0"
     babel-loader: "npm:^8.0.0"
     classnames: "npm:^2.2.6"
     css-loader: "npm:^5.0.0"
