@@ -1,8 +1,8 @@
 'use client';
 import React, { FC, HTMLProps, useContext, useEffect, MouseEvent } from 'react';
 import HeaderContext, { IHeaderContext } from '../HeaderContext';
-import { ChevronDown as ChevronDownIcon } from '../../../../node_modules/nhsuk-react-components/dist/esm/components/content-presentation/icons/individual/ChevronDown';
-
+// import { ChevronDown as ChevronDownIcon } from '../../../../node_modules/nhsuk-react-components/dist/esm/components/content-presentation/icons/individual/ChevronDown';
+import { ChevronDownIcon } from './LocalChevronDown';
 export interface NavDropdownMenuProps extends HTMLProps<HTMLButtonElement> {
   type?: 'button' | 'submit' | 'reset';
   dropdownText?: string;

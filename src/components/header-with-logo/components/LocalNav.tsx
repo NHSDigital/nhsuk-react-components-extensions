@@ -1,6 +1,7 @@
 import React, { Children, FC, HTMLProps } from 'react';
 import classNames from 'classnames';
-import { childIsOfComponentType } from '../../../../node_modules/nhsuk-react-components/dist/esm/util/types/TypeGuards';
+// import { childIsOfComponentType } from '../../../../node_modules/nhsuk-react-components/dist/esm/util/types/TypeGuards';
+import { childIsOfComponentType } from './LocalTypeGuards';
 import NavItem from './LocalNavItem';
 
 const Nav: FC<HTMLProps<HTMLDivElement>> = ({
