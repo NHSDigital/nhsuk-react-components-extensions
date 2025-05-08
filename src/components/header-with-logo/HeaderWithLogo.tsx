@@ -103,6 +103,10 @@ const HeaderWithLogo = ({
     transactional,
   ]);
 
+  // useEffect(() => console.log('I am calling useEffect'), [
+  //   document.querySelector('.nhsuk-header__navigation-list')?.children.length
+  // ]);
+
   return (
     <header
       className={classNames(

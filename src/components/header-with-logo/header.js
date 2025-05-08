@@ -3,6 +3,7 @@
  * See Github issue https://github.com/nhsuk/nhsuk-frontend/issues/937
  */
 
+
 class Header {
     constructor() {
       this.menuIsOpen = false;
@@ -14,8 +15,9 @@ class Header {
       this.mobileMenuContainer = document.querySelector('.nhsuk-mobile-menu-container');
       this.breakpoints = [];
       this.width = document.body.offsetWidth;
+      // this.width = this.navigationList.offsetWidth
     }
-  
+    
     init() {
       if (
         !this.navigation ||
@@ -25,11 +27,23 @@ class Header {
       ) {
         return;
       }
-  
-      this.setupMobileMenu();
-      this.calculateBreakpoints();
-      this.updateNavigation();
-      this.doOnOrientationChange();
+
+      this.doEverything = this.debounce(() => {
+        this.setupMobileMenu()
+        this.calculateBreakpoints();
+        this.updateNavigation();
+        this.doOnOrientationChange()
+      });
+
+      // 3933 - this is another way to do it, instead of adding the eventListener to updateNavigation
+      // still gives a split-second flicker before correcting itself though
+      window.addEventListener('load', this.doEverything)
+
+
+      // this.setupMobileMenu()
+      // this.calculateBreakpoints()
+      // this.updateNavigation()
+      // this.doOnOrientationChange()
   
       this.handleResize = this.debounce(() => {
         console.log(`I am calling handleResize`)
@@ -39,7 +53,7 @@ class Header {
   
       this.mobileMenuToggleButton.addEventListener('click', this.toggleMobileMenu.bind(this));
       window.addEventListener('resize', this.handleResize);
-      window.addEventListener('load', this.handleResize);
+      // window.addEventListener('load', this.handleResize);
       window.addEventListener('orientationchange', this.doOnOrientationChange());
     }
   
@@ -62,14 +76,17 @@ class Header {
      */
     calculateBreakpoints() {
       let childrenWidth = 0;
-      for (let i = 0; i < this.navigationList.children.length; i++) {
-        childrenWidth += this.navigationList.children[i].offsetWidth;
-        this.breakpoints[i] = childrenWidth;
-      }
+      console.log(`I am calculateBreakpoints`)
+        for (let i = 0; i < this.navigationList.children.length; i++) {
+          console.log(`I am breakpoint for ${this.navigationList.children[i]}: ${this.navigationList.children[i].offsetWidth}`)
+          childrenWidth += this.navigationList.children[i].offsetWidth;
+          this.breakpoints[i] = childrenWidth;
+        }
     }
   
     // Add the mobile menu to the DOM
     setupMobileMenu() {
+      console.log(`I am setupMobileMenu`)
       this.mobileMenuContainer.appendChild(this.mobileMenu);
       this.mobileMenu.classList.add('nhsuk-header__drop-down', 'nhsuk-header__drop-down--hidden');
     }
@@ -157,7 +174,8 @@ class Header {
      */
   
     updateNavigation() {
-      const availableSpace = this.navigation.offsetWidth;
+      // const availableSpace = this.navigation.offsetWidth;
+      const availableSpace = this.navigationList.offsetWidth; 
       let itemsVisible = this.navigationList.children.length;
   
       if (availableSpace < this.breakpoints[itemsVisible - 1]) {
@@ -185,8 +203,7 @@ class Header {
           itemsVisible += 1;
         }
       }
-  
-      // HERE IS THE ISSUE - when it first renders, children.length is not set because they haven't loaded yet
+    // HERE IS THE ISSUE - when it first renders, children.length is not set because they haven't loaded yet
       if (!this.mobileMenu.children.length) {
         console.log(`!this.mobileMenu.children.length`)
         this.mobileMenuToggleButton.classList.remove('nhsuk-header__menu-toggle--visible');
@@ -197,6 +214,7 @@ class Header {
         console.log(`document.body.offsetWidth !== this.width && this.menuIsOpen`)
         this.closeMobileMenu();
       }
+
     }
   
     /**
@@ -216,7 +234,7 @@ class Header {
         default:
           break;
       }
-    }
+  }
   }
   
   export default () => {

@@ -4,12 +4,12 @@ import { AsElementLink } from '../../../../node_modules/nhsuk-react-components/d
 
 
 export interface NavItemProps extends AsElementLink<HTMLAnchorElement> {
+  // added here because it was giving errors at the end
+  id?: string;
   home?: boolean;
 }
 
 const NavItem: FC<NavItemProps> = ({
-  // added here because it was giving errors at the end
-  id,
   home,
   className,
   children,

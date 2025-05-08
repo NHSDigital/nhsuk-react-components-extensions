@@ -1,29 +1,29 @@
 import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
-import Header from '../Header';
+import HeaderWithLogo from '../HeaderWithLogo';
 
 describe('The header component', () => {
   it('Matches the snapshot', () => {
     const { container } = render(
-      <Header>
-        <Header.Container>
-          <Header.Logo href="/" />
-          <Header.Content>
-            <Header.Search />
-          </Header.Content>
-        </Header.Container>
-        <Header.Nav>
-          <Header.NavItem href="/conditions">Health A-Z</Header.NavItem>
-          <Header.NavItem href="/live-well">Live Well</Header.NavItem>
-          <Header.NavItem href="/social-care-and-support">Care and support</Header.NavItem>
-          <Header.NavItem href="/news">Health news</Header.NavItem>
-          <Header.NavItem href="/service-search">Services near you</Header.NavItem>
-          <Header.NavItem href="/" home>
+      <HeaderWithLogo>
+        <HeaderWithLogo.Container>
+          <HeaderWithLogo.Logo href="/" />
+          <HeaderWithLogo.Content>
+            <HeaderWithLogo.Search />
+          </HeaderWithLogo.Content>
+        </HeaderWithLogo.Container>
+        <HeaderWithLogo.Nav>
+          <HeaderWithLogo.NavItem href="/conditions">Health A-Z</HeaderWithLogo.NavItem>
+          <HeaderWithLogo.NavItem href="/live-well">Live Well</HeaderWithLogo.NavItem>
+          <HeaderWithLogo.NavItem href="/social-care-and-support">Care and support</HeaderWithLogo.NavItem>
+          <HeaderWithLogo.NavItem href="/news">Health news</HeaderWithLogo.NavItem>
+          <HeaderWithLogo.NavItem href="/service-search">Services near you</HeaderWithLogo.NavItem>
+          <HeaderWithLogo.NavItem href="/" home>
             Home
-          </Header.NavItem>
-          <Header.NavDropdownMenu />
-        </Header.Nav>
-      </Header>,
+          </HeaderWithLogo.NavItem>
+          <HeaderWithLogo.NavDropdownMenu />
+        </HeaderWithLogo.Nav>
+      </HeaderWithLogo>,
     );
 
     expect(container).toMatchSnapshot();
@@ -39,7 +39,7 @@ describe('The header component', () => {
     'Sets the appropriate classNames with transactional $transactional and orgName $orgName and white $white',
     ({ transactional, orgName, white }) => {
       const { container } = render(
-        <Header transactional={transactional} orgName={orgName} white={white}></Header>,
+        <HeaderWithLogo transactional={transactional} orgName={orgName} white={white}></HeaderWithLogo>,
       );
 
       const headerElement = container.querySelector('.nhsuk-header');
@@ -77,11 +77,11 @@ describe('The header component', () => {
       'When rendered with $numberOfLinks links then it is $expectedLeftAligned that the list has the left aligned class',
       ({ numberOfLinks, expectedLeftAligned }) => {
         const { container } = render(
-          <Header.Nav>
+          <HeaderWithLogo.Nav>
             {[...Array(numberOfLinks)].map((_x, i) => (
-              <Header.NavItem key={i} />
+              <HeaderWithLogo.NavItem key={i} />
             ))}
-          </Header.Nav>,
+          </HeaderWithLogo.Nav>,
         );
 
         const navList = container.getElementsByClassName('nhsuk-header__navigation-list')[0];
@@ -96,12 +96,12 @@ describe('The header component', () => {
 
     it('Only counts NavItem components when determining whether to set left aligned class', () => {
       const { container } = render(
-        <Header.Nav>
-          <Header.NavItem />
-          <Header.NavItem />
-          <Header.NavItem />
-          <Header.Logo />
-        </Header.Nav>,
+        <HeaderWithLogo.Nav>
+          <HeaderWithLogo.NavItem />
+          <HeaderWithLogo.NavItem />
+          <HeaderWithLogo.NavItem />
+          <HeaderWithLogo.Logo />
+        </HeaderWithLogo.Nav>,
       );
 
       const navList = container.getElementsByClassName('nhsuk-header__navigation-list')[0];
@@ -115,9 +115,9 @@ describe('The header component', () => {
       'Renders as expected when passed a dropdownText of %s',
       (dropdownText) => {
         const { container } = render(
-          <Header>
-            <Header.NavDropdownMenu dropdownText={dropdownText}></Header.NavDropdownMenu>
-          </Header>,
+          <HeaderWithLogo>
+            <HeaderWithLogo.NavDropdownMenu dropdownText={dropdownText}></HeaderWithLogo.NavDropdownMenu>
+          </HeaderWithLogo>,
         );
 
         const visuallyHiddenText = container.querySelector(
@@ -131,9 +131,9 @@ describe('The header component', () => {
     it('Invokes the onClick prop when button is clicked', () => {
       const clickFn = jest.fn();
       const { container } = render(
-        <Header>
-          <Header.NavDropdownMenu onClick={clickFn}></Header.NavDropdownMenu>
-        </Header>,
+        <HeaderWithLogo>
+          <HeaderWithLogo.NavDropdownMenu onClick={clickFn}></HeaderWithLogo.NavDropdownMenu>
+        </HeaderWithLogo>,
       );
 
       const buttonElement = container.querySelector('.nhsuk-header__menu-toggle');
@@ -151,11 +151,11 @@ describe('The header component', () => {
       'Sets the home className as expected when home is %s',
       (home) => {
         const { container } = render(
-          <Header>
-            <Header.Nav>
-              <Header.NavItem home={home} />
-            </Header.Nav>
-          </Header>,
+          <HeaderWithLogo>
+            <HeaderWithLogo.Nav>
+              <HeaderWithLogo.NavItem home={home} />
+            </HeaderWithLogo.Nav>
+          </HeaderWithLogo>,
         );
 
         const navItemElement = container.querySelector('.nhsuk-header__navigation-item');
@@ -172,9 +172,9 @@ describe('The header component', () => {
   describe('The Logo component', () => {
     it('Sets logo only class if there is no menu or search', () => {
       const { container } = render(
-        <Header>
-          <Header.Logo />
-        </Header>,
+        <HeaderWithLogo>
+          <HeaderWithLogo.Logo />
+        </HeaderWithLogo>,
       );
 
       expect(container.querySelector('.nhsuk-header__logo')).toHaveClass(
@@ -184,12 +184,12 @@ describe('The header component', () => {
 
     it('Does not set logo only class if there is a menu', () => {
       const { container } = render(
-        <Header>
-          <Header.Nav>
-            <Header.NavDropdownMenu />
-          </Header.Nav>
-          <Header.Logo />
-        </Header>,
+        <HeaderWithLogo>
+          <HeaderWithLogo.Nav>
+            <HeaderWithLogo.NavDropdownMenu />
+          </HeaderWithLogo.Nav>
+          <HeaderWithLogo.Logo />
+        </HeaderWithLogo>,
       );
 
       expect(container.querySelector('.nhsuk-header__logo')).not.toHaveClass(
@@ -199,10 +199,10 @@ describe('The header component', () => {
 
     it('Does not set logo only class if there is a search', () => {
       const { container } = render(
-        <Header>
-          <Header.Search />
-          <Header.Logo />
-        </Header>,
+        <HeaderWithLogo>
+          <HeaderWithLogo.Search />
+          <HeaderWithLogo.Logo />
+        </HeaderWithLogo>,
       );
 
       expect(container.querySelector('.nhsuk-header__logo')).not.toHaveClass(
@@ -212,10 +212,10 @@ describe('The header component', () => {
 
     it('Does not set logo only class if there is a service name', () => {
       const { container } = render(
-        <Header>
-          <Header.ServiceName>Test</Header.ServiceName>
-          <Header.Logo />
-        </Header>,
+        <HeaderWithLogo>
+          <HeaderWithLogo.ServiceName>Test</HeaderWithLogo.ServiceName>
+          <HeaderWithLogo.Logo />
+        </HeaderWithLogo>,
       );
 
       expect(container.querySelector('.nhsuk-header__logo')).not.toHaveClass(
@@ -225,9 +225,9 @@ describe('The header component', () => {
 
     it('Sets the transactional class if the header is transactional', () => {
       const { container } = render(
-        <Header transactional>
-          <Header.Logo />
-        </Header>,
+        <HeaderWithLogo transactional>
+          <HeaderWithLogo.Logo />
+        </HeaderWithLogo>,
       );
 
       expect(container.querySelector('.nhsuk-header__logo')).toHaveClass(
@@ -239,9 +239,9 @@ describe('The header component', () => {
       'Renders as expected with the service name %s',
       (serviceName) => {
         const { container } = render(
-          <Header serviceName={serviceName}>
-            <Header.Logo />
-          </Header>,
+          <HeaderWithLogo serviceName={serviceName}>
+            <HeaderWithLogo.Logo />
+          </HeaderWithLogo>,
         );
 
         if (serviceName) {
@@ -266,9 +266,9 @@ describe('The header component', () => {
   describe('The OrganizationalLogo component', () => {
     it('Is rendered when orgName is specified', () => {
       const { container } = render(
-        <Header orgName="Test org">
-          <Header.Logo />
-        </Header>,
+        <HeaderWithLogo orgName="Test org">
+          <HeaderWithLogo.Logo />
+        </HeaderWithLogo>,
       );
 
       expect(container.querySelector('.nhsuk-organisation-name')?.textContent).toBe('Test org');
@@ -278,9 +278,9 @@ describe('The header component', () => {
 
     it('Renders the orgName, orgSplit and orgDescriptor', () => {
       const { container } = render(
-        <Header orgName="Test org" orgSplit="Org split" orgDescriptor="Org descriptor">
-          <Header.Logo />
-        </Header>,
+        <HeaderWithLogo orgName="Test org" orgSplit="Org split" orgDescriptor="Org descriptor">
+          <HeaderWithLogo.Logo />
+        </HeaderWithLogo>,
       );
 
       expect(container.querySelector('.nhsuk-organisation-name-split')?.textContent).toBe(
@@ -293,9 +293,9 @@ describe('The header component', () => {
 
     it('Uses the logoUrl if specified', () => {
       const { container } = render(
-        <Header orgName="Test org">
-          <Header.Logo logoUrl="Test url" />
-        </Header>,
+        <HeaderWithLogo orgName="Test org">
+          <HeaderWithLogo.Logo logoUrl="Test url" />
+        </HeaderWithLogo>,
       );
 
       expect(container.querySelector('.nhsuk-org-logo')?.getAttribute('src')).toBe('Test url');
