@@ -19,7 +19,7 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "types": ["react", "jest", "node"],
+    "types": ["react", "jest", "node", "@testing-library/jest-dom"],
     "declaration": true,
     "declarationDir": "./lib",
     "strict": true,
@@ -30,5 +30,5 @@
     "ignoreDiagnostics": [7005]
   },
   "include": ["src/**/*" ],
-  "exclude": ["node_modules", "**/__tests__", "**/__mocks__"]
+  "exclude": ["node_modules", "**/__mocks__"]
 }
