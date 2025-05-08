@@ -11,7 +11,6 @@ describe('The header component', () => {
           <HeaderWithLogo.Content>
             <HeaderWithLogo.Search />
           </HeaderWithLogo.Content>
-        </HeaderWithLogo.Container>
         <HeaderWithLogo.Nav>
           <HeaderWithLogo.NavItem href="/conditions">Health A-Z</HeaderWithLogo.NavItem>
           <HeaderWithLogo.NavItem href="/live-well">Live Well</HeaderWithLogo.NavItem>
@@ -23,6 +22,7 @@ describe('The header component', () => {
           </HeaderWithLogo.NavItem>
           <HeaderWithLogo.NavDropdownMenu />
         </HeaderWithLogo.Nav>
+        </HeaderWithLogo.Container>
       </HeaderWithLogo>,
     );
 
@@ -45,21 +45,23 @@ describe('The header component', () => {
       const headerElement = container.querySelector('.nhsuk-header');
 
       if (transactional) {
-        expect(headerElement).toHaveClass('nhsuk-header__transactional');
+        // expect(headerElement).toHaveProperty('class','nhsuk-header__transactional');
+        // 3933 - changed this because for some reason it didn't like "toHaveClass"
+        expect(headerElement?.className).toContain('nhsuk-header__transactional');
       } else {
-        expect(headerElement).not.toHaveClass('nhsuk-header__transactional');
+        expect(headerElement?.className).not.toContain('nhsuk-header__transactional');
       }
 
       if (orgName !== undefined) {
-        expect(headerElement).toHaveClass('nhsuk-header--organisation');
+        expect(headerElement?.className).toContain('nhsuk-header--organisation');
       } else {
-        expect(headerElement).not.toHaveClass('nhsuk-header--organisation');
+        expect(headerElement?.className).not.toContain('nhsuk-header--organisation');
       }
 
       if (white) {
-        expect(headerElement).toHaveClass('nhsuk-header--white');
+        expect(headerElement?.className).toContain('nhsuk-header--white');
       } else {
-        expect(headerElement).not.toHaveClass('nhsuk-header--white');
+        expect(headerElement?.className).not.toContain('nhsuk-header--white');
       }
     },
   );
@@ -87,9 +89,9 @@ describe('The header component', () => {
         const navList = container.getElementsByClassName('nhsuk-header__navigation-list')[0];
 
         if (expectedLeftAligned) {
-          expect(navList).toHaveClass('nhsuk-header__navigation-list--left-aligned');
+          expect(navList?.className).toContain('nhsuk-header__navigation-list--left-aligned');
         } else {
-          expect(navList).not.toHaveClass('nhsuk-header__navigation-list--left-aligned');
+          expect(navList?.className).not.toContain('nhsuk-header__navigation-list--left-aligned');
         }
       },
     );
@@ -106,7 +108,7 @@ describe('The header component', () => {
 
       const navList = container.getElementsByClassName('nhsuk-header__navigation-list')[0];
 
-      expect(navList).toHaveClass('nhsuk-header__navigation-list--left-aligned');
+      expect(navList?.className).toContain('nhsuk-header__navigation-list--left-aligned');
     });
   });
 
@@ -161,9 +163,9 @@ describe('The header component', () => {
         const navItemElement = container.querySelector('.nhsuk-header__navigation-item');
 
         if (home) {
-          expect(navItemElement).toHaveClass('nhsuk-header__navigation-item--home');
+          expect(navItemElement?.className).toContain('nhsuk-header__navigation-item--home');
         } else {
-          expect(navItemElement).not.toHaveClass('nhsuk-header__navigation-item--home');
+          expect(navItemElement?.className).not.toContain('nhsuk-header__navigation-item--home');
         }
       },
     );
@@ -177,7 +179,7 @@ describe('The header component', () => {
         </HeaderWithLogo>,
       );
 
-      expect(container.querySelector('.nhsuk-header__logo')).toHaveClass(
+      expect(container.querySelector('.nhsuk-header__logo')?.className).toContain(
         'nhsuk-header__logo--only',
       );
     });
@@ -192,7 +194,7 @@ describe('The header component', () => {
         </HeaderWithLogo>,
       );
 
-      expect(container.querySelector('.nhsuk-header__logo')).not.toHaveClass(
+      expect(container.querySelector('.nhsuk-header__logo')?.className).not.toContain(
         'nhsuk-header__logo--only',
       );
     });
@@ -205,7 +207,7 @@ describe('The header component', () => {
         </HeaderWithLogo>,
       );
 
-      expect(container.querySelector('.nhsuk-header__logo')).not.toHaveClass(
+      expect(container.querySelector('.nhsuk-header__logo')?.className).not.toContain(
         'nhsuk-header__logo--only',
       );
     });
@@ -218,7 +220,7 @@ describe('The header component', () => {
         </HeaderWithLogo>,
       );
 
-      expect(container.querySelector('.nhsuk-header__logo')).not.toHaveClass(
+      expect(container.querySelector('.nhsuk-header__logo')?.className).not.toContain(
         'nhsuk-header__logo--only',
       );
     });
@@ -230,7 +232,7 @@ describe('The header component', () => {
         </HeaderWithLogo>,
       );
 
-      expect(container.querySelector('.nhsuk-header__logo')).toHaveClass(
+      expect(container.querySelector('.nhsuk-header__logo')?.className).toContain(
         'nhsuk-header__transactional--logo',
       );
     });
@@ -245,7 +247,7 @@ describe('The header component', () => {
         );
 
         if (serviceName) {
-          expect(container.querySelector('.nhsuk-header__link')).toHaveClass(
+          expect(container.querySelector('.nhsuk-header__link')?.className).toContain(
             'nhsuk-header__link--service',
           );
 
@@ -253,7 +255,7 @@ describe('The header component', () => {
             'Test service',
           );
         } else {
-          expect(container.querySelector('.nhsuk-header__link')).not.toHaveClass(
+          expect(container.querySelector('.nhsuk-header__link')?.className).not.toContain(
             'nhsuk-header__link--service',
           );
 

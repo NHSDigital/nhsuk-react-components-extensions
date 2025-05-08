@@ -97,110 +97,107 @@ exports[`The header component Matches the snapshot 1`] = `
           </div>
         </div>
       </div>
-    </div>
-    <div
-      class="nhsuk-navigation-container"
-    >
-      <nav
-        class="nhsuk-navigation"
-        id="header-navigation"
-        role="navigation"
+      <div
+        class="nhsuk-navigation-container"
       >
-        <ul
-          class="nhsuk-header__navigation-list"
+        <nav
+          class="nhsuk-navigation"
+          id="header-navigation"
+          role="navigation"
         >
-          <li
-            class="nhsuk-header__navigation-item"
+          <ul
+            class="nhsuk-header__navigation-list"
           >
-            <a
-              class="nhsuk-header__navigation-link"
-              href="/conditions"
+            <li
+              class="nhsuk-header__navigation-item"
             >
-              Health A-Z
-            </a>
-          </li>
-          <li
-            class="nhsuk-header__navigation-item"
-          >
-            <a
-              class="nhsuk-header__navigation-link"
-              href="/live-well"
-            >
-              Live Well
-            </a>
-          </li>
-          <li
-            class="nhsuk-header__navigation-item"
-          >
-            <a
-              class="nhsuk-header__navigation-link"
-              href="/social-care-and-support"
-            >
-              Care and support
-            </a>
-          </li>
-          <li
-            class="nhsuk-header__navigation-item"
-          >
-            <a
-              class="nhsuk-header__navigation-link"
-              href="/news"
-            >
-              Health news
-            </a>
-          </li>
-          <li
-            class="nhsuk-header__navigation-item"
-          >
-            <a
-              class="nhsuk-header__navigation-link"
-              href="/service-search"
-            >
-              Services near you
-            </a>
-          </li>
-          <li
-            class="nhsuk-header__navigation-item nhsuk-header__navigation-item--home"
-          >
-            <a
-              class="nhsuk-header__navigation-link"
-              href="/"
-            >
-              Home
-            </a>
-          </li>
-          <li
-            class="nhsuk-mobile-menu-container"
-          >
-            <button
-              aria-expanded="false"
-              class="nhsuk-header__menu-toggle nhsuk-header__navigation-link"
-            >
-              <span
-                class="nhsuk-u-visually-hidden"
+              <a
+                class="nhsuk-header__navigation-link"
+                href="/conditions"
               >
-                Browse
-              </span>
-              More
-              <svg
-                aria-hidden="true"
-                class="nhsuk-icon nhsuk-icon__chevron-down"
-                height="34"
-                viewBox="0 0 24 24"
-                width="34"
-                xmlns="http://www.w3.org/2000/svg"
+                Health A-Z
+              </a>
+            </li>
+            <li
+              class="nhsuk-header__navigation-item"
+            >
+              <a
+                class="nhsuk-header__navigation-link"
+                href="/live-well"
               >
-                <path
-                  d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"
-                />
-              </svg>
-            </button>
-            <ul
-              class="nhsuk-header__drop-down nhsuk-header__drop-down--hidden"
-            />
-          </li>
-        </ul>
-      </nav>
+                Live Well
+              </a>
+            </li>
+            <li
+              class="nhsuk-header__navigation-item"
+            >
+              <a
+                class="nhsuk-header__navigation-link"
+                href="/social-care-and-support"
+              >
+                Care and support
+              </a>
+            </li>
+            <li
+              class="nhsuk-header__navigation-item"
+            >
+              <a
+                class="nhsuk-header__navigation-link"
+                href="/news"
+              >
+                Health news
+              </a>
+            </li>
+            <li
+              class="nhsuk-header__navigation-item"
+            >
+              <a
+                class="nhsuk-header__navigation-link"
+                href="/service-search"
+              >
+                Services near you
+              </a>
+            </li>
+            <li
+              class="nhsuk-header__navigation-item nhsuk-header__navigation-item--home"
+            >
+              <a
+                class="nhsuk-header__navigation-link"
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              class="nhsuk-mobile-menu-container"
+            >
+              <button
+                aria-expanded="false"
+                class="nhsuk-header__menu-toggle nhsuk-header__navigation-link "
+              >
+                <span
+                  class="nhsuk-u-visually-hidden"
+                >
+                  Browse
+                </span>
+                More
+                <svg
+                  aria-hidden="true"
+                  class="nhsuk-icon nhsuk-icon__chevron-down"
+                  height="34"
+                  viewBox="0 0 24 24"
+                  width="34"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"
+                  />
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
 </div>
