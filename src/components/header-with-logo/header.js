@@ -39,14 +39,12 @@ class Header {
       // still gives a split-second flicker before correcting itself though
       window.addEventListener('load', this.doEverything)
 
-
       // this.setupMobileMenu()
       // this.calculateBreakpoints()
       // this.updateNavigation()
       // this.doOnOrientationChange()
   
       this.handleResize = this.debounce(() => {
-        console.log(`I am calling handleResize`)
         this.calculateBreakpoints();
         this.updateNavigation();
       });
@@ -76,9 +74,7 @@ class Header {
      */
     calculateBreakpoints() {
       let childrenWidth = 0;
-      console.log(`I am calculateBreakpoints`)
         for (let i = 0; i < this.navigationList.children.length; i++) {
-          console.log(`I am breakpoint for ${this.navigationList.children[i]}: ${this.navigationList.children[i].offsetWidth}`)
           childrenWidth += this.navigationList.children[i].offsetWidth;
           this.breakpoints[i] = childrenWidth;
         }
@@ -86,7 +82,6 @@ class Header {
   
     // Add the mobile menu to the DOM
     setupMobileMenu() {
-      console.log(`I am setupMobileMenu`)
       this.mobileMenuContainer.appendChild(this.mobileMenu);
       this.mobileMenu.classList.add('nhsuk-header__drop-down', 'nhsuk-header__drop-down--hidden');
     }
@@ -179,11 +174,9 @@ class Header {
       let itemsVisible = this.navigationList.children.length;
   
       if (availableSpace < this.breakpoints[itemsVisible - 1]) {
-        console.log(`availableSpace < this.breakpoints[itemsVisible - 1]`)
         this.mobileMenuToggleButton.classList.add('nhsuk-header__menu-toggle--visible');
         this.mobileMenuContainer.classList.add('nhsuk-mobile-menu-container--visible');
         if (itemsVisible === 2) {
-          console.log(`itemsVisible === 2`)
           return;
         }
         while (availableSpace < this.breakpoints[itemsVisible - 1]) {
@@ -194,7 +187,6 @@ class Header {
           itemsVisible -= 1;
         }
       } else if (availableSpace > this.breakpoints[itemsVisible]) {
-        console.log(`availableSpace > this.breakpoints[itemsVisible]`)
         while (availableSpace > this.breakpoints[itemsVisible]) {
           this.navigationList.insertBefore(
             this.mobileMenu.removeChild(this.mobileMenu.firstChild),
@@ -211,7 +203,6 @@ class Header {
       }
   
       if (document.body.offsetWidth !== this.width && this.menuIsOpen) {
-        console.log(`document.body.offsetWidth !== this.width && this.menuIsOpen`)
         this.closeMobileMenu();
       }
 
