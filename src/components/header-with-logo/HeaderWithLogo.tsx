@@ -46,14 +46,21 @@ const HeaderWithLogo = ({
   white,
   ...rest
 }: HeaderProps) => {
+
   const [hasMenuToggle, setHasMenuToggle] = useState(false);
   const [hasSearch, setHasSearch] = useState(false);
   const [hasServiceName, setHasServiceName] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [pageIsLoaded, setPageIsLoaded] = useState(false)
+
+  window.addEventListener("load", () => {
+    console.log(`page has loaded, setPageIsLoaded(true)`)
+    setPageIsLoaded(true);
+});
 
   useEffect(() => {
     HeaderJs();
-  }, []);
+  }, [pageIsLoaded]);
 
   const setMenuToggle = (toggle: boolean): void => {
     setHasMenuToggle(toggle);
@@ -107,6 +114,8 @@ const HeaderWithLogo = ({
   //   document.querySelector('.nhsuk-header__navigation-list')?.children.length
   // ]);
 
+  console.log(`I am contextValue: ${JSON.stringify(contextValue)}`)
+
   return (
     <header
       className={classNames(
@@ -122,6 +131,7 @@ const HeaderWithLogo = ({
       <HeaderContext.Provider value={contextValue}>{children}</HeaderContext.Provider>
     </header>
   );
+
 };
 
 HeaderWithLogo.Logo = BaseHeaderLogo;

@@ -29,6 +29,7 @@ class Header {
       }
 
       this.doEverything = this.debounce(() => {
+        console.log(`I am doEverything`)
         this.setupMobileMenu()
         this.calculateBreakpoints();
         this.updateNavigation();
@@ -38,6 +39,8 @@ class Header {
       // 3933 - this is another way to do it, instead of adding the eventListener to updateNavigation
       // still gives a split-second flicker before correcting itself though
       window.addEventListener('load', this.doEverything)
+      // window.onload = this.doEverything
+
 
       // this.setupMobileMenu()
       // this.calculateBreakpoints()
@@ -45,6 +48,7 @@ class Header {
       // this.doOnOrientationChange()
   
       this.handleResize = this.debounce(() => {
+        console.log(`I am handleResize`)
         this.calculateBreakpoints();
         this.updateNavigation();
       });
