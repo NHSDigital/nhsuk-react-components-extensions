@@ -51,7 +51,7 @@ class Header {
   
       this.mobileMenuToggleButton.addEventListener('click', this.toggleMobileMenu.bind(this));
       window.addEventListener('resize', this.handleResize);
-      // window.addEventListener('load', this.handleResize);
+      window.addEventListener('load', this.handleResize);
       window.addEventListener('orientationchange', this.doOnOrientationChange());
     }
   
