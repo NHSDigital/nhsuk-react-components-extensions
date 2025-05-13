@@ -8,13 +8,13 @@
 
 
 
+// 3933 - issue is here
 .nhsuk-header {
     display: flex;
     min-height: 46px;
     align-items: center;
     padding: 0;
     border-bottom: 1px solid #4d8ecd;
-
 }
 
 .nhsuk-header__logo {
@@ -59,10 +59,10 @@
 .nhsuk-navigation-container {
     display: flex;
     width: auto;
-    // max-width: 50%;
+    max-width: 50%;
     flex-grow: 1;
     flex-shrink: 1;
-    // align-items: center;
+    align-items: center;
     justify-content: flex-end;
     
     .nhsuk-navigation {
