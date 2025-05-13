@@ -83,7 +83,7 @@
     "build:lib": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline && tsc --emitDeclarationOnly",
     "build:sass": "sass src:css",
     "cleanup": "bash scripts/cleanup.sh",
-    "lint": "stylelint src/**/*.scss && eslint --fix src/*.ts src/components/**/*.ts src/components/**/*.tsx",
+    "lint": "stylelint --fix src/**/*.scss src/**/**/*.scss && eslint --fix src/*.ts src/components/**/*.ts src/components/**/*.tsx",
     "prebuild": "yarn lint && yarn test --coverage && yarn cleanup",
     "storybook": "start-storybook",
     "test": "jest",
