@@ -8,12 +8,14 @@ const stories = storiesOf('Header with logo next to nav links', module);
 stories
     .add('Standard', () =>(
         <>
+        {/* <HeaderWithLogo.Container> */}
         <HeaderWithLogo>
-        <HeaderWithLogo.Container>
+        
+        
           <HeaderWithLogo.Logo href="/" />
-          <HeaderWithLogo.ServiceName>"Your information page"</HeaderWithLogo.ServiceName>
+          <HeaderWithLogo.ServiceName>Your information page</HeaderWithLogo.ServiceName>
           {/* <HeaderWithLogo.Content> */}
-            <HeaderWithLogo.Search />
+            {/* <HeaderWithLogo.Search /> */}
           {/* </HeaderWithLogo.Content> */}
         <HeaderWithLogo.Nav>
         <HeaderWithLogo.NavItem href="/conditions">Health A-Z</HeaderWithLogo.NavItem>
@@ -26,7 +28,8 @@ stories
           </HeaderWithLogo.NavItem>
           <HeaderWithLogo.NavDropdownMenu />
         </HeaderWithLogo.Nav>
-        </HeaderWithLogo.Container>
+        
         </HeaderWithLogo>
+        {/* </HeaderWithLogo.Container> */}
         </>
     ))

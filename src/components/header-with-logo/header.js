@@ -19,6 +19,7 @@ class Header {
     }
     
     init() {
+      console.log(`I am init`)
       if (
         !this.navigation ||
         !this.navigationList ||
@@ -28,13 +29,13 @@ class Header {
         return;
       }
 
-      this.doEverything = this.debounce(() => {
-        console.log(`I am doEverything`)
+      // this.doEverything = this.debounce(() => {
+        // console.log(`I am doEverything`)
         this.setupMobileMenu()
         this.calculateBreakpoints();
         this.updateNavigation();
         this.doOnOrientationChange()
-      });
+      // });
 
       // 3933 - this is another way to do it, instead of adding the eventListener to updateNavigation
       // still gives a split-second flicker before correcting itself though
@@ -55,7 +56,7 @@ class Header {
   
       this.mobileMenuToggleButton.addEventListener('click', this.toggleMobileMenu.bind(this));
       window.addEventListener('resize', this.handleResize);
-      window.addEventListener('load', this.handleResize);
+      // window.addEventListener('load', this.handleResize);
       window.addEventListener('orientationchange', this.doOnOrientationChange());
     }
   

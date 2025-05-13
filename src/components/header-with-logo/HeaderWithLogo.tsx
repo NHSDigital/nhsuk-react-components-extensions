@@ -60,7 +60,7 @@ const HeaderWithLogo = ({
 
   useEffect(() => {
     HeaderJs();
-  }, [pageIsLoaded]);
+  }, []);
 
   const setMenuToggle = (toggle: boolean): void => {
     setHasMenuToggle(toggle);
