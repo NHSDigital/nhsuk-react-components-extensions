@@ -1,4 +1,3 @@
-'use client';
 import React, { FC, useContext, SVGProps } from 'react';
 import classNames from 'classnames';
 import HeaderContext, { IHeaderContext } from '../HeaderContext';

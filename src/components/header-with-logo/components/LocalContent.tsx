@@ -1,4 +1,3 @@
-'use client';
 import React, { FC, HTMLProps } from 'react';
 import classNames from 'classnames';
 

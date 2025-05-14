@@ -1,4 +1,3 @@
-'use client';
 import React, { FC, HTMLProps, useContext, useState, useEffect, useMemo } from 'react';
 import classNames from 'classnames';
 import NHSLogo, { NHSLogoNavProps } from './components/LocalNHSLogo';

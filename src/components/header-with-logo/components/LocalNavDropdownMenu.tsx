@@ -1,4 +1,3 @@
-'use client';
 import React, { FC, HTMLProps, useContext, useEffect, MouseEvent } from 'react';
 import HeaderContext, { IHeaderContext } from '../HeaderContext';
 import { ChevronDownIcon } from './LocalChevronDown';

@@ -1,4 +1,3 @@
-'use client';
 import React, { FC, useContext } from 'react';
 import HeaderContext, { IHeaderContext } from '../HeaderContext';
 import { AsElementLink } from './LocalLinkTypes';
