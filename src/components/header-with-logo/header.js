@@ -29,17 +29,17 @@ class Header {
         return;
       }
 
-      // this.doEverything = this.debounce(() => {
-        // console.log(`I am doEverything`)
+      this.prepareHeader = this.debounce(() => {
+        console.log(`I am prepareHeader`)
         this.setupMobileMenu()
         this.calculateBreakpoints();
         this.updateNavigation();
         this.doOnOrientationChange()
-      // });
+      });
 
       // 3933 - this is another way to do it, instead of adding the eventListener to updateNavigation
       // still gives a split-second flicker before correcting itself though
-      window.addEventListener('load', this.doEverything)
+      window.addEventListener('load', this.prepareHeader)
       // window.onload = this.doEverything
 
 

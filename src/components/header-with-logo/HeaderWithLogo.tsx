@@ -51,14 +51,12 @@ const HeaderWithLogo = ({
   const [hasSearch, setHasSearch] = useState(false);
   const [hasServiceName, setHasServiceName] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [pageIsLoaded, setPageIsLoaded] = useState(false)
 
-  window.addEventListener("load", () => {
-    console.log(`page has loaded, setPageIsLoaded(true)`)
-    setPageIsLoaded(true);
-});
+  console.log(`I am header`)
+
 
   useEffect(() => {
+    console.log(`I am calling useEffect`)
     HeaderJs();
   }, []);
 
@@ -109,12 +107,6 @@ const HeaderWithLogo = ({
     menuOpen,
     transactional,
   ]);
-
-  // useEffect(() => console.log('I am calling useEffect'), [
-  //   document.querySelector('.nhsuk-header__navigation-list')?.children.length
-  // ]);
-
-  console.log(`I am contextValue: ${JSON.stringify(contextValue)}`)
 
   return (
     <header
