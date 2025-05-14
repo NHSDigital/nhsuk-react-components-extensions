@@ -1,11 +1,9 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
-import { AsElementLink } from '../../../../node_modules/nhsuk-react-components/dist/esm/util/types/LinkTypes';
+import { AsElementLink } from './LocalLinkTypes';
 
 
 export interface NavItemProps extends AsElementLink<HTMLAnchorElement> {
-  // added here because it was giving errors at the end
-  id?: string;
   home?: boolean;
 }
 

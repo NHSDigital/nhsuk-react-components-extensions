@@ -1,7 +1,7 @@
 'use client';
 import React, { FC, useContext } from 'react';
 import HeaderContext, { IHeaderContext } from '../HeaderContext';
-import { AsElementLink } from '../../../../node_modules/nhsuk-react-components/dist/esm/util/types/LinkTypes';
+import { AsElementLink } from './LocalLinkTypes';
 
 export interface OrganisationalLogoProps extends AsElementLink<HTMLAnchorElement> {
   logoUrl?: string;

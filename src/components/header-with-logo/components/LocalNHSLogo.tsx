@@ -2,7 +2,7 @@
 import React, { FC, useContext, SVGProps } from 'react';
 import classNames from 'classnames';
 import HeaderContext, { IHeaderContext } from '../HeaderContext';
-import { AsElementLink } from '../../../../node_modules/nhsuk-react-components/dist/esm/util/types/LinkTypes';
+import { AsElementLink } from './LocalLinkTypes';
 
 interface SVGImageWithSrc extends SVGProps<SVGImageElement> {
   src: string;
