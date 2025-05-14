@@ -15,11 +15,9 @@ class Header {
       this.mobileMenuContainer = document.querySelector('.nhsuk-mobile-menu-container');
       this.breakpoints = [];
       this.width = document.body.offsetWidth;
-      // this.width = this.navigationList.offsetWidth
     }
     
     init() {
-      console.log(`I am init`)
       if (
         !this.navigation ||
         !this.navigationList ||
@@ -30,33 +28,20 @@ class Header {
       }
 
       this.prepareHeader = this.debounce(() => {
-        console.log(`I am prepareHeader`)
         this.setupMobileMenu()
         this.calculateBreakpoints();
         this.updateNavigation();
         this.doOnOrientationChange()
       });
 
-      // 3933 - this is another way to do it, instead of adding the eventListener to updateNavigation
-      // still gives a split-second flicker before correcting itself though
-      window.addEventListener('load', this.prepareHeader)
-      // window.onload = this.doEverything
-
-
-      // this.setupMobileMenu()
-      // this.calculateBreakpoints()
-      // this.updateNavigation()
-      // this.doOnOrientationChange()
-  
       this.handleResize = this.debounce(() => {
-        console.log(`I am handleResize`)
         this.calculateBreakpoints();
         this.updateNavigation();
       });
   
+      window.addEventListener('load', this.prepareHeader)
       this.mobileMenuToggleButton.addEventListener('click', this.toggleMobileMenu.bind(this));
       window.addEventListener('resize', this.handleResize);
-      // window.addEventListener('load', this.handleResize);
       window.addEventListener('orientationchange', this.doOnOrientationChange());
     }
   
@@ -200,9 +185,7 @@ class Header {
           itemsVisible += 1;
         }
       }
-    // HERE IS THE ISSUE - when it first renders, children.length is not set because they haven't loaded yet
       if (!this.mobileMenu.children.length) {
-        console.log(`!this.mobileMenu.children.length`)
         this.mobileMenuToggleButton.classList.remove('nhsuk-header__menu-toggle--visible');
         this.mobileMenuContainer.classList.remove('nhsuk-mobile-menu-container--visible');
       }

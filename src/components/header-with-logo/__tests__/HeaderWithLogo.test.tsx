@@ -45,8 +45,6 @@ describe('The header component', () => {
       const headerElement = container.querySelector('.nhsuk-header');
 
       if (transactional) {
-        // expect(headerElement).toHaveProperty('class','nhsuk-header__transactional');
-        // 3933 - changed this because for some reason it didn't like "toHaveClass"
         expect(headerElement?.className).toContain('nhsuk-header__transactional');
       } else {
         expect(headerElement?.className).not.toContain('nhsuk-header__transactional');

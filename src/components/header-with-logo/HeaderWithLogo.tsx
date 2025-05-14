@@ -52,11 +52,7 @@ const HeaderWithLogo = ({
   const [hasServiceName, setHasServiceName] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  console.log(`I am header`)
-
-
   useEffect(() => {
-    console.log(`I am calling useEffect`)
     HeaderJs();
   }, []);
 

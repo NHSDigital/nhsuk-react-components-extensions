@@ -4,11 +4,6 @@ import { FC, ReactElement, JSXElementConstructor, ReactNode, ReactPortal } from 
  * Assert that a child item is of the given component type.
  */
 
-// 3933 - this is the older version
-// declare const childIsOfComponentType: (child: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined, component: FC) => child is ReactPortal | ReactElement<any, string | JSXElementConstructor<any>>;
-
-// export default childIsOfComponentType
-
 
 /**
  * Assert that a child item is of the given component type.
