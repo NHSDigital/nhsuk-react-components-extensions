@@ -15,8 +15,9 @@ class Header {
       this.mobileMenuContainer = document.querySelector('.nhsuk-mobile-menu-container');
       this.breakpoints = [];
       this.width = document.body.offsetWidth;
+      this.widthDifference = this.width - this.navigation.offsetWidth
     }
-    
+
     init() {
       if (
         !this.navigation ||
@@ -27,24 +28,26 @@ class Header {
         return;
       }
 
-      this.prepareHeader = this.debounce(() => {
+      // this.prepareHeader = this.debounce(() => {
         this.setupMobileMenu()
-        this.calculateBreakpoints();
+        this.calculateBreakpoints(this.widthDifference);
         this.updateNavigation();
-        this.doOnOrientationChange()
-      });
+        this.doOnOrientationChange();
+        // this.calculateBreakpoints();
+        // this.updateNavigation();
+      // });
 
       this.handleResize = this.debounce(() => {
-        this.calculateBreakpoints();
+        this.calculateBreakpoints(0);
         this.updateNavigation();
       });
-  
-      window.addEventListener('load', this.prepareHeader)
+
+      // window.addEventListener('load', this.prepareHeader)
       this.mobileMenuToggleButton.addEventListener('click', this.toggleMobileMenu.bind(this));
       window.addEventListener('resize', this.handleResize);
       window.addEventListener('orientationchange', this.doOnOrientationChange());
     }
-  
+
     debounce(func, timeout = 100) {
       let timer;
       return (...args) => {
@@ -54,7 +57,7 @@ class Header {
         }, timeout);
       };
     }
-  
+
     /**
      * Calculate breakpoints.
      *
@@ -62,20 +65,43 @@ class Header {
      * each navigation item.
      *
      */
-    calculateBreakpoints() {
-      let childrenWidth = 0;
+    calculateBreakpoints(childrenWidth) {
+
+      // 3933 - this works for the first one, but makes it too wide after resizing
+      // let widthDifference = this.width - this.navigation.offsetWidth
+      // let childrenWidth = childrenWidth;
+      // console.log(`I am navigation.children: ${this.navigation.children[0].textContent}`)
+      // console.log(`I am navigationList.children: ${this.navigationList.children[0].textContent}`)
         for (let i = 0; i < this.navigationList.children.length; i++) {
           childrenWidth += this.navigationList.children[i].offsetWidth;
           this.breakpoints[i] = childrenWidth;
+          console.log(`1 - Width of ${this.navigationList.children[i].textContent} is ${this.navigationList.children[i].offsetWidth}, total width now ${childrenWidth}`)
         }
+        console.log(`Width of screen: ${this.width}, width of navigation: ${this.navigationList.offsetWidth}, childrenWidth: ${childrenWidth}`)
     }
-  
+
+    calculateBreakpointsAfterResize() {
+
+      // 3933 - this works for the first one, but makes it too wide after resizing
+      // let widthDifference = this.width - this.navigation.offsetWidth
+      // let childrenWidth = widthDifference;
+      let childrenWidth = 0;
+      // console.log(`I am navigation.children: ${this.navigation.children[0].textContent}`)
+      // console.log(`I am navigationList.children: ${this.navigationList.children[0].textContent}`)
+        for (let i = 0; i < this.navigationList.children.length; i++) {
+          childrenWidth += this.navigationList.children[i].offsetWidth;
+          this.breakpoints[i] = childrenWidth;
+          console.log(`1 - Width of ${this.navigationList.children[i].textContent} is ${this.navigationList.children[i].offsetWidth}, total width now ${childrenWidth}`)
+        }
+        console.log(`Width of screen: ${this.width}, width of navigation: ${this.navigationList.offsetWidth}, childrenWidth: ${childrenWidth}`)
+    }
+
     // Add the mobile menu to the DOM
     setupMobileMenu() {
       this.mobileMenuContainer.appendChild(this.mobileMenu);
       this.mobileMenu.classList.add('nhsuk-header__drop-down', 'nhsuk-header__drop-down--hidden');
     }
-  
+
     /**
      * Close the mobile menu
      *
@@ -92,7 +118,7 @@ class Header {
       this.mobileMenuCloseButton.removeEventListener('click', this.closeMobileMenu.bind(this));
       document.removeEventListener('keydown', this.handleEscapeKey.bind(this));
     }
-  
+
     /**
      * Escape key handler
      *
@@ -105,7 +131,7 @@ class Header {
         this.closeMobileMenu();
       }
     }
-  
+
     /**
      * Open the mobile menu
      *
@@ -116,21 +142,21 @@ class Header {
      *
      * Adds event listeners for the close button,
      */
-  
+
     openMobileMenu() {
       this.menuIsOpen = true;
       this.mobileMenu.classList.remove('nhsuk-header__drop-down--hidden');
       const marginBody = this.mobileMenu.offsetHeight;
       this.navigation.style.marginBottom = `${marginBody}px`;
       this.mobileMenuToggleButton.setAttribute('aria-expanded', 'true');
-  
+
       // add event listerer for esc key to close menu
       document.addEventListener('keydown', this.handleEscapeKey.bind(this));
-  
+
       // add event listener for close icon to close menu
       this.mobileMenuCloseButton.addEventListener('click', this.closeMobileMenu.bind(this));
     }
-  
+
     /**
      * Handle menu button click
      *
@@ -143,7 +169,7 @@ class Header {
         this.openMobileMenu();
       }
     }
-  
+
     /**
      * Update nav for the available space
      *
@@ -157,13 +183,13 @@ class Header {
      * Additionaly will close the mobile menu if the window gets resized
      * and the menu is open.
      */
-  
+
     updateNavigation() {
-      // const availableSpace = this.navigation.offsetWidth;
-      const availableSpace = this.navigationList.offsetWidth; 
+      console.log(`I am updateNavigation`)
+      const availableSpace = this.navigation.offsetWidth;
       let itemsVisible = this.navigationList.children.length;
-  
       if (availableSpace < this.breakpoints[itemsVisible - 1]) {
+        console.log(`YES - I am availableSpace: ${availableSpace}, this.breakpoints[itemsVisible - 1]: ${this.breakpoints[itemsVisible - 1]}`)
         this.mobileMenuToggleButton.classList.add('nhsuk-header__menu-toggle--visible');
         this.mobileMenuContainer.classList.add('nhsuk-mobile-menu-container--visible');
         if (itemsVisible === 2) {
@@ -177,6 +203,7 @@ class Header {
           itemsVisible -= 1;
         }
       } else if (availableSpace > this.breakpoints[itemsVisible]) {
+        console.log(`NOPE - I am availableSpace: ${availableSpace}, this.breakpoints[itemsVisible]: ${this.breakpoints[itemsVisible]}`)
         while (availableSpace > this.breakpoints[itemsVisible]) {
           this.navigationList.insertBefore(
             this.mobileMenu.removeChild(this.mobileMenu.firstChild),
@@ -186,16 +213,17 @@ class Header {
         }
       }
       if (!this.mobileMenu.children.length) {
+        console.log(`!this.mobileMenu.children.length`)
         this.mobileMenuToggleButton.classList.remove('nhsuk-header__menu-toggle--visible');
         this.mobileMenuContainer.classList.remove('nhsuk-mobile-menu-container--visible');
       }
-  
+
       if (document.body.offsetWidth !== this.width && this.menuIsOpen) {
         this.closeMobileMenu();
       }
 
     }
-  
+
     /**
      * Orientation change
      *
@@ -215,8 +243,7 @@ class Header {
       }
   }
   }
-  
+
   export default () => {
     new Header().init();
   };
-  
