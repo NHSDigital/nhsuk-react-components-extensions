@@ -173,7 +173,7 @@ exports[`The header component Matches the snapshot 1`] = `
             >
               <button
                 aria-expanded="false"
-                class="nhsuk-header__menu-toggle nhsuk-header__navigation-link "
+                class="nhsuk-header__menu-toggle nhsuk-header__navigation-link"
               >
                 <span
                   class="nhsuk-u-visually-hidden"
@@ -194,6 +194,9 @@ exports[`The header component Matches the snapshot 1`] = `
                   />
                 </svg>
               </button>
+              <ul
+                class="nhsuk-header__drop-down nhsuk-header__drop-down--hidden"
+              />
             </li>
           </ul>
         </nav>
