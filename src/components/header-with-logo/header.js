@@ -15,7 +15,6 @@ class Header {
     this.mobileMenuContainer = document.querySelector('.nhsuk-mobile-menu-container');
     this.breakpoints = [];
     this.width = document.body.offsetWidth;
-    this.widthDifference = this.width - this.navigation.offsetWidth
   }
 
   init() {
