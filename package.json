@@ -1,6 +1,6 @@
 {
   "name": "nhsuk-react-components-extensions",
-  "version": "2.0.0-beta.1",
+  "version": "2.1.0-test.3",
   "author": {
     "email": "thomas.judd-cooper1@nhs.net",
     "name": "Thomas Judd-Cooper",
@@ -31,6 +31,7 @@
     "@types/react-input-mask": "^3.0.5",
     "@typescript-eslint/eslint-plugin": "^8.13.0",
     "@typescript-eslint/parser": "^8.13.0",
+    "babel-jest": "^29.7.0",
     "babel-loader": "^8.0.0",
     "css-loader": "^5.0.0",
     "eslint": "^9.14.0",
@@ -82,7 +83,7 @@
     "build:lib": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline && tsc --emitDeclarationOnly",
     "build:sass": "sass src:css",
     "cleanup": "bash scripts/cleanup.sh",
-    "lint": "stylelint src/**/*.scss && eslint --fix src/*.ts src/components/**/*.ts src/components/**/*.tsx",
+    "lint": "stylelint --fix src/**/*.scss src/**/**/*.scss && eslint --fix src/*.ts src/components/**/*.ts src/components/**/*.tsx",
     "prebuild": "yarn lint && yarn test --coverage && yarn cleanup",
     "storybook": "start-storybook",
     "test": "jest",
