@@ -172,7 +172,6 @@ exports[`The header component Matches the snapshot 1`] = `
               class="nhsuk-mobile-menu-container"
             >
               <button
-                aria-expanded="false"
                 class="nhsuk-header__menu-toggle nhsuk-header__navigation-link"
               >
                 <span

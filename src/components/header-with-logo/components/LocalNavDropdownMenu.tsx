@@ -1,4 +1,5 @@
-import React, { FC, HTMLProps } from 'react';
+import React, { FC, HTMLProps, useContext, useEffect } from 'react';
+import HeaderContext, { IHeaderContext } from '../HeaderContext';
 import { ChevronDownIcon } from './LocalChevronDown';
 export interface NavDropdownMenuProps extends HTMLProps<HTMLButtonElement> {
   type?: 'button' | 'submit' | 'reset';
@@ -6,6 +7,12 @@ export interface NavDropdownMenuProps extends HTMLProps<HTMLButtonElement> {
 }
 
 const NavMenuDropdown: FC<NavDropdownMenuProps> = ({ onClick, dropdownText = 'More', ...rest }) => {
+  const { setMenuToggle } = useContext<IHeaderContext>(HeaderContext);
+
+  useEffect(() => {
+    setMenuToggle(true);
+    return () => setMenuToggle(false);
+  }, []);
 
   return (
     <li className="nhsuk-mobile-menu-container">
