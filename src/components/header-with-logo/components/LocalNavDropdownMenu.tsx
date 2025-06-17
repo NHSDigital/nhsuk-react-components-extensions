@@ -1,4 +1,4 @@
-import React, { FC, HTMLProps, useContext, useEffect, MouseEvent } from 'react';
+import React, { FC, HTMLProps, useContext, useEffect } from 'react';
 import HeaderContext, { IHeaderContext } from '../HeaderContext';
 import { ChevronDownIcon } from './LocalChevronDown';
 export interface NavDropdownMenuProps extends HTMLProps<HTMLButtonElement> {
@@ -7,15 +7,7 @@ export interface NavDropdownMenuProps extends HTMLProps<HTMLButtonElement> {
 }
 
 const NavMenuDropdown: FC<NavDropdownMenuProps> = ({ onClick, dropdownText = 'More', ...rest }) => {
-  const { setMenuToggle, toggleMenu, menuOpen } = useContext<IHeaderContext>(HeaderContext);
-
-  const onToggleClick = (e: MouseEvent<HTMLButtonElement>) => {
-    toggleMenu();
-
-    if (onClick) {
-      onClick(e);
-    }
-  };
+  const { setMenuToggle } = useContext<IHeaderContext>(HeaderContext);
 
   useEffect(() => {
     setMenuToggle(true);
@@ -26,8 +18,6 @@ const NavMenuDropdown: FC<NavDropdownMenuProps> = ({ onClick, dropdownText = 'Mo
     <li className="nhsuk-mobile-menu-container">
       <button
         className="nhsuk-header__menu-toggle nhsuk-header__navigation-link "
-        aria-expanded={menuOpen ? 'true' : 'false'}
-        onClick={onToggleClick}
         {...rest}
       >
         <span className="nhsuk-u-visually-hidden">Browse</span>

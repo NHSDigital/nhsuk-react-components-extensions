@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import HeaderWithLogo from '../HeaderWithLogo';
 
 describe('The header component', () => {
@@ -127,23 +127,6 @@ describe('The header component', () => {
         expect(visuallyHiddenText?.nextSibling?.textContent).toBe(dropdownText ?? 'More');
       },
     );
-
-    it('Invokes the onClick prop when button is clicked', () => {
-      const clickFn = jest.fn();
-      const { container } = render(
-        <HeaderWithLogo>
-          <HeaderWithLogo.NavDropdownMenu onClick={clickFn}></HeaderWithLogo.NavDropdownMenu>
-        </HeaderWithLogo>,
-      );
-
-      const buttonElement = container.querySelector('.nhsuk-header__menu-toggle');
-
-      expect(clickFn).not.toHaveBeenCalled();
-
-      fireEvent.click(buttonElement!);
-
-      expect(clickFn).toHaveBeenCalledTimes(1);
-    });
   });
 
   describe('The NavItem component', () => {
