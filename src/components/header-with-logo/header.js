@@ -2,10 +2,6 @@
  * Lifted from nhsuk-frontend and brought into this repo to enable compilation to CJS if required
  * See Github issue https://github.com/nhsuk/nhsuk-frontend/issues/937
  */
-
-import { resourceUsage } from "process";
-
-
 class Header {
   constructor() {
     this.menuIsOpen = false;
@@ -97,6 +93,7 @@ class Header {
     this.menuIsOpen = false;
     this.mobileMenu.classList.add('nhsuk-header__drop-down--hidden');
     this.navigation.style.marginBottom = 0;
+    this.mobileMenuToggleButton.classList.remove('nhsuk-header__menu-toggle--expanded');
     this.mobileMenuToggleButton.setAttribute('aria-expanded', 'false');
     document.removeEventListener('keydown', this.handleEscapeKey.bind(this));
   }
@@ -109,7 +106,7 @@ class Header {
    *
    */
   handleEscapeKey(e) {
-    if (e.key === 'Escape') {
+    if (e.key === 'Escape' && this.menuIsOpen) {
       this.closeMobileMenu();
       this.mobileMenuToggleButton.focus();
     }
@@ -125,13 +122,12 @@ class Header {
    */
   onBlur(e) {
     const grandchildren = this.mobileMenu.querySelectorAll('li a');
-    const mobileMenuIsClosed = this.mobileMenu.classList.contains('nhsuk-header__drop-down--hidden');
     // Checks the current link even qualifies
     const currentFocusIsInDropdown = Array.from(grandchildren).includes(e.currentTarget);
     const currentFocusIsToggleOrSubLink = e.currentTarget.classList.contains('nhsuk-header__menu-toggle') || currentFocusIsInDropdown
 
     // If the menu isn't open, or the old link isn't one of the toggles or sub links, return;
-    if (mobileMenuIsClosed || !currentFocusIsToggleOrSubLink) {
+    if (!this.menuIsOpen || !currentFocusIsToggleOrSubLink) {
       return;
     }
 
@@ -163,6 +159,7 @@ class Header {
     this.mobileMenu.classList.remove('nhsuk-header__drop-down--hidden');
     const marginBody = this.mobileMenu.offsetHeight;
     this.navigation.style.marginBottom = `${marginBody}px`;
+    this.mobileMenuToggleButton.classList.add('nhsuk-header__menu-toggle--expanded');
     this.mobileMenuToggleButton.setAttribute('aria-expanded', 'true');
 
     // add event listener for esc key to close menu
