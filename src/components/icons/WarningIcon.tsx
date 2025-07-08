@@ -9,7 +9,7 @@ interface WarningIconProps extends HTMLProps<SVGSVGElement> {
 const WarningIcon: React.FC<WarningIconProps> = props => {
   const inColour = props.inColour ?? true;
   return (
-    <svg className="warning-triangle-icon" viewBox="0 0 94 84" aria-label={props["aria-label"] || "Warning"} {...props}>
+    <svg className="warning-triangle-icon" viewBox="0 0 94 84" width="94" height="84" aria-label={props["aria-label"] || "Warning"} {...props}>
       {
         inColour === false ? (
           <path

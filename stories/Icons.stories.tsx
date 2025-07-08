@@ -5,4 +5,5 @@ import { WarningIcon } from '../src';
 
 const stories = storiesOf('Icons', module);
 
-stories.add('WarningIcon', () => <WarningIcon />);
+stories.add('WarningIcon solid', () => <WarningIcon />);
+stories.add('WarningIcon transparent', () => <WarningIcon inColour={false} />);
