@@ -1,12 +1,17 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { storiesOf } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { MaskedInput } from '../src';
 
-const stories = storiesOf('MaskedInput', module);
+const meta: Meta<typeof MaskedInput> = {
+  title: 'MaskedInput',
+  component: MaskedInput,
+};
+export default meta;
 
-stories
-  .add('National Insurance Mask', () => (
+type Story = StoryObj<typeof MaskedInput>;
+
+export const NationalInsuranceMask: Story = {
+  render: () => (
     <div className="masked-input-demo">
       <MaskedInput
         name="ni-number"
@@ -22,8 +27,11 @@ stories
         alwaysShowMask={false}
       />
     </div>
-  ))
-  .add('NHS Number Mask', () => (
+  ),
+};
+
+export const NHSNumberMask: Story = {
+  render: () => (
     <div className="masked-input-demo">
       <MaskedInput
         name="ni-number"
@@ -36,4 +44,5 @@ stories
         alwaysShowMask={false}
       />
     </div>
-  ));
+  ),
+};

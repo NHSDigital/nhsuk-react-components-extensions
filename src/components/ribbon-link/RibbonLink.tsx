@@ -3,6 +3,7 @@ import React, { HTMLProps } from 'react';
 import classNames from 'classnames';
 import { ArrowRightCircleIcon } from 'nhsuk-react-components';
 import Bar from './components/Bar';
+import './_RibbonLink.scss';
 
 type RibbonFlavours = 'hot' | 'mild' | 'cool';
 

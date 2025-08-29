@@ -1,3 +1,6 @@
+// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+import storybook from "eslint-plugin-storybook";
+
 import react from "eslint-plugin-react";
 import typescriptEslint from "@typescript-eslint/eslint-plugin";
 import jest from "eslint-plugin-jest";
@@ -79,4 +82,4 @@ export default [...compat.extends("airbnb-typescript"), {
         "jsx-a11y/anchor-has-content": 0,
         "jsx-a11y/heading-has-content": 0,
     },
-}];
+}, ...storybook.configs["flat/recommended"]];

@@ -8,7 +8,8 @@ import FormGroup from './LocalFormGroup';
 
 // this needs to use "require" or the tests will fail in the pipeline
 // TODO - switch react-input-mask for a package that's updated regularly
-const ReactInputMask = require('react-input-mask')
+// const ReactInputMask = require('react-input-mask')
+import ReactInputMask from 'react-input-mask';
 
 import classNames from 'classnames';
 

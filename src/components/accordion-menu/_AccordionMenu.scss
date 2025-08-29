@@ -1,6 +1,6 @@
 @use '../../styles/variables';
-@use '../../../node_modules/nhsuk-frontend/packages/core/settings/all' as settings;
-@import '../../../node_modules/nhsuk-frontend/packages/core/all';
+@use '../../../node_modules/nhsuk-frontend/packages/core/settings' as settings;
+@import '../../../node_modules/nhsuk-frontend/packages/core';
 
 .nhsuk-accordion-menu {
   display: block;

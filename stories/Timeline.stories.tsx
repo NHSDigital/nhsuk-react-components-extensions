@@ -1,11 +1,17 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-import { storiesOf } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { Timeline } from '../src';
 import Tag from '../src/components/tag/Tag';
 import { EventProps } from '../src/components/timeline/components/Event';
 
-const stories = storiesOf('Timeline', module);
+const meta: Meta<typeof Timeline> = {
+  title: 'Timeline',
+  component: Timeline,
+};
+export default meta;
+
+type Story = StoryObj<typeof Timeline>;
 
 const actionStyle = {
   marginLeft: '8px',
@@ -78,4 +84,6 @@ const storybookEvents: EventProps[] = [
   },
 ];
 
-stories.add('Standard', () => <Timeline events={storybookEvents} />);
+export const Standard: Story = {
+  render: () => <Timeline events={storybookEvents} />,
+};

@@ -1,9 +1,19 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { storiesOf } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { WarningIcon } from '../src';
 
-const stories = storiesOf('Icons', module);
+const meta: Meta<typeof WarningIcon> = {
+  title: 'Icons/WarningIcon',
+  component: WarningIcon,
+};
+export default meta;
 
-stories.add('WarningIcon solid', () => <WarningIcon />);
-stories.add('WarningIcon transparent', () => <WarningIcon inColour={false} />);
+type Story = StoryObj<typeof WarningIcon>;
+
+export const Solid: Story = {
+  render: () => <WarningIcon />,
+};
+
+export const Transparent: Story = {
+  render: () => <WarningIcon inColour={false} />,
+};
