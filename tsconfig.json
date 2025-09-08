@@ -21,7 +21,7 @@
     "emitDecoratorMetadata": true,
     "types": ["react", "jest", "node", "@testing-library/jest-dom"],
     "declaration": true,
-    "declarationDir": "./lib",
+  
     "strict": true,
     "noUnusedParameters": true,
     "esModuleInterop": true

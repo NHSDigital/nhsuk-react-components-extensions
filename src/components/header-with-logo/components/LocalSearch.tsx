@@ -1,13 +1,13 @@
-import React, { FC, HTMLProps, useContext, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import classNames from 'classnames';
-import { SearchIcon } from 'nhsuk-react-components';
 import HeaderContext, { IHeaderContext } from '../HeaderContext';
+import { SearchIcon } from 'nhsuk-react-components';
 
-export interface SearchProps extends HTMLProps<HTMLInputElement> {
+export interface SearchProps extends React.HTMLProps<HTMLInputElement> {
   visuallyHiddenText?: string;
 }
 
-const Search: FC<SearchProps> = ({
+const Search: React.FC<SearchProps> = ({
   action,
   method = 'get',
   type = 'search',

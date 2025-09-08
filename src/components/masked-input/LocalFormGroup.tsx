@@ -33,7 +33,7 @@ export type FormGroupProps<T> = FormElementProps & {
   inputType: 'input' | 'radios' | 'select' | 'checkboxes' | 'dateinput' | 'textarea';
 };
 
-const FormGroup = <T extends BaseFormElementRenderProps>(props: FormGroupProps<T>): JSX.Element => {
+const FormGroup = <T extends BaseFormElementRenderProps>(props: FormGroupProps<T>) => {
   const {
     children,
     hint,
