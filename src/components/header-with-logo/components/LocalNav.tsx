@@ -1,7 +1,7 @@
 import React, { Children, } from 'react';
 import classNames from 'classnames';
 import NavItem from './LocalNavItem';
-import { childIsOfComponentType } from 'utils/react-guards';
+import { childIsOfComponentType } from '../../../utils/react-guards';
 
 const Nav: React.FC<React.HTMLProps<HTMLDivElement>> = ({
   className,

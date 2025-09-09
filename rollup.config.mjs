@@ -27,7 +27,12 @@ export default [
         minimize: true,
         // optional: quiet dart-sass deprecations if you use legacy APIs
         // use: { sass: { silenceDeprecations: ['legacy-js-api'] } },
-        modules: false
+        modules: false,
+        use: {
+          sass: {
+            quietDeps: true,
+          },
+        }
       }),
       typescript({
         tsconfig: './tsconfig.json',
@@ -36,7 +41,7 @@ export default [
     ],
     output: [
       { file: pkg.module, format: 'esm', sourcemap: true },
-      { file: pkg.main,   format: 'cjs', sourcemap: true },
+      { file: pkg.main, format: 'cjs', sourcemap: true },
     ],
   },
 
