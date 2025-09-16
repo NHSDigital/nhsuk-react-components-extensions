@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import MaskedInput from '../src/components/masked-input/MaskedInput2'
+import MaskedInput from '../src/components/masked-input/MaskedInput'
 const meta: Meta<typeof MaskedInput> = {
   title: 'MaskedInput',
   component: MaskedInput,

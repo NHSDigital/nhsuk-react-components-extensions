@@ -40,8 +40,8 @@ export default [
       }),
     ],
     output: [
-      { file: pkg.module, format: 'esm', sourcemap: true },
-      { file: pkg.main, format: 'cjs', sourcemap: true },
+      { file: "dist/index.js", format: "cjs" },
+      { file: "dist/index.esm.js", format: "esm" },
     ],
   },
 

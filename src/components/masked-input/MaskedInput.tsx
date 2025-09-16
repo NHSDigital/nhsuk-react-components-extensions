@@ -18,6 +18,7 @@ export type MaskedInputProps = NativeInputProps &
 		formatChars?: Record<string, string>;
 		alwaysShowMask?: boolean;
 		inputRef?: React.Ref<HTMLInputElement>;
+		className: string;
 	};
 
 function setRefs<T>(node: T, ...refs: Array<React.Ref<T> | undefined>) {
@@ -102,8 +103,5 @@ const MaskedInput = React.forwardRef<HTMLInputElement, MaskedInputProps>(
 
 MaskedInput.displayName = "MaskedInput";
 
-MaskedInput.defaultProps = {
-	type: "text",
-};
 
 export default MaskedInput;

@@ -17,4 +17,7 @@ export interface FormElementProps {
     disableErrorLine?: boolean;
     id?: string;
     name?: string;
+    className?: string;
+    width?: string;
+    ref?: any;
 }
