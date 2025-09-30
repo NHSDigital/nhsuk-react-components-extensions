@@ -3,7 +3,7 @@ import parseMask from './utils/parseMask';
 import { isAndroidBrowser, isWindowsPhoneBrowser, isAndroidFirefox } from './utils/environment';
 import { clearRange, formatValue, getFilledLength, isEmpty, isPermanentChar, getInsertStringLength, insertString } from './utils/string';
 import defer from './utils/defer';
-import { TextInput, TextInputProps } from 'nhsuk-react-components';
+import { TextInput, TextInputProps } from "@ncrs/nhsuk-react-components";
 
 export interface InputMaskProps extends Omit<TextInputProps, 'onChange' | 'value' | 'defaultValue'> {
     mask?: string;

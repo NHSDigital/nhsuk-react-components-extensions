@@ -11,7 +11,7 @@ import Content from './components/LocalContent';
 import TransactionalServiceName from './components/LocalTransactionalServiceName';
 import HeaderJs from './header';
 import './_headerWithLogo.scss'
-import { Container } from 'nhsuk-react-components';
+import { Container } from "@ncrs/nhsuk-react-components";
 
 const BaseHeaderLogo: React.FC<OrganisationalLogoProps & NHSLogoNavProps> = (props) => {
   const { orgName } = useContext<IHeaderContext>(HeaderContext);

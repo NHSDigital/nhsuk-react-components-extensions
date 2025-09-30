@@ -1,7 +1,7 @@
 import MaskedInput from './MaskedInput';
 import FormGroup from './LocalFormGroup';
 import type { FormElementProps } from './LocalFormTypes';
-import { Label } from 'nhsuk-react-components';
+import { Label } from "@ncrs/nhsuk-react-components";
 import { getRandomString, generateRandomID, generateRandomName } from './LocalRandomID';
 import FieldsetContext from './LocalFieldsetContext';
 

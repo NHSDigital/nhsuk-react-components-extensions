@@ -1,5 +1,5 @@
 {
-  "name": "nhsuk-react-components-extensions",
+  "name": "@ncrs/nhsuk-react-components-extensions",
   "version": "2.3.0-beta",
   "style": "dist/index.css",
   "author": {
@@ -92,6 +92,7 @@
     "react-dom": "^19"
   },
   "dependencies": {
+    "@ncrs/nhsuk-react-components": "^5.0.0",
     "classnames": "^2.2.6",
     "react-input-mask": "^2.0.4"
   },
