@@ -192,7 +192,7 @@ export function insertString(maskOptions: MaskOptions, value: string, insertStr:
   });
   return value;
 }
-export function getInsertStringLength(maskOptions: MaskOptions, value: string, insertStr: string, insertPos: number): number {
+export function getInsertStringLength(maskOptions: MaskOptions, insertStr: string, insertPos: number): number {
   const mask = maskOptions.mask;
   const maskChar = maskOptions.maskChar;
   const arrayInsertStr = insertStr.split('');

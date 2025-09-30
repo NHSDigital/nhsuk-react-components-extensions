@@ -32,6 +32,6 @@
 @use '../../node_modules/nhsuk-frontend/packages/core/utilities/link-nowrap';
 @use '../../node_modules/nhsuk-frontend/packages/core/utilities/reading-width';
 @use '../../node_modules/nhsuk-frontend/packages/core/utilities/spacing';
-@use '../../node_modules/nhsuk-frontend/packages/core/utilities/typography';
+@use '../../node_modules/nhsuk-frontend/packages/core/utilities/typography' as typography-utilities;
 @use '../../node_modules/nhsuk-frontend/packages/core/utilities/visually-hidden';
 @use '../../node_modules/nhsuk-frontend/packages/core/utilities/widths';

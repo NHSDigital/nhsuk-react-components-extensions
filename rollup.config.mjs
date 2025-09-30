@@ -4,7 +4,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import postcss from 'rollup-plugin-postcss';
 import dts from 'rollup-plugin-dts';
-import pkg from './package.json' assert { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
 
 export default [
   // JS + CSS bundle
@@ -16,7 +16,7 @@ export default [
       /^react-dom($|\/)/,
       /^@types\/react($|\/)/,
       /^@types\/react-dom($|\/)/,
-      /^nhsuk-react-components($|\/)/
+      /^@ncrs\/nhsuk-react-components($|\/)/
     ],
     plugins: [
       resolve(),
@@ -26,11 +26,11 @@ export default [
         extract: 'index.css',   // make the output predictable
         minimize: true,
         // optional: quiet dart-sass deprecations if you use legacy APIs
-        // use: { sass: { silenceDeprecations: ['legacy-js-api'] } },
         modules: false,
         use: {
           sass: {
             quietDeps: true,
+            silenceDeprecations: ['legacy-js-api', 'misplaced-rest']
           },
         }
       }),

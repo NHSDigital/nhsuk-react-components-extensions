@@ -3,9 +3,9 @@ import parseMask from './utils/parseMask';
 import { isAndroidBrowser, isWindowsPhoneBrowser, isAndroidFirefox } from './utils/environment';
 import { clearRange, formatValue, getFilledLength, isEmpty, isPermanentChar, getInsertStringLength, insertString } from './utils/string';
 import defer from './utils/defer';
-import { TextInput, TextInputProps } from "@ncrs/nhsuk-react-components";
+import { TextInput } from "@ncrs/nhsuk-react-components";
 
-export interface InputMaskProps extends Omit<TextInputProps, 'onChange' | 'value' | 'defaultValue'> {
+export interface InputMaskProps extends Omit<any, 'onChange' | 'value' | 'defaultValue'> {
     mask?: string;
     maskChar?: string;
     formatChars?: Record<string, string>;
@@ -258,7 +258,7 @@ const InputElement: React.FC<InputMaskProps> = ({
             val = clearRange(maskOptions, val, cursorPos, selection.length);
         }
 
-        const textLen = getInsertStringLength(maskOptions, val, text, cursorPos);
+        const textLen = getInsertStringLength(maskOptions, val, cursorPos);
         val = insertString(maskOptions, val, text, cursorPos);
         cursorPos += textLen;
         cursorPos = getRightEditablePos(cursorPos) || cursorPos;
@@ -540,7 +540,7 @@ const InputElement: React.FC<InputMaskProps> = ({
         }
     }, [inputRef]);
 
-    const inputProps: TextInputProps = {
+    const inputProps: any = {
         ...props,
         onFocus: handleFocus,
         onBlur: handleBlur

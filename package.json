@@ -1,6 +1,6 @@
 {
   "name": "@ncrs/nhsuk-react-components-extensions",
-  "version": "2.3.0-beta",
+  "version": "2.3.1-beta",
   "style": "dist/index.css",
   "author": {
     "email": "thomas.judd-cooper1@nhs.net",
@@ -87,19 +87,18 @@
     "webpack": "^5.0.0"
   },
   "peerDependencies": {
-    "nhsuk-react-components": "^5",
     "react": "^19",
     "react-dom": "^19"
   },
   "dependencies": {
-    "@ncrs/nhsuk-react-components": "^5.0.0",
+    "@ncrs/nhsuk-react-components": "^5.0.2",
     "classnames": "^2.2.6",
     "react-input-mask": "^2.0.4"
   },
   "scripts": {
     "build": "yarn build:dist && yarn build:lib && yarn build:sass",
     "build:dist": "rollup -c",
-    "build:lib": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline && tsc --emitDeclarationOnly",
+    "build:lib": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline && tsc --emitDeclarationOnly --skipLibCheck",
     "build:sass": "sass src:css",
     "cleanup": "bash scripts/cleanup.sh",
     "lint": "stylelint --fix src/**/*.scss src/**/**/*.scss && eslint --fix src/*.ts src/components/**/*.ts src/components/**/*.tsx",
