@@ -1,6 +1,6 @@
 {
   "name": "@ncrs/nhsuk-react-components-extensions",
-  "version": "2.3.1-beta",
+  "version": "2.3.2-beta",
   "style": "dist/index.css",
   "author": {
     "email": "thomas.judd-cooper1@nhs.net",
