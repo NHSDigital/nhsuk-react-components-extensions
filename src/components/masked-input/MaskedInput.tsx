@@ -4,9 +4,6 @@ import { FormElementProps } from "./LocalFormTypes";
 import { InputWidth } from "nhsuk-react-components/dist/esm/util/types/NHSUKTypes";
 import FormGroup from "./LocalFormGroup";
 import {InputMask} from '@react-input/mask';
-// const _InputMask = require("@react-input/mask");
-
-// const InputMask = _InputMask.default ?? _InputMask;
 
 type NativeInputProps = Omit<HTMLProps<HTMLInputElement>, "ref">;
 
