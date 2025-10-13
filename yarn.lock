@@ -2556,14 +2556,12 @@ __metadata:
     jest-axe: "npm:^9.0.0"
     jest-environment-jsdom: "npm:^29.7.0"
     less: "npm:^4.4.1"
-    nhsuk-frontend: "npm:^9"
-    nhsuk-react-components: "npm:^5"
+    nhsuk-frontend: "npm:^10"
     postcss: "npm:^8.4.49"
     prettier: "npm:^3.3.3"
     react: "npm:^19.1.1"
     react-docgen-typescript: "npm:^2.4.0"
     react-dom: "npm:^19.1.1"
-    react-input-mask: "npm:^2.0.4"
     rollup: "npm:^4.50.1"
     rollup-plugin-dts: "npm:^6.2.3"
     rollup-plugin-postcss: "npm:^4.0.2"
@@ -8074,15 +8072,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"invariant@npm:^2.2.4":
-  version: 2.2.4
-  resolution: "invariant@npm:2.2.4"
-  dependencies:
-    loose-envify: "npm:^1.0.0"
-  checksum: 10c0/5af133a917c0bcf65e84e7f23e779e7abc1cd49cb7fdc62d00d1de74b0d8c1b5ee74ac7766099fb3be1b05b26dfc67bab76a17030d2fe7ea2eef867434362dfc
-  languageName: node
-  linkType: hard
-
 "ip-address@npm:^9.0.5":
   version: 9.0.5
   resolution: "ip-address@npm:9.0.5"
@@ -9613,7 +9602,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.0.0, loose-envify@npm:^1.4.0":
+"loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
   dependencies:
@@ -10113,23 +10102,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nhsuk-frontend@npm:^9":
-  version: 9.6.4
-  resolution: "nhsuk-frontend@npm:9.6.4"
-  checksum: 10c0/3e405f7f804ad01c17167433074f31060c74b9ed87809cb0fc521010a60b050d859d4e845cbc24ba379023cb48ad0c3bbd1d7ea98a61004411cf2aa29d3c8213
-  languageName: node
-  linkType: hard
-
-"nhsuk-react-components@npm:^5":
-  version: 5.0.0
-  resolution: "nhsuk-react-components@npm:5.0.0"
-  dependencies:
-    classnames: "npm:^2.2.6"
-  peerDependencies:
-    nhsuk-frontend: ">=9.0.0 <10.0.0"
-    react: ">=16.8.0"
-    react-dom: ">=16.8.0"
-  checksum: 10c0/54212ca80732cf299c036e8dc45f3be88e6ee6783b13dce99f441886bd2fca20e06cd8f01aa5dddba255927e013ca4c5ce181f0b3b89dd22ec45a0ca0b104512
+"nhsuk-frontend@npm:^10":
+  version: 10.0.0
+  resolution: "nhsuk-frontend@npm:10.0.0"
+  checksum: 10c0/5a24cc7b56188d18bbd86c040e39b420546451f1b955eed176f4acd5f3b75d6ec5eef86b8ab970cff1b4741f2f599debae03bf4be75c3f6a903cfce205e88501
   languageName: node
   linkType: hard
 
@@ -11639,19 +11615,6 @@ __metadata:
   peerDependencies:
     react: ^19.1.1
   checksum: 10c0/8c91198510521299c56e4e8d5e3a4508b2734fb5e52f29eeac33811de64e76fe586ad32c32182e2e84e070d98df67125da346c3360013357228172dbcd20bcdd
-  languageName: node
-  linkType: hard
-
-"react-input-mask@npm:^2.0.4":
-  version: 2.0.4
-  resolution: "react-input-mask@npm:2.0.4"
-  dependencies:
-    invariant: "npm:^2.2.4"
-    warning: "npm:^4.0.2"
-  peerDependencies:
-    react: ">=0.14.0"
-    react-dom: ">=0.14.0"
-  checksum: 10c0/89fc110a99e79ee3fa3f63696d5d46ab8889c653b33c0e50c6b24d70b715e1c8d475b8637ceb9e0f4fcacec5e39f653156faef4f5f06972886c4b1e643f66a82
   languageName: node
   linkType: hard
 
@@ -14037,15 +14000,6 @@ __metadata:
   dependencies:
     makeerror: "npm:1.0.12"
   checksum: 10c0/a17e037bccd3ca8a25a80cb850903facdfed0de4864bd8728f1782370715d679fa72e0a0f5da7c1c1379365159901e5935f35be531229da53bbfc0efdabdb48e
-  languageName: node
-  linkType: hard
-
-"warning@npm:^4.0.2":
-  version: 4.0.3
-  resolution: "warning@npm:4.0.3"
-  dependencies:
-    loose-envify: "npm:^1.0.0"
-  checksum: 10c0/aebab445129f3e104c271f1637fa38e55eb25f968593e3825bd2f7a12bd58dc3738bb70dc8ec85826621d80b4acfed5a29ebc9da17397c6125864d72301b937e
   languageName: node
   linkType: hard
 

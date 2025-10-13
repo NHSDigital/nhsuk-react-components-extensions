@@ -1,5 +1,6 @@
-@use '../../../node_modules/nhsuk-frontend/packages/core/settings' as *;
-@use '../../../node_modules/nhsuk-frontend/packages/core' as *;
+@use '../../../node_modules/nhsuk-frontend/dist/nhsuk/core/settings' as *;
+@use '../../../node_modules/nhsuk-frontend/dist/nhsuk/core/helpers/colour' as *;
+@use '../../../node_modules/nhsuk-frontend/dist/nhsuk/core' as *;
 
 
 .nhsuk-timeline {
@@ -8,7 +9,7 @@
 }
 
 .nhsuk-timeline::before {
-  background-color: $color_nhsuk-blue;
+  background-color: nhsuk-colour('blue');
   content: '';
   height: 100%;
   left: 0;
@@ -32,7 +33,7 @@
 }
 
 .nhsuk-timeline__event::before {
-  background-color: $color_nhsuk-blue;
+  background-color: nhsuk-colour('blue');
   content: '';
   height: 5px;
   left: 0;

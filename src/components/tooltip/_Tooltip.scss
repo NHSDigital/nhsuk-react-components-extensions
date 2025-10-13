@@ -1,4 +1,4 @@
-@use '../../../node_modules/nhsuk-frontend/packages/core/settings/colours';
+@use '../../../node_modules/nhsuk-frontend/dist/nhsuk/core/helpers/colour' as *;
 
 .nhsuk-tooltip {
   display: inline-block;
@@ -17,11 +17,11 @@
     z-index: 1000;
     margin-left: -100px;
     border-radius: 4px;
-    background-color: colours.$color_nhsuk-black;
+    background-color: nhsuk-colour('black');
     padding: 5px;
     width: 200px;
     text-align: center;
-    color: colours.$color_nhsuk-white;
+    color: nhsuk-colour('white');
 
     &::after {
       position: absolute;
@@ -30,7 +30,7 @@
       margin-left: -5px;
       border-width: 5px;
       border-style: solid;
-      border-color: colours.$color_nhsuk-black transparent transparent transparent; // sass-lint:disable-line variable-name-format
+      border-color: nhsuk-colour('black') transparent transparent transparent; // sass-lint:disable-line variable-name-format
       content: ' ';
     }
   }

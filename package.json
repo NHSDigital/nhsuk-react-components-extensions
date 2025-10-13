@@ -1,6 +1,6 @@
 {
   "name": "@ncrs/nhsuk-react-components-extensions",
-  "version": "2.3.2-beta",
+  "version": "2.3.4-beta",
   "style": "dist/index.css",
   "author": {
     "email": "thomas.judd-cooper1@nhs.net",
@@ -19,6 +19,7 @@
     "@babel/preset-typescript": "^7.27.1",
     "@eslint/eslintrc": "^3.2.0",
     "@eslint/js": "^9.16.0",
+    "@ncrs/nhsuk-react-components": "^5.0.2",
     "@react-input/mask": "^2.0.4",
     "@rollup/plugin-commonjs": "^28.0.6",
     "@rollup/plugin-node-resolve": "^16.0.1",
@@ -43,6 +44,7 @@
     "add": "^2.0.6",
     "babel-jest": "^29.7.0",
     "babel-loader": "^8.0.0",
+    "classnames": "^2.2.6",
     "css-loader": "^5.0.0",
     "eslint": "^9.14.0",
     "eslint-config-airbnb": "^19.0.4",
@@ -60,8 +62,7 @@
     "jest-axe": "^9.0.0",
     "jest-environment-jsdom": "^29.7.0",
     "less": "^4.4.1",
-    "nhsuk-frontend": "^9",
-    "nhsuk-react-components": "^5",
+    "nhsuk-frontend": "^10",
     "postcss": "^8.4.49",
     "prettier": "^3.3.3",
     "react": "^19.1.1",
@@ -90,11 +91,6 @@
     "react": "^19",
     "react-dom": "^19"
   },
-  "dependencies": {
-    "@ncrs/nhsuk-react-components": "^5.0.2",
-    "classnames": "^2.2.6",
-    "react-input-mask": "^2.0.4"
-  },
   "scripts": {
     "build": "yarn build:dist && yarn build:lib && yarn build:sass",
     "build:dist": "rollup -c",
@@ -112,7 +108,7 @@
     "lib",
     "css"
   ],
-  "module": "dist/index.es.js",
+  "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "packageManager": "yarn@4.4.0+sha512.91d93b445d9284e7ed52931369bc89a663414e5582d00eea45c67ddc459a2582919eece27c412d6ffd1bd0793ff35399381cb229326b961798ce4f4cc60ddfdb"

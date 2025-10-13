@@ -1,152 +1,272 @@
 /* stylelint-disable selector-max-id */
 /* stylelint-disable declaration-no-important */
 
+/* Logoout screen */
+.masthead-wrapper {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+}
+
+.nhsuk-skip-link:focus {
+    z-index: 200;
+}
+
+.masthead-container {
+    max-width: 100%;
+    flex-grow: 1;
+    margin: 0;
+}
+
 .nhsuk-header {
-  display: flex;
-  min-height: 46px;
-  align-items: center;
-  padding: 0;
-  border-bottom: 1px solid #4d8ecd;
+    display: flex;
+    min-height: 46px;
+    align-items: center;
+    padding: 0 16px;
+    border-bottom: 1px solid #4d8ecd;
+
+    @media (min-width: 641px) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    @media (min-width: 1025px) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
 }
 
 .nhsuk-header__logo {
-  flex-shrink: 0;
-  padding-left: 10px;
-  padding-right: 10px;
+    flex-shrink: 0;
 
+    .nhsuk-header__link {
+        display: block;
+        width: 50px;
+        height: 40px;
 
-  .nhsuk-header__link {
-    display: block;
-    width: 50px;
-    height: 40px;
+        .nhsuk-logo {
+            width: 50px;
+            height: 40px;
+            border: 0;
 
-    .nhsuk-logo {
-      width: 50px;
-      height: 40px;
-      border: 0;
+            .nhsuk-logo__background {
+                fill: #fff;
+            }
+
+            .nhsuk-logo__text {
+                fill: #005eb8;
+            }
+        }
     }
-  }
 }
 
 .nhsuk-header__transactional-service-name {
-  width: auto;
-  max-width: 40vw;
-  flex-shrink: 0;
-  padding: 0;
-  margin-right: auto;
-  float: initial;
+    width: max-content;
+    max-width: 40vw;
+    flex-shrink: 0;
+    padding: 0 16px;
+    margin-right: auto;
+    float: initial;
 
-  .nhsuk-header__transactional-service-name--link {
-    display: inline-block;
-    margin-top: 3px;
-    margin-bottom: 3px;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 1em;
-    font-style: bold;
-    padding-right: 30px;
-  }
+    @media (min-width: 641px) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    @media (min-width: 1025px) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .nhsuk-header__transactional-service-name--link {
+        display: inline-block;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 1em;
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.nhsuk-header__transactional-service-name .nhsuk-header__transactional-service-name--link:hover {
+    text-decoration: underline;
+    color: white;
 }
 
 .nhsuk-navigation-container {
-  display: flex;
-  width: auto;
-  max-width: 70%;
-  flex-grow: 1;
-  flex-shrink: 1;
-  align-items: center;
-  justify-content: flex-end;
-
-  .nhsuk-navigation {
-    width: 100%;
-    max-width: 100%;
+    display: flex;
+    width: auto;
+    max-width: 50%;
+    flex-grow: 1;
     flex-shrink: 1;
-    margin-bottom: 0 !important;
-  }
+    align-items: center;
+    justify-content: flex-end;
+
+    @media (min-width: 641px) {
+        max-width: calc(100% - 340px);
+    }
+
+    .nhsuk-navigation {
+        width: 100%;
+        max-width: 100%;
+        flex-shrink: 1;
+        margin-bottom: 0 !important;
+    }
+}
+
+.icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    margin-left: 8px;
 }
 
 .nhsuk-header__navigation-list {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: flex-end;
-  padding-left: 0;
-  margin: 0;
-  gap: 4px;
-  list-style: none;
-
-  .nhsuk-header__navigation-item {
-    position: relative;
     display: flex;
-    margin-bottom: 0;
-    list-style-type: none !important;
-  }
-
-  .nhsuk-header__navigation-link {
-    position: relative;
-    display: flex;
-    flex-shrink: 0;
+    width: 100%;
     align-items: center;
-    padding: 8px 16px;
-    border-width: 4px 0;
-    border-style: solid;
-    border-color: transparent;
-    font-weight: 500;
-    white-space: nowrap;
+    justify-content: flex-end;
+    padding-left: 0;
+    border-top: none;
+    margin: 0;
+    gap: 0;
+    list-style: none;
 
-    .nhsuk-icon {
-      display: block;
-      width: 18px;
-      height: 18px;
+    .nhsuk-header__navigation-item {
+        position: relative;
+        display: flex;
+        border-top: none;
+        margin-bottom: 0;
+        list-style-type: none;
     }
 
-    &:focus {
-      background-color: #ffeb3b;
-      color: #212b32;
-    }
+    .nhsuk-header__navigation-link {
+        position: relative;
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        padding: 8px 16px;
+        border: none;
+        border-width: 4px 0;
+        border-style: solid;
+        border-color: transparent;
+        color: #fff;
+        fill: #fff;
+        font-weight: 500;
+        white-space: nowrap;
+        text-decoration: none;
 
-    &.nhsuk-header__menu-toggle {
-      right: 0;
-      padding-right: 8px;
-      border-radius: 0;
-
-      // Chevron fixes
-      .nhsuk-icon {
-        position: static;
-        width: 24px;
-        height: 24px;
-        margin-left: 6px;
-        transform: rotate(90deg);
-        fill: inherit;
-      }
-
-      &--expanded {
+        .icon,
         .nhsuk-icon {
-          transform: rotate(-90deg);
+            display: block;
+            width: 18px;
+            height: 18px;
+            margin: 0;
         }
-      }
+
+        .text + .icon,
+        .text + .nhsuk-icon,
+        .nhsuk-icon + .text {
+            margin-left: 10px;
+        }
+
+        &:hover,
+        &:visited,
+        &:active {
+            border-color: transparent;
+            background-color: unset;
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        &:focus {
+            border-color: transparent transparent #212b32;
+            background-color: #ffeb3b;
+            color: #212b32;
+            fill: #212b32;
+
+            .nhsuk-icon,
+            .nhsuk-icon path {
+                fill: #212b32;
+            }
+        }
+
+        &.nhsuk-header__menu-toggle {
+            right: 0;
+            padding-right: 8px;
+            border-radius: 0;
+
+            // Chevron fixes
+            .nhsuk-icon {
+                position: static;
+                width: 24px;
+                height: 24px;
+                margin-left: 6px;
+                transform: rotate(90deg);
+            }
+
+            &--expanded {
+                .nhsuk-icon {
+                    transform: rotate(-90deg);
+                }
+            }
+
+            &:focus {
+                border-width: 4px 0 !important;
+                border-color: transparent transparent #212b32 !important;
+            }
+        }
     }
-  }
 
-  .nhsuk-mobile-menu-container {
-    display: none;
+    .nhsuk-mobile-menu-container {
+        position: relative;
+        display: none;
 
-    &.nhsuk-mobile-menu-container--visible {
-      display: block;
+        &.nhsuk-mobile-menu-container--visible {
+            display: block;
+        }
     }
-  }
 
-  .nhsuk-header__drop-down {
-    position: absolute;
-    z-index: 1;
-    top: auto;
-    right: 0;
-    width: 13rem;
-    padding: 10px;
-    background-color: #f0f4f5;
-  }
+    .nhsuk-header__drop-down {
+        position: absolute;
+        z-index: 50;
+        top: auto;
+        right: 0;
+        width: 13rem;
+        padding: 0;
+        border: none;
+        background-color: #005eb8;
+        right: 100px;
 
-  .nhsuk-header__drop-down--hidden {
-    display: none;
-  };
+        & > *:last-child {
+            border-bottom: 0;
+            margin-bottom: 0;
+        }
+
+        .nhsuk-header__navigation-item {
+            display: block;
+            border-bottom: 1px solid rgba(216, 221, 224, 0.4);
+
+            .nhsuk-header__navigation-link {
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    .nhsuk-header__drop-down--hidden {
+        display: none;
+    }
+}
+
+.nhsuk-hero__wrapper {
+    padding-top: 16px;
+    padding-bottom: 12px;
+
+    h1 {
+        font-size: 1.4rem;
+    }
 }
