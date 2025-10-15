@@ -10,7 +10,7 @@ import NavDropdownMenu from './components/LocalNavDropdownMenu';
 import Content from './components/LocalContent';
 import TransactionalServiceName from './components/LocalTransactionalServiceName';
 import HeaderJs from './header';
-import './_headerWithLogo.scss'
+import './headerWithLogo.scss'
 import { Container } from "nhsuk-react-components";
 
 const BaseHeaderLogo: React.FC<OrganisationalLogoProps & NHSLogoNavProps> = (props) => {
