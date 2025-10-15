@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { act } from 'react';
 import {render} from '@testing-library/react'
 import AccordionMenu from '..';
 
@@ -29,10 +29,14 @@ describe('AccordionMenu', () => {
 
         expect(component.container.querySelector('#accordion')).toHaveProperty('open',true)
 
-        component.getByText("Heading").click()
+        act(() => {
+          component.getByText("Heading").click()
+        });
         expect(component.container.querySelector('#accordion')).toHaveProperty('open',false)
 
-        component.getByText("Heading").click()
+        act(() => {
+          component.getByText("Heading").click()
+        });
 
         expect(component.container.querySelector('#accordion')).toHaveProperty('open',true)
               });
@@ -44,7 +48,9 @@ describe('AccordionMenu', () => {
 
         expect(component.container.querySelector('#accordion')).toHaveProperty('open',true)
 
-        component.getByText("Heading").click()
+        act(() => {
+          component.getByText("Heading").click()
+        });
 
         expect(component.container.querySelector('#accordion')).toHaveProperty('open',true)
       });
@@ -55,7 +61,9 @@ describe('AccordionMenu', () => {
         );
         expect(component.container.querySelector('#accordion')).toHaveProperty('open',false)
 
-        component.getByText("Heading").click()
+        act(() => {
+          component.getByText("Heading").click()
+        });
 
         expect(component.container.querySelector('#accordion')).toHaveProperty('open',false)
       });

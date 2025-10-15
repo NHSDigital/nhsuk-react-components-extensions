@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
+    "declarationDir": "./dist/types",
     "module": "es6",
     "target": "es5",
     "lib": ["es5", "es6", "es7", "es2017", "esnext", "dom"],
@@ -21,7 +22,7 @@
     "emitDecoratorMetadata": true,
     "types": ["react", "jest", "node", "@testing-library/jest-dom"],
     "declaration": true,
-    "declarationDir": "./lib",
+  
     "strict": true,
     "noUnusedParameters": true,
     "esModuleInterop": true

@@ -1,5 +1,6 @@
-import React, { HTMLProps } from 'react';
+import React from 'react';
 import classNames from 'classnames';
+import './_Tag.scss';
 
 type TagColours =
   | 'white'
@@ -13,7 +14,7 @@ type TagColours =
   | 'orange'
   | 'yellow';
 
-export interface TagProps extends HTMLProps<HTMLSpanElement> {
+export interface TagProps extends React.HTMLProps<HTMLSpanElement> {
   color?: TagColours;
 }
 

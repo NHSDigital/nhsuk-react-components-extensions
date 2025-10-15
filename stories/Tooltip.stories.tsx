@@ -1,22 +1,31 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { storiesOf } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { Tooltip, WarningIcon } from '../src';
 
-const stories = storiesOf('Tooltip', module);
+const meta: Meta<typeof Tooltip> = {
+  title: 'Tooltip',
+  component: Tooltip,
+};
+export default meta;
 
-stories
-  .add('Standard', () => (
+type Story = StoryObj<typeof Tooltip>;
+
+export const Standard: Story = {
+  render: () => (
     <div className="tooltip-demo">
       <Tooltip tooltip="Hello!">
         <div>Hover Over Me!</div>
       </Tooltip>
     </div>
-  ))
-  .add('With an Icon', () => (
+  ),
+};
+
+export const WithIcon: Story = {
+  render: () => (
     <div className="tooltip-demo">
       <Tooltip tooltip="Data Quality Issues">
         <WarningIcon />
       </Tooltip>
     </div>
-  ));
+  ),
+};

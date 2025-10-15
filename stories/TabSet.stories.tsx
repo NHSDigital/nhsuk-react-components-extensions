@@ -1,12 +1,18 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { storiesOf } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import { TabSet } from '../src';
 
-const stories = storiesOf('TabSet', module);
+const meta: Meta<typeof TabSet> = {
+  title: 'TabSet',
+  component: TabSet,
+};
+export default meta;
 
-stories
-  .add('Standard', () => (
+type Story = StoryObj<typeof TabSet>;
+
+export const Standard: Story = {
+  render: () => (
     <>
       <TabSet>
         <TabSet.Tab>Overview</TabSet.Tab>
@@ -16,8 +22,11 @@ stories
       </TabSet>
       <br />
     </>
-  ))
-  .add('With Disabled Tab', () => (
+  ),
+};
+
+export const WithDisabledTab: Story = {
+  render: () => (
     <>
       <TabSet>
         <TabSet.Tab>Overview</TabSet.Tab>
@@ -27,8 +36,11 @@ stories
       </TabSet>
       <br />
     </>
-  ))
-  .add('With Empty Tab', () => (
+  ),
+};
+
+export const WithEmptyTab: Story = {
+  render: () => (
     <>
       <TabSet>
         <TabSet.Tab>Overview</TabSet.Tab>
@@ -38,8 +50,11 @@ stories
       </TabSet>
       <br />
     </>
-  ))
-  .add('With Different Sizes', () => (
+  ),
+};
+
+export const WithDifferentSizes: Story = {
+  render: () => (
     <>
       <TabSet>
         <TabSet.Tab style={{ maxWidth: 200 }}>Overview</TabSet.Tab>
@@ -50,4 +65,5 @@ stories
       </TabSet>
       <br />
     </>
-  ));
+  ),
+};

@@ -1,11 +1,18 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { Tag } from '../src';
+import type { Meta, StoryObj } from '@storybook/react';
+import Tag from '../src/components/tag/Tag';
 
-const stories = storiesOf('Tags', module);
 
-stories
-  .add('Basic', () => (
+const meta: Meta<typeof Tag> = {
+  title: 'Tags',
+  component: Tag,
+};
+export default meta;
+
+type Story = StoryObj<typeof Tag>;
+
+export const Basic: Story = {
+  render: () => (
     <div className="tag-demo">
       <Tag>Standard</Tag>
       <Tag>Done</Tag>
@@ -15,8 +22,11 @@ stories
       <Tag color="red">FP69</Tag>
       <Tag color="orange">Ceased - no cervix</Tag>
     </div>
-  ))
-  .add('Colours', () => (
+  ),
+};
+
+export const Colours: Story = {
+  render: () => (
     <div className="tag-demo">
       <Tag>Standard</Tag>
       <Tag color="white">Started</Tag>
@@ -30,4 +40,5 @@ stories
       <Tag color="orange">Declined</Tag>
       <Tag color="yellow">Delayed</Tag>
     </div>
-  ));
+  ),
+};

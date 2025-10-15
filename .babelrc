@@ -1,9 +1,13 @@
 {
-  "presets": ["@babel/env", "@babel/typescript", "@babel/preset-react"],
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-typescript",
+    "@babel/preset-react"
+  ],
   "plugins": [
-    "@babel/plugin-transform-numeric-separator",
-    "@babel/proposal-class-properties",
-    "@babel/proposal-object-rest-spread"
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread",
+    "@babel/plugin-transform-numeric-separator"
   ],
   "ignore": ["**/__tests__/*", "*/__mocks__/*"]
 }

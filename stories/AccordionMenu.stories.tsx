@@ -1,12 +1,18 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React, { useState } from 'react';
-import { storiesOf } from '@storybook/react';
-import { AccordionMenu } from '../src';
+import type { Meta, StoryObj } from '@storybook/react';
+import AccordionMenu from '../src/components/accordion-menu/AccordionMenu';
 
-const stories = storiesOf('Accordion Menu', module);
+const meta: Meta<typeof AccordionMenu> = {
+  title: 'Accordion Menu',
+  component: AccordionMenu,
+};
+export default meta;
 
-stories
-  .add('Standard', () => (
+type Story = StoryObj<typeof AccordionMenu>;
+
+export const Standard: Story = {
+  render: () => (
     <AccordionMenu className="accordion-demo">
       <AccordionMenu.Section heading="Greetings!">
         <AccordionMenu.Link>Hello!</AccordionMenu.Link>
@@ -25,8 +31,11 @@ stories
         <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
       </AccordionMenu.Section>
     </AccordionMenu>
-  ))
-  .add('With defaultOpen', () => (
+  ),
+};
+
+export const WithDefaultOpen: Story = {
+  render: () => (
     <AccordionMenu className="accordion-demo">
       <AccordionMenu.Section heading="Greetings!" defaultOpen>
         <AccordionMenu.Link>Hello!</AccordionMenu.Link>
@@ -45,35 +54,43 @@ stories
         <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
       </AccordionMenu.Section>
     </AccordionMenu>
-  ))
-  .add('Programmatic Control', () => {
-    const [isOpen, setIsOpen] = useState<boolean>(false);
+  ),
+};
 
-    return (
-      <>
-        <label htmlFor="open-accordion">
-          <input type="checkbox" id="open-accordion" onChange={e => setIsOpen(e.target.checked)} />
-          Open Accordion Section
-        </label>
+const ProgrammaticControl = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-        <AccordionMenu className="accordion-demo">
-          <AccordionMenu.Section heading="Greetings!" open={isOpen}>
-            <AccordionMenu.Link>Hello!</AccordionMenu.Link>
-            <AccordionMenu.Link>Hello!</AccordionMenu.Link>
-          </AccordionMenu.Section>
-          <AccordionMenu.Section heading="Salutations!">
-            <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
-            <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
-          </AccordionMenu.Section>
-          <AccordionMenu.Section heading="Greetings!">
-            <AccordionMenu.Link>Hello!</AccordionMenu.Link>
-            <AccordionMenu.Link>Hello!</AccordionMenu.Link>
-          </AccordionMenu.Section>
-          <AccordionMenu.Section heading="Salutations!">
-            <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
-            <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
-          </AccordionMenu.Section>
-        </AccordionMenu>
-      </>
-    );
-  });
+  return (
+    <>
+      <label htmlFor="open-accordion">
+        <input
+          type="checkbox"
+          id="open-accordion"
+          onChange={(e) => setIsOpen(e.target.checked)}
+        />
+        {' '}Open Accordion Section
+      </label>
+
+      <AccordionMenu className="accordion-demo">
+        <AccordionMenu.Section heading="Greetings!" open={isOpen}>
+          <AccordionMenu.Link>Hello!</AccordionMenu.Link>
+          <AccordionMenu.Link>Hello!</AccordionMenu.Link>
+        </AccordionMenu.Section>
+        <AccordionMenu.Section heading="Salutations!">
+          <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
+          <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
+        </AccordionMenu.Section>
+        <AccordionMenu.Section heading="Greetings!">
+          <AccordionMenu.Link>Hello!</AccordionMenu.Link>
+          <AccordionMenu.Link>Hello!</AccordionMenu.Link>
+        </AccordionMenu.Section>
+        <AccordionMenu.Section heading="Salutations!">
+          <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
+          <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
+        </AccordionMenu.Section>
+      </AccordionMenu>
+    </>
+  );
+};
+
+export { ProgrammaticControl };

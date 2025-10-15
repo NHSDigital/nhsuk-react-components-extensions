@@ -1,8 +1,8 @@
-import React, { HTMLProps, ReactNode, useState, MouseEvent, useEffect } from 'react';
+import React, { useState, MouseEvent, useEffect } from 'react';
 import classNames from 'classnames';
 
-export interface SectionProps extends HTMLProps<HTMLDetailsElement> {
-  heading: ReactNode;
+export interface SectionProps extends React.HTMLProps<HTMLDetailsElement> {
+  heading: React.ReactNode;
   defaultOpen?: boolean;
 }
 

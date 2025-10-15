@@ -1,20 +1,58 @@
-import typescript from '@rollup/plugin-typescript';
-import pkg from './package.json' assert { type: 'json' };
-import { nodeResolve } from '@rollup/plugin-node-resolve';
+// rollup.config.mjs
+import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+import typescript from '@rollup/plugin-typescript';
+import postcss from 'rollup-plugin-postcss';
+import dts from 'rollup-plugin-dts';
+import pkg from './package.json' with { type: 'json' };
 
-export default {
-  input: 'src/index.ts',
-  output: [
-    { file: pkg.main, format: 'cjs', sourcemap: true },
-    { file: pkg.module, format: 'es', sourcemap: true }
-  ],
-  external: [...Object.keys(pkg.dependencies || {}), ...Object.keys(pkg.peerDependencies || {})],
-  plugins: [
-    typescript({
-      declarationDir: './dist'
-    }),
-    nodeResolve(),
-    commonjs()
-  ],
-};
+export default [
+  // JS + CSS bundle
+  {
+    input: 'src/index.ts',
+    // DO NOT externalize styles here — let postcss handle them
+    external: [
+      /^react($|\/)/,
+      /^react-dom($|\/)/,
+      /^@types\/react($|\/)/,
+      /^@types\/react-dom($|\/)/,
+    ],
+    plugins: [
+      resolve(),
+      commonjs(),
+      postcss({
+        extensions: ['.css', '.scss'],
+        extract: 'index.css',   // make the output predictable
+        minimize: true,
+        // optional: quiet dart-sass deprecations if you use legacy APIs
+        modules: false,
+        use: {
+          sass: {
+            quietDeps: true,
+            silenceDeprecations: ['legacy-js-api', 'misplaced-rest']
+          },
+        }
+      }),
+      typescript({
+        tsconfig: './tsconfig.json',
+        declaration: true,
+        declarationDir: './dist/types',
+        rootDir: './src',
+        noEmitOnError: true
+      }),
+    ],
+    output: [
+      { file: "dist/index.js", format: "cjs" },
+      { file: "dist/index.esm.js", format: "esm" },
+    ],
+  },
+
+  // .d.ts bundle
+  {
+    input: 'dist/types/index.d.ts',
+    output: [{ file: pkg.types, format: 'esm' }],
+    plugins: [dts()],
+    // Tell dts bundler to ignore style imports
+    external: [/\.s?css$/i, /\.less$/i, /\.styl(us)?$/i],
+  },
+];

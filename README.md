@@ -32,7 +32,7 @@ import SubNavigation from 'nhsuk-react-components/dist/src/components/sub-naviga
 
 ### Styles
 
-The package comes with two separate "master" stylesheets. These can be found at `~nhsuk-react-components-extensions/css/all.css` and `~nhsuk-react-components-extensions/css/components.css`.
+The package comes with two separate "master" stylesheets. These can be found at `~nhsuk-react-components-extensions/css.css` and `~nhsuk-react-components-extensions/css/components.css`.
 
 If you are already using components from `nhsuk-frontend` or the `nhsuk-react-components` packages, it is strongly recommended to use the `components.css` file as this only contains the additional styles required to use the extra components in this library.
 
@@ -40,7 +40,7 @@ If you are not using any of those other packages, or the standard NHS.UK stylesh
 
 ```scss
 // Core NHS.UK Styles and Components
-@import '~nhsuk-react-components-extensions/css/all.css';
+@import '~nhsuk-react-components-extensions/css.css';
 
 // Just Components
 @import '~nhsuk-react-components-extensions/css/components.css';
