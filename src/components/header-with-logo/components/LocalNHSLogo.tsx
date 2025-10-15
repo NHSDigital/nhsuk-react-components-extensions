@@ -1,15 +1,9 @@
-import React, { useContext, SVGProps } from 'react';
+import React, { useContext } from 'react';
 import classNames from 'classnames';
 import HeaderContext, { IHeaderContext } from '../HeaderContext';
 import { AsElementLink } from './LocalLinkTypes';
 
-interface SVGImageWithSrc extends SVGProps<SVGImageElement> {
-  src: string;
-}
-
 export type NHSLogoNavProps = AsElementLink<HTMLAnchorElement>;
-
-const SVGImageWithSrc: React.FC<SVGImageWithSrc> = (props) => <image {...props} />;
 
 const NHSLogo: React.FC<NHSLogoNavProps> = ({
   className,

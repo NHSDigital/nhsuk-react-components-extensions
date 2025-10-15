@@ -315,7 +315,7 @@ const InputElement: React.FC<InputMaskProps> = ({
         }
 
         const oldValue = internalValue;
-        let value = inputValue;
+        let currentValue = inputValue;
         const input = getInputDOMNode();
 
         // Handle autofill
@@ -330,7 +330,7 @@ const InputElement: React.FC<InputMaskProps> = ({
         const selection = getSelection();
         let cursorPos = selection.end;
         const maskLen = maskStr.length;
-        const valueLen = value.length;
+        const valueLen = currentValue.length;
         const oldValueLen = oldValue.length;
         const prefixLength = prefix?.length || 0;
         const lastEditablePosValue = lastEditablePos || 0;
@@ -339,13 +339,13 @@ const InputElement: React.FC<InputMaskProps> = ({
 
         if (backspaceOrDeleteRemoval.current) {
             const deleteFromRight = backspaceOrDeleteRemoval.current.key === 'Delete';
-            value = internalValue;
+            currentValue = internalValue;
             const removalSelection = backspaceOrDeleteRemoval.current.selection;
             cursorPos = removalSelection.start;
             backspaceOrDeleteRemoval.current = null;
 
             if (removalSelection.length) {
-                value = clearRange(maskOptions, value, removalSelection.start, removalSelection.length);
+                currentValue = clearRange(maskOptions, currentValue, removalSelection.start, removalSelection.length);
             } else if (removalSelection.start < prefixLength || (!deleteFromRight && removalSelection.start === prefixLength)) {
                 cursorPos = prefixLength;
             } else {
@@ -355,16 +355,16 @@ const InputElement: React.FC<InputMaskProps> = ({
 
                 if (editablePos !== null) {
                     if (!maskCharacter) {
-                        value = value.substring(0, getFilledLength(maskOptions, value));
+                        currentValue = currentValue.substring(0, getFilledLength(maskOptions, currentValue));
                     }
-                    value = clearRange(maskOptions, value, editablePos, 1);
+                    currentValue = clearRange(maskOptions, currentValue, editablePos, 1);
                     cursorPos = editablePos;
                 }
             }
         } else if (valueLen > oldValueLen) {
             const enteredStringLen = valueLen - oldValueLen;
             const startPos = selection.end - enteredStringLen;
-            enteredString = value.substring(startPos, startPos + enteredStringLen);
+            enteredString = currentValue.substring(startPos, startPos + enteredStringLen);
 
             if (startPos < lastEditablePosValue && (enteredStringLen !== 1 || enteredString !== maskStr[startPos])) {
                 cursorPos = getRightEditablePos(startPos) || startPos;
@@ -372,10 +372,10 @@ const InputElement: React.FC<InputMaskProps> = ({
                 cursorPos = startPos;
             }
 
-            value = value.substring(0, startPos) + value.substring(startPos + enteredStringLen);
-            clearedValue = clearRange(maskOptions, value, startPos, maskLen - startPos);
+            currentValue = currentValue.substring(0, startPos) + currentValue.substring(startPos + enteredStringLen);
+            clearedValue = clearRange(maskOptions, currentValue, startPos, maskLen - startPos);
             clearedValue = insertString(maskOptions, clearedValue, enteredString, cursorPos);
-            value = insertString(maskOptions, oldValue, enteredString, cursorPos);
+            currentValue = insertString(maskOptions, oldValue, enteredString, cursorPos);
 
             if (enteredStringLen !== 1 || (cursorPos >= prefixLength && cursorPos < lastEditablePosValue)) {
                 cursorPos = Math.max(getFilledLength(maskOptions, clearedValue), cursorPos);
@@ -387,12 +387,12 @@ const InputElement: React.FC<InputMaskProps> = ({
             }
         } else if (valueLen < oldValueLen) {
             const removedLen = maskLen - valueLen;
-            enteredString = value.substring(0, selection.end);
+            enteredString = currentValue.substring(0, selection.end);
             const clearOnly = enteredString === oldValue.substring(0, selection.end);
             clearedValue = clearRange(maskOptions, oldValue, selection.end, removedLen);
 
             if (maskCharacter) {
-                value = insertString(maskOptions, clearedValue, enteredString, 0);
+                currentValue = insertString(maskOptions, clearedValue, enteredString, 0);
             }
 
             clearedValue = clearRange(maskOptions, clearedValue, selection.end, maskLen - selection.end);
@@ -408,8 +408,8 @@ const InputElement: React.FC<InputMaskProps> = ({
             }
         }
 
-        value = formatValue(maskOptions, value);
-        setInputValue(value);
+        currentValue = formatValue(maskOptions, currentValue);
+        setInputValue(currentValue);
 
         if (onChange) {
             onChange(event);
@@ -430,8 +430,8 @@ const InputElement: React.FC<InputMaskProps> = ({
         if (maskOptions.mask) {
             if (!internalValue) {
                 const { prefix } = maskOptions;
-                const value = formatValue(maskOptions, prefix || '');
-                const inputValue = formatValue(maskOptions, value);
+                const formattedValue = formatValue(maskOptions, prefix || '');
+                const inputValue = formatValue(maskOptions, formattedValue);
 
                 const isInputValueChanged = inputValue !== event.target.value;
 

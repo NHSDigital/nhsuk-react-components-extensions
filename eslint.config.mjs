@@ -44,11 +44,7 @@ export default [...compat.extends("airbnb-typescript"), {
             ecmaFeatures: {
                 jsx: true,
             },
-            projectService: {
-                // this is to allow the test files to be linted, even though they aren't included in tsconfig.json
-                allowDefaultProject: ["src/components/*/__tests__/*.test.tsx", ],
-                maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING: 10,
-            },
+            projectService: true,
             tsconfigRootDir: import.meta.dirname,
         },
     },
