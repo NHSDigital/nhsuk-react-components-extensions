@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import classNames from 'classnames';
 import HeaderContext, { IHeaderContext } from '../HeaderContext';
-import { SearchIcon } from "@ncrs/nhsuk-react-components";
+import { SearchIcon } from "nhsuk-react-components";
 
 export interface SearchProps extends React.HTMLProps<HTMLInputElement> {
   visuallyHiddenText?: string;

@@ -16,7 +16,6 @@ export default [
       /^react-dom($|\/)/,
       /^@types\/react($|\/)/,
       /^@types\/react-dom($|\/)/,
-      /^@ncrs\/nhsuk-react-components($|\/)/
     ],
     plugins: [
       resolve(),

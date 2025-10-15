@@ -2,7 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import Bar from './components/Bar';
 import './_RibbonLink.scss';
-import { ArrowRightCircleIcon } from "@ncrs/nhsuk-react-components";
+import { ArrowRightCircleIcon } from "nhsuk-react-components";
 
 type RibbonFlavours = 'hot' | 'mild' | 'cool';
 
