@@ -57,40 +57,40 @@ export const WithDefaultOpen: Story = {
   ),
 };
 
-export const ProgrammaticControl: Story = {
-  render: () => {
-    const [isOpen, setIsOpen] = useState(false);
+const ProgrammaticControl = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    return (
-      <>
-        <label htmlFor="open-accordion">
-          <input
-            type="checkbox"
-            id="open-accordion"
-            onChange={(e) => setIsOpen(e.target.checked)}
-          />
-          {' '}Open Accordion Section
-        </label>
+  return (
+    <>
+      <label htmlFor="open-accordion">
+        <input
+          type="checkbox"
+          id="open-accordion"
+          onChange={(e) => setIsOpen(e.target.checked)}
+        />
+        {' '}Open Accordion Section
+      </label>
 
-        <AccordionMenu className="accordion-demo">
-          <AccordionMenu.Section heading="Greetings!" open={isOpen}>
-            <AccordionMenu.Link>Hello!</AccordionMenu.Link>
-            <AccordionMenu.Link>Hello!</AccordionMenu.Link>
-          </AccordionMenu.Section>
-          <AccordionMenu.Section heading="Salutations!">
-            <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
-            <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
-          </AccordionMenu.Section>
-          <AccordionMenu.Section heading="Greetings!">
-            <AccordionMenu.Link>Hello!</AccordionMenu.Link>
-            <AccordionMenu.Link>Hello!</AccordionMenu.Link>
-          </AccordionMenu.Section>
-          <AccordionMenu.Section heading="Salutations!">
-            <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
-            <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
-          </AccordionMenu.Section>
-        </AccordionMenu>
-      </>
-    );
-  },
+      <AccordionMenu className="accordion-demo">
+        <AccordionMenu.Section heading="Greetings!" open={isOpen}>
+          <AccordionMenu.Link>Hello!</AccordionMenu.Link>
+          <AccordionMenu.Link>Hello!</AccordionMenu.Link>
+        </AccordionMenu.Section>
+        <AccordionMenu.Section heading="Salutations!">
+          <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
+          <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
+        </AccordionMenu.Section>
+        <AccordionMenu.Section heading="Greetings!">
+          <AccordionMenu.Link>Hello!</AccordionMenu.Link>
+          <AccordionMenu.Link>Hello!</AccordionMenu.Link>
+        </AccordionMenu.Section>
+        <AccordionMenu.Section heading="Salutations!">
+          <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
+          <AccordionMenu.Link>Goodbye!</AccordionMenu.Link>
+        </AccordionMenu.Section>
+      </AccordionMenu>
+    </>
+  );
 };
+
+export { ProgrammaticControl };
