@@ -99,6 +99,7 @@
     "build:dist": "rollup -c",
     "build:lib": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline && tsc --emitDeclarationOnly --skipLibCheck",
     "build:sass": "sass src:css",
+    "build-storybook": "storybook build",
     "cleanup": "bash scripts/cleanup.sh",
     "lint": "stylelint --fix src/**/*.scss src/**/**/*.scss && eslint --fix src/*.ts src/components/**/*.ts src/components/**/*.tsx",
     "prebuild": "yarn lint && yarn test --coverage && yarn cleanup",
